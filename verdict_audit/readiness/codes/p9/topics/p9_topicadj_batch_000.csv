@@ -1,0 +1,51 @@
+item_id,topic,reason
+T0012,other_biology,The model tests hypotheses in evolutionary biology about animal colour vision and opsin evolution.
+T0022,other,"A computational fluid dynamics dataset of aneurysm geometries and hemodynamics, with no image analysis, fits no single listed domain."
+T0035,other,"Prompt learning for biomedical image classification is validated across 9 modalities, so no single imaging domain is primary."
+T0037,other,Interactive segmentation of generic biomedical imaging datasets names no specific imaging modality.
+T0046,other,A general medical vision-language model for VQA and grounding names no specific imaging modality.
+T0053,other,Adapter fine-tuning for generic medical imaging benchmarks names no specific modality.
+T0066,radiology,Counterfactual synthesis is evaluated on brain MRI and chest X-ray datasets.
+T0079,other,All-in-one medical image restoration across unspecified modalities has no single named imaging domain.
+T0093,other,"Visual grounding of medical MLLMs is studied across 8 imaging modalities, so no single domain is primary."
+T0111,other,"The foundation model fuses genetic variants, clinical phenotypes and retinal images equally, giving no single primary domain."
+T0121,other,"The fine-tuning method is applied across protein, small molecule and regulatory DNA design, so no single domain is primary."
+T0122,other,"The diagnosis framework is evaluated on both breast cancer screening and retinal disease, spanning different imaging domains."
+T0136,other,Federated medical VQA over unspecified imaging modalities has no single primary domain.
+T0142,other,Multi-granular vision-language pretraining for generic medical imaging names no specific modality.
+T0150,other,Uncertainty for medical image registration across four anatomical structures names no specific imaging modality.
+T0157,other,"Visual reprogramming is evaluated on 11 generic biomedical and 7 natural image datasets, with no single domain."
+T0163,other,A general medical vision-language model for comprehension and generation names no specific modality.
+T0167,radiology,"The segmentation metric is evaluated on CT, MRI and MRA datasets."
+T0169,radiology,Pretraining uses multi-parametric brain MRI scans.
+T0174,other,Multi-label medical image diagnosis on unspecified clinical benchmarks names no specific modality.
+T0179,epidemiology_public_health,"The interpretability method targets patient survival and disease-progression time-to-event models, applied to cancer prognosis."
+T0184,other,"Zero-shot medical detection across seven benchmarks, with endoscopy as one example, has no single primary imaging domain."
+T0188,genomics_omics,"The model learns from high-dimensional single-cell cytometry profiles of immune cells, not microscopy images."
+T0213,other,Test-time adaptation of medical VLMs under scanner shifts names no specific imaging modality.
+T0216,other,"Synthesized medical VQA spans 13 imaging modalities, so no single domain is primary."
+T0229,other,A multi-image clinical diagnostic reasoning benchmark names no single imaging modality.
+T0232,other,Semi-supervised medical image segmentation on unnamed benchmarks names no specific modality.
+T0239,other,Medical image segmentation of lesions or organs on four unnamed datasets names no specific modality.
+T0246,other,Pixel-wise pretraining spans 4 unspecified medical imaging modalities.
+T0250,proteins,Cryo-EM pose estimation is used for near-atomic protein 3D reconstruction.
+T0253,proteins,"Cryo-EM denoising supports particle picking and 3D reconstruction of biological macromolecules, i.e. structural biology."
+T0296,radiology,"Most evaluation datasets are cardiac, kidney and brain tumor segmentation (ACDC, KiTS, MSD brain), with skin lesions secondary."
+T0300,other_biology,"The work analyzes mouse behavior from pose and video, with no neural data involved."
+T0303,other,"The model aligns chest X-rays, ECGs, echocardiograms and clinical text, so no single domain is primary."
+T0314,other,Grounded medical MLLM for VQA and segmentation spans four unspecified imaging modalities.
+T0317,other,Universal in-context segmentation across twelve datasets and multiple modalities names no single domain.
+T0321,other,"Predicting nanoparticle distribution from tumor microenvironment components, with no imaging modality named, fits no single domain."
+T0322,other,Class-incremental medical image classification on four unnamed medical datasets names no specific modality.
+T0327,other,Multimodal fusion of medical images and clinical text for diagnosis has no single primary domain.
+T0353,other,A general medical multimodal LLM alignment framework names no specific imaging modality.
+T0359,other,Reference-based anatomical localization with VLMs names no specific imaging modality.
+T0367,other,"Segmentation is benchmarked on mixed 2D datasets (retina, skin, endoscopy, EM) and 3D datasets, so no single domain."
+T0372,radiology,"Segmentation tasks are on X-ray, ultrasound and abdominal CT."
+T0374,other_biology,"The benchmark targets LLM reasoning over wet-lab biological protocols, a general biology domain."
+T0381,radiology,"Registration is evaluated on 3D abdomen, lung and brain medical images."
+T0385,epidemiology_public_health,Conformal prediction of longitudinal patient biomarker trajectories identifies subjects at risk of Alzheimer's progression in clinical studies.
+T0386,other,A general medical MLLM for VQA and reasoning names no specific imaging modality.
+T0390,other,Unsupervised medical anomaly detection on three unnamed benchmarks names no specific modality.
+T0394,other,A generic probabilistic segmentation model applied to unnamed medical imaging benchmarks has no single domain.
+T0413,radiology,"Segmentation targets 3D volumetric medical images of brain stroke and tumor, atrium and pancreas lesions."

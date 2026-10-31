@@ -1,0 +1,24 @@
+item_id,topic,reason
+T1752,other,"Bayesian staging of a multimodal Alzheimer's cohort combining imaging, plasma and cognition, so no single data domain is primary."
+T1758,other,"Insurance fraud detection on claim graphs is a financial anomaly task, not public health or any listed domain."
+T1783,radiology,"The method centres on disentangling sequential chest X-rays, with EHR as an aligned auxiliary stream."
+T1788,ehr_clinical_text,"The main application is adapting LLMs to medicine (HealthBench, HuatuoGPT-3 medical LLM)."
+T1791,radiology,"Evaluated on tumor segmentation in BraTS, KiTS23 and LiTS medical scans."
+T1815,other_biology,"The dataset is mouse 3D pose and behavior, with no neural data recorded or decoded."
+T1829,other_biology,"Video generation for simulating organ, cellular and molecular biological processes."
+T1833,other,Generic medical vision-language pretraining across phenotypes with no single imaging modality named.
+T1837,other,"A position paper on statistical testing frameworks for monitoring deployed clinical AI, not tied to a data domain or population health question."
+T1845,other,Generic conformal segmentation method evaluated on unspecified medical datasets plus COCO.
+T1891,ehr_clinical_text,"Explainability for irregular hospital-record time series, applied to sepsis prediction."
+T1932,molecules_drug_discovery,Protein-ligand interaction model for binding/affinity prediction and discovery of de novo inhibitor compounds.
+T1937,other,"Generic evaluation framework for clinical classifiers (calibration, label shift, costs) without a specific data domain."
+T1944,physiological_signals,"A brain-signal foundation model for zero-shot classification tasks, not aimed at understanding brain function."
+T1986,ehr_clinical_text,Real-world tasks are predicting Crohn's onset and length of stay from routine blood test records.
+T2005,ehr_clinical_text,Evaluated on psychotherapy notes to predict depression and anxiety outcomes.
+T2008,neuroscience,Foundation model for EEG and MEG framed as measuring neural activity from its biophysics.
+T2052,physiological_signals,The model is driven by ECG electrophysiology encoding to generate cardiac motion.
+T2053,pathology_microscopy,Evaluated on whole-slide images and clinical endomicroscopy.
+T2075,genomics_omics,Applied to spatial transcriptomics and single-cell trajectory inference.
+T2080,genomics_omics,The task is generating RNA designs that bind protein targets.
+T2133,pathology_microscopy,Generates fluorescence microscopy images of protein subcellular localization in cells.
+T2168,ehr_clinical_text,A medical multimodal LLM for VQA and report generation across 8 modalities.
