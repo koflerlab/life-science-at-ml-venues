@@ -56,7 +56,7 @@ def points() -> list[dict]:
 
 def fig_map(pts: list[dict]) -> None:
     fig = plt.figure(figsize=(7.2, 8.6))
-    gs = fig.add_gridspec(3, 3, height_ratios=(2.2, 1, 1), hspace=0.25, wspace=0.08)
+    gs = fig.add_gridspec(3, 3, height_ratios=(2.2, 1, 1), hspace=0.32, wspace=0.08)
     ax = fig.add_subplot(gs[0, :])
     order = [f for f, _, _ in FAMILIES][::-1]  # neutral "other" drawn first, underneath
     for f in order:
@@ -72,7 +72,9 @@ def fig_map(pts: list[dict]) -> None:
     ax.set_xticks([]); ax.set_yticks([])
     for s in ax.spines.values():
         s.set_color(GRID)
-    ax.legend(loc="upper left", bbox_to_anchor=(1.0, 1.0), frameon=False, fontsize=7.5, markerscale=1.6)
+    h, lab = ax.get_legend_handles_labels()
+    ax.legend(h[::-1], lab[::-1], loc="upper left", bbox_to_anchor=(1.0, 1.0), frameon=False, fontsize=7.5,
+              markerscale=1.6)
     ax.set_title("(a) Medical papers by topic family (t-SNE of SPECTER2 abstract embeddings)", loc="left", fontsize=9)
     for k, v in enumerate(VENUES):
         a = fig.add_subplot(gs[1 + k // 3, k % 3])
@@ -82,8 +84,10 @@ def fig_map(pts: list[dict]) -> None:
         a.set_xticks([]); a.set_yticks([])
         for s in a.spines.values():
             s.set_color(GRID)
-        a.set_title(f"{VENUE_NAME[v]} (n = {len(sel)})", loc="left", fontsize=8.5)
-    fig.text(0.125, 0.355, "(b) Papers of each venue on the same map", fontsize=9, weight="bold")
+        a.set_title(f"{VENUE_NAME[v]} (n = {len(sel)})", loc="left", fontsize=8.5, weight="normal")
+        if k == 0:
+            a.text(0, 1.32, "(b) Papers of each venue on the same map", transform=a.transAxes, fontsize=9,
+                   weight="bold", va="bottom")
     save(fig, "fig_topics_map")
 
 
@@ -101,11 +105,12 @@ def fig_venue(res: dict) -> None:
                     color="white" if m[i, j] > 25 else INK)
     ax.set_xticks(range(len(VENUES)), [f"{VENUE_NAME[v]}\n(n = {by[v]['n']})" for v in VENUES], fontsize=8)
     ax.set_yticks(range(len(topics)), [TOPIC_NAME[t] for t in topics], fontsize=8)
+    ax.xaxis.tick_top()
     ax.tick_params(length=0)
     for s in ax.spines.values():
         s.set_visible(False)
-    ax.set_title("Share of each venue's medical papers by topic (%)", loc="left", fontsize=9)
-    fig.text(0.0, -0.02, "▲ / ▼ adjusted standardised residual ≥ 3 / ≤ −3 (Note 9-24, T2)", fontsize=7, color=INK2,
+    ax.set_title("Share of each venue's medical papers by topic (%)", loc="left", fontsize=9, pad=28)
+    fig.text(0.0, -0.04,"▲ / ▼ adjusted standardised residual ≥ 3 / ≤ −3 (Note 9-24, T2)", fontsize=7, color=INK2,
              transform=ax.transAxes)
     save(fig, "fig_topics_venue")
 
