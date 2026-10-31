@@ -255,9 +255,157 @@ def run(limit: int | None, frame_path: Path | None = None) -> None:
     print("done:", len(done_keys()), "of", len(frame), "papers with a final status", flush=True)
 
 
+# ---- Note 9-23: recovery of frame papers without a full text -------------------------------------------------
+# Same order as the frozen rule (arXiv HTML, arXiv PDF, open proceedings), extended by the open proceedings that
+# the first run did not index (proceedings.neurips.cc 2025, proceedings.iclr.cc 2025/2026), then
+# the OpenReview API with Kate's own session token, then an open-access PDF listed by OpenAlex. Same title rule.
+PROC_INDEX = {
+    "neurips-2025": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference",
+    "iclr-2025": "https://proceedings.iclr.cc/paper_files/paper/2025",
+    "iclr-2026": "https://proceedings.iclr.cc/paper_files/paper/2026",
+}
+TOKEN_FILE = Path(os.environ.get("USERPROFILE", str(Path.home()))) / ".openreview" / "token"
+RECOVERY = "9-23"
+
+
+def get_auth(url: str, headers: dict) -> tuple[bytes, str] | None:
+    """get() with extra headers (OpenReview token, never logged); None on 403/404."""
+    wait = DELAY - (time.monotonic() - _last.get(family(url), 0.0))
+    if wait > 0:
+        time.sleep(wait)
+    _last[family(url)] = time.monotonic()
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={**HEADERS, **headers}), timeout=90) as r:
+            return r.read(), r.geturl()
+    except urllib.error.HTTPError as e:
+        if e.code in (403, 404):
+            return None
+        raise
+
+
+def parse_proc(page: str, base: str) -> dict:
+    """normalised title -> pdf url, from a proceedings.{neurips,iclr}.cc listing (Abstract page -> Paper pdf)."""
+    out = {}
+    for href, title in re.findall(r'<a[^>]*href="([^"]*/hash/[0-9a-f]+-Abstract-[A-Za-z_]+\.html)"[^>]*>(.*?)</a>',
+                                  page, re.S):
+        pdf = re.sub(r"/hash/([0-9a-f]+)-Abstract-([A-Za-z_]+)\.html$", r"/file/\1-Paper-\2.pdf", href)
+        out[norm(re.sub(r"<[^>]+>", "", title))] = urllib.parse.urljoin(base, pdf)
+    return out
+
+
+def index_recovery() -> None:
+    out = {}
+    for stratum, url in PROC_INDEX.items():
+        got = get(url)
+        if not got:
+            raise SystemExit(f"index missing: {url}")
+        path, sha = store("indexes", f"{stratum}_proc", "html", got[0])
+        mapping = parse_proc(decode(got[0]), got[1])
+        out[stratum] = dict(kind="proc", url=url, path=path, sha256=sha, n=len(mapping), map=mapping)
+        print(stratum, "proc", len(mapping), flush=True)
+    (META / "venue_index_9-23.json").write_text(json.dumps(out), encoding="utf-8")
+
+
+def openalex_pdf(title: str, venue_year: int) -> str | None:
+    """The single OpenAlex work matching the title rule, if it lists an open-access PDF location."""
+    got = get(f"https://api.openalex.org/works?search={urllib.parse.quote(title)}&per-page=5")
+    if not got:
+        return None
+    n = norm(title)
+    hits = [w for w in json.loads(got[0]).get("results", [])
+            if similar(n, norm(w.get("title") or "")) >= RATIO and (w.get("publication_year") or 0) >= venue_year - 1]
+    if len({w["id"] for w in hits}) != 1:
+        return None
+    pdfs = [loc["pdf_url"] for loc in hits[0].get("locations") or [] if loc.get("is_oa") and loc.get("pdf_url")]
+    return pdfs[0] if pdfs else None
+
+
+def recover_one(p: dict, vidx: dict, token: str | None) -> dict:
+    rec = dict(key=key_of(p), stratum=p["stratum"], forum_id=p["forum_id"], group=p["group"], recovery=RECOVERY,
+               retrieved_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
+    year = int(p["stratum"][-4:])
+    status, aid, ratio = search(p["title"], year)
+    rec.update(match=status, arxiv_id=aid, match_ratio=round(ratio, 4))
+    if aid:
+        got = get(f"https://arxiv.org/html/{aid}")
+        if got and html_text_len(got[0]) >= MIN_TEXT:
+            path, sha = store("arxiv_html", rec["key"], "html", got[0])
+            return dict(rec, status="ok", source="arxiv_html", url=got[1], path=path, sha256=sha, bytes=len(got[0]))
+        got = get(f"https://arxiv.org/pdf/{aid}")
+        if got and got[0][:4] == b"%PDF":
+            path, sha = store("arxiv_pdf", rec["key"], "pdf", got[0])
+            return dict(rec, status="ok", source="arxiv_pdf", url=got[1], path=path, sha256=sha, bytes=len(got[0]))
+    v = vidx.get(p["stratum"])
+    url, source = None, None
+    if v and v["kind"] == "pmlr":
+        url, source = v["map"].get(p["forum_id"]), "pmlr"
+    elif v:
+        n = norm(p["title"])
+        hits = [u for t, u in v["map"].items() if similar(n, t) >= RATIO]
+        url, source = (hits[0] if len(hits) == 1 else None), ("cvf" if v["kind"] == "cvf" else v["stratum_source"])
+    if url:
+        got = get(url)
+        if got and got[0][:4] == b"%PDF":
+            path, sha = store("venue_pdf", rec["key"], "pdf", got[0])
+            return dict(rec, status="ok", source=source, url=got[1], path=path, sha256=sha, bytes=len(got[0]))
+    if token and not p["forum_id"].startswith("src:"):
+        got = get_auth(f"https://api2.openreview.net/pdf?id={p['forum_id']}", {"Authorization": "Bearer " + token})
+        if got and got[0][:4] == b"%PDF":
+            path, sha = store("openreview_pdf", rec["key"], "pdf", got[0])
+            return dict(rec, status="ok", source="openreview", url=f"https://openreview.net/pdf?id={p['forum_id']}",
+                        path=path, sha256=sha, bytes=len(got[0]))
+    oa = openalex_pdf(p["title"], year)
+    if oa:
+        got = get_auth(oa, {})  # 403 (e.g. a bot check) counts as no PDF, it is never retried around
+        if got and got[0][:4] == b"%PDF":
+            path, sha = store("openalex_pdf", rec["key"], "pdf", got[0])
+            return dict(rec, status="ok", source="openalex", url=got[1], path=path, sha256=sha, bytes=len(got[0]))
+    return dict(rec, status="no_fulltext" if aid or url or oa else status)
+
+
+def last_rows() -> dict:
+    out = {}
+    for line in MANIFEST.read_text(encoding="utf-8").splitlines():
+        r = json.loads(line)
+        out[r["key"]] = r
+    return out
+
+
+def recover(limit: int | None) -> None:
+    """Frame papers whose last manifest row is not ok and has no Note 9-23 attempt yet; proceedings strata first."""
+    frame = json.loads((HERE / "results" / "p9_frame.json").read_text(encoding="utf-8"))
+    vidx = json.loads((META / "venue_index.json").read_text(encoding="utf-8"))
+    for s, v in json.loads((META / "venue_index_9-23.json").read_text(encoding="utf-8")).items():
+        vidx[s] = dict(v, stratum_source=s.split("-")[0] + "_proc")
+    token = TOKEN_FILE.read_text(encoding="utf-8").strip() if TOKEN_FILE.exists() else None
+    print("openreview token:", "present" if token else "absent", flush=True)
+    last = last_rows()
+    todo = [p for p in frame if last.get(key_of(p), {}).get("status") != "ok"
+            and not (last.get(key_of(p), {}).get("recovery") == RECOVERY and last[key_of(p)]["status"] in FINAL)]
+    todo.sort(key=lambda p: (p["stratum"] not in PROC_INDEX, p["stratum"], p["forum_id"]))
+    todo = todo[:limit]
+    stats = Counter()
+    for i, p in enumerate(todo, 1):
+        try:
+            rec = recover_one(p, vidx, token)
+        except Exception as exc:  # recorded, retried on the next run
+            rec = dict(key=key_of(p), stratum=p["stratum"], forum_id=p["forum_id"], group=p["group"],
+                       recovery=RECOVERY, status="error", error=f"{type(exc).__name__}: {str(exc)[:150]}")
+        with MANIFEST.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(rec) + "\n")
+        stats[rec["status"] if rec["status"] != "ok" else rec["source"]] += 1
+        if i % 25 == 0 or i == len(todo):
+            print(f"{i}/{len(todo)} {dict(stats)}", flush=True)
+
+
 if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "run"
-    if mode == "index":
+    if mode == "index-recovery":
+        index_recovery()
+    elif mode == "recover":
+        args = sys.argv[2:]
+        recover(int(args[args.index("--limit") + 1]) if "--limit" in args else None)
+    elif mode == "index":
         index()
     else:
         args = sys.argv[2:]

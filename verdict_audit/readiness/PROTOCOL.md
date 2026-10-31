@@ -868,3 +868,71 @@ estimates of E-a from `results/p9_papers.csv` before this note was written (code
   E-c, claim verdicts of medical vs other attempted papers: verified 21.7% vs 49.7%, falsified 3.6% vs 4.7%, toy
   25.5% vs 20.9% (difference +4.7, -0.6 to +10.7), inconclusive 49.2% vs 24.8%; papers with any toy verdict 64.5% vs
   71.3% (-6.8, -15.9 to +2.3).
+
+## Note 9-23 (2026-11-01, full-text recovery, frozen before any recovery request)
+
+Kate decided on 2026-10-31 to complete full-text coverage of the frame and to report the result in version 1 of the
+medRxiv manuscript (not yet approved for posting). 1,062 of the 4,340 frame papers had no full text (1,057
+`no_match`, 4 `error`, 1 `no_fulltext`). The frozen rule lists proceedings.neurips.cc and ECVA among the open
+proceedings, but `fetch_p9.py` indexed only PMLR and CVF; NeurIPS 2025 is now on proceedings.neurips.cc and ICLR
+2025 and 2026 on proceedings.iclr.cc (not named in the protocol). The protocol excluded OpenReview scraping;
+unauthenticated OpenReview requests now meet a bot check (HTTP 403, `ChallengeRequiredError`).
+
+Disclosure of what was seen before this note (2026-10-31): one unauthenticated OpenReview request per stratum
+(403); with Kate's own OpenReview session token (she logged in herself; the token is stored outside the repository
+and the data tree and never logged), one ICLR 2025 PDF (HTTP 200, content discarded) and five NeurIPS 2026 notes
+(HTTP 403 "no permission": NeurIPS 2026 papers are not public before the conference); title counts of the missing
+papers against the proceedings listings (476 of 493 missing NeurIPS 2025, ICLR 2025 and ICLR 2026 papers have an
+identical normalised title); arXiv and OpenAlex on a random 20 of the missing NeurIPS 2026 and ECCV 2026 papers (0
+arXiv matches, 1 OpenAlex open-access PDF). No recovered text was read and nothing was coded.
+
+* Units: frame papers whose last manifest row is not `ok`. Script `fetch_p9.py index-recovery` and
+  `fetch_p9.py recover`; manifest rows carry `recovery: "9-23"`.
+* Order: arXiv HTML, arXiv PDF (unchanged search and title rule); open proceedings (PMLR and CVF as before,
+  proceedings.neurips.cc 2025 and proceedings.iclr.cc 2025 and 2026 by a unique normalised title similarity of at
+  least 0.95); the OpenReview API PDF with Kate's session token (public notes only); a unique OpenAlex work with
+  title similarity of at least 0.95 and publication year at least the venue year minus 1 that lists an open-access
+  PDF. A bot check or an access refusal counts as no full text and is never worked around. Spacing as before.
+* Excerpts, sheets and coding exactly as Protocol 9: `build_p9_excerpts.py`, then `build_p9_sheets.py final` (item
+  ids and the 25% coder-2 sample were fixed over the whole frame by `init`); coder 1 on every new paper, coder 2 on
+  the new papers in its sample, coder2full on the rest for variance and compute (Note 9-6), every variance and
+  compute disagreement adjudicated (Note 9-6, claude-opus-5-5, labels in random order); other fields from coder 1
+  (Note 9-5). Coders claude-sonnet-5-5, unchanged `CODER_PROMPT.md` with this repository's paths, one batch of 20
+  per instance (Note 9-18). Agreement is reported for the new papers alone and pooled.
+* Analyses: A9.3 and Note 9-22 E-a and E-b are rerun on all coded papers; these become the main estimates of the
+  manuscript. The estimates on the 3,278 papers of the first retrieval (results at commit 092e8a5) are reported as a
+  sensitivity analysis. Labels L9.1 to L9.3 are re-evaluated by the unchanged rule; any change in a label or in the
+  sign of a pooled difference is reported in the abstract.
+* Post hoc, exploratory (`posthoc_p9_recovery.py`, `results/p9_recovery.json`): within venue-year strata, the
+  pooled difference in each A9.3 indicator between recovered papers and papers of the first retrieval (MH and
+  bootstrap as in A9.3), by group; it asks whether papers found on arXiv document more than the others.
+* Papers still without a full text are counted by group and venue-year. A later pass after the NeurIPS 2026 papers
+  become public would need its own note.
+
+## Note 9-24 (2026-11-01, topics of the medical papers, post hoc, codebook frozen before any paper is coded)
+
+Kate asked on 2026-10-31 for a summary table of the topics of the medical papers and a t-SNE map of their abstracts
+showing which topics appear more often at which venue. Post hoc and descriptive. Kate chose a fixed codebook with two
+blind coders over clusters, and the 2,170 medical papers as the corpus.
+
+* Units: all 2,170 medical papers, with or without a full text. Input: title and abstract from the venue listing
+  (`papers.json`). Venue, year, group and the clinical or life-science label are hidden; items in random order
+  (seed 20261101), item ids `T0000` onward; keys in `data/p9/topic_keys.json` (git-ignored).
+* Codebook (one primary topic, the application domain the paper's method is built for or evaluated on; prompt
+  `codes/p9/topics/TOPIC_PROMPT.md`): radiology, pathology_microscopy, other_clinical_imaging, ehr_clinical_text,
+  physiological_signals, neuroscience, genomics_omics, proteins, molecules_drug_discovery, chemistry_materials,
+  epidemiology_public_health, other_biology, other.
+* Coders: two blind claude-sonnet-5-5 subagents (roles topic1, topic2) code every paper, batches of 50, several
+  batches per instance (Note 9-16). Cohen's kappa reported, no gate; every disagreement adjudicated blind by
+  claude-opus-5-5 (labels in random order, one-sentence reason; `ADJ`-style prompt in the same folder). Final topic:
+  the agreed label or the adjudicated one.
+* Analyses (`posthoc_p9_topics.py`, `results/p9_topics.json`): T1 counts and shares of each topic per venue (six
+  venues, years pooled) and per venue-year, Wilson intervals; T2 chi-square test of venue by topic with adjusted
+  standardised residuals, a cell read as over- or under-represented only if its residual is at least 3 in absolute
+  value; T3 shares by year (2025 versus 2026); T4 per topic among coded papers, the shares reporting code released,
+  open main data, weights released and variance (Note 9-5 indicators, `unclear` excluded); T5 among attempted ICML
+  2026 medical papers (Note 9-10), papers and the decided share per topic. All descriptive, no multiplicity
+  correction.
+* Map: SPECTER2 base (`allenai/specter2_base`, revision recorded) CLS embedding of title, separator and abstract;
+  t-SNE (scikit-learn, cosine metric, perplexity 30, PCA initialisation, random_state 20261101); points coloured by
+  final topic, a second panel by venue. The map illustrates the table and is not used for inference.
