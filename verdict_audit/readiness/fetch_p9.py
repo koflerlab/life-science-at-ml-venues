@@ -306,6 +306,20 @@ def index_recovery() -> None:
     (META / "venue_index_9-23.json").write_text(json.dumps(out), encoding="utf-8")
 
 
+def public_http_url(url: str) -> bool:
+    """OpenAlex URLs are external data: only http(s) to a host that resolves to public addresses only."""
+    import ipaddress
+    import socket
+    u = urllib.parse.urlparse(url)
+    if u.scheme not in ("http", "https") or not u.hostname:
+        return False
+    try:
+        addrs = {a[4][0] for a in socket.getaddrinfo(u.hostname, None)}
+    except OSError:
+        return False
+    return all(ipaddress.ip_address(a.split("%")[0]).is_global for a in addrs)
+
+
 def openalex_pdf(title: str, venue_year: int) -> str | None:
     """The single OpenAlex work matching the title rule, if it lists an open-access PDF location."""
     got = get(f"https://api.openalex.org/works?search={urllib.parse.quote(title)}&per-page=5")
@@ -316,7 +330,8 @@ def openalex_pdf(title: str, venue_year: int) -> str | None:
             if similar(n, norm(w.get("title") or "")) >= RATIO and (w.get("publication_year") or 0) >= venue_year - 1]
     if len({w["id"] for w in hits}) != 1:
         return None
-    pdfs = [loc["pdf_url"] for loc in hits[0].get("locations") or [] if loc.get("is_oa") and loc.get("pdf_url")]
+    pdfs = [loc["pdf_url"] for loc in hits[0].get("locations") or []
+            if loc.get("is_oa") and loc.get("pdf_url") and public_http_url(loc["pdf_url"])]
     return pdfs[0] if pdfs else None
 
 
