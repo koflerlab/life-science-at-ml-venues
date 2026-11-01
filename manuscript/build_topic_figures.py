@@ -115,6 +115,31 @@ def fig_venue(res: dict) -> None:
     save(fig, "fig_topics_venue")
 
 
+def fig_map_readme(pts: list[dict]) -> None:
+    """Single large t-SNE panel for the README: points by topic family, family names placed on the map."""
+    fig, ax = plt.subplots(figsize=(10, 7))
+    for f, _, _ in FAMILIES[::-1]:
+        sel = [p for p in pts if p["family"] == f]
+        ax.scatter([p["x"] for p in sel], [p["y"] for p in sel], s=14, c=COLOR[f], alpha=0.85, linewidths=0.5,
+                   edgecolors="white", label=f"{f} ({len(sel)})", zorder=2)
+    for f, _, _ in FAMILIES[:-1]:
+        sel = np.array([(p["x"], p["y"]) for p in pts if p["family"] == f])
+        mx, my = np.median(sel, axis=0)
+        ax.text(mx, my, f, fontsize=10, weight="bold", color=INK, ha="center", va="center", zorder=3,
+                bbox=dict(boxstyle="round,pad=0.3", fc="white", ec=COLOR[f], lw=1.2, alpha=0.92))
+    ax.set_xticks([]); ax.set_yticks([])
+    for s in ax.spines.values():
+        s.set_visible(False)
+    h, lab = ax.get_legend_handles_labels()
+    ax.legend(h[::-1], lab[::-1], loc="upper center", bbox_to_anchor=(0.5, -0.01), ncol=4, frameon=False,
+              fontsize=8.5, markerscale=1.6)
+    ax.set_title(f"{len(pts):,} medical and life-science papers at CVPR, ICCV, ECCV, ICLR, ICML and NeurIPS 2025-2026",
+                 fontsize=11, loc="left")
+    fig.text(0.125, 0.02, "t-SNE of SPECTER2 abstract embeddings; colour = topic coded by two blind coders (Note 9-24)",
+             fontsize=8, color=INK2)
+    save(fig, "fig_tsne_readme")
+
+
 def fig_axes() -> None:
     """Note 9-26: share of medical and other papers per label of each axis (all 4,340 papers)."""
     res = json.loads((RES / "p9_axes.json").read_text(encoding="utf-8"))["X1"]
@@ -139,7 +164,9 @@ def fig_axes() -> None:
 
 def main() -> None:
     res = json.loads((RES / "p9_topics.json").read_text(encoding="utf-8"))
-    fig_map(points())
+    pts = points()
+    fig_map(pts)
+    fig_map_readme(pts)
     fig_venue(res)
     fig_axes()
     print("wrote", FIG / "fig_topics_map.png", FIG / "fig_topics_venue.png", FIG / "fig_axes.png")

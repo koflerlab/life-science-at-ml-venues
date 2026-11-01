@@ -9,7 +9,9 @@ and do agents reproduce them as well? Data, code, frozen protocol and manuscript
 **4,340 papers** (2,170 medical, 2,170 other) from CVPR, ICCV, ECCV, ICLR, ICML and NeurIPS 2025-2026;
 **3,787 full texts** coded on twelve practices by two blind LLM coders with adjudication.
 
-**Explore:** [interactive map](https://kondratevakate.github.io/life-science-at-ml-venues/) · [dataset on Hugging Face](https://huggingface.co/datasets/kondratevakate/life-science-at-ml-venues)
+**Data:** [dataset on Hugging Face](https://huggingface.co/datasets/kondratevakate/life-science-at-ml-venues)
+
+![t-SNE map of the medical papers by topic](manuscript/figures/fig_tsne_readme.png)
 
 ## Key findings
 
@@ -26,11 +28,6 @@ and do agents reproduce them as well? Data, code, frozen protocol and manuscript
 
 ![Data, method and architecture](manuscript/figures/fig_axes.png)
 
-<details><summary>t-SNE map of the medical abstracts</summary>
-
-![t-SNE map](manuscript/figures/fig_topics_map.png)
-
-</details>
 
 ## Where things are
 
