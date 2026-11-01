@@ -1,29 +1,37 @@
 # Life science at ML venues
 
-Reproducibility practice in medical and life-science papers at top machine-learning venues, and what happens to
-them under agentic reproduction. Data, code, frozen protocol and manuscript for:
+Do medical and life-science papers at top ML venues report reproducibility practices more often than other papers,
+and do agents reproduce them as well? Data, code, frozen protocol and manuscript for:
 
 > Kondrateva E, Kofler F, Simkó A. Reported reproducibility practices and agentic reproduction outcomes in medical
-> and life-science papers at major ML conferences: a systematic meta-research study. Preprint in preparation for
-> medRxiv. An earlier version was submitted as the PSE9 abstract "Well documented, rarely picked".
+> and life-science papers at major ML conferences: a systematic meta-research study. medRxiv preprint in preparation.
 
-The frame is every paper labelled clinical or life science at CVPR 2025, ICCV 2025, ECCV 2026, ICLR 2025 and 2026,
-ICML 2025 and 2026 and NeurIPS 2025 and 2026 (2,170) plus an equal random sample of other papers; 3,787 full texts
-were coded on twelve practices. Reproduction outcomes come from the ICML 2026 agent reproduction challenge. The study
-is built to be rerun on later venue-years with the same frame procedure and codebook.
+**4,340 papers** (2,170 medical, 2,170 other) from CVPR, ICCV, ECCV, ICLR, ICML and NeurIPS 2025-2026;
+**3,787 full texts** coded on twelve practices by two blind LLM coders with adjudication.
+
+## Key findings
+
+* Medical papers report releasing **code** (59% vs 47%), **weights**, **open data** and **variance** more often.
+* Few papers in either group link their main claims to a specific result (2.5% vs 5.8%).
+* In the ICML 2026 agent reproduction challenge, attempted medical papers reached a verdict less often (46% vs 66%).
+* Exploratory: within the same type of data, the open-data advantage disappears (Note 9-27).
+
+![Medical minus other, reported practices](manuscript/figures/fig3.png)
 
 ## What the papers are about
 
-Topics of the 2,170 medical papers (two blind coders, kappa 0.91; Note 9-24), and type of data, method and
-architecture of all 4,340 frame papers (Notes 9-26 and 9-27). Post hoc and descriptive.
-
 ![Topic by venue](manuscript/figures/fig_topics_venue.png)
 
-![t-SNE map of medical abstracts](manuscript/figures/fig_topics_map.png)
+![Data, method and architecture](manuscript/figures/fig_axes.png)
 
-![Data, method and architecture, medical vs other](manuscript/figures/fig_axes.png)
+<details><summary>t-SNE map of the medical abstracts</summary>
+
+![t-SNE map](manuscript/figures/fig_topics_map.png)
+
+</details>
 
 ## Where things are
+
 
 | Path | What |
 |---|---|
@@ -34,6 +42,8 @@ architecture of all 4,340 frame papers (Notes 9-26 and 9-27). Post hoc and descr
 | [`manuscript/`](manuscript/) | Manuscript source, figure and table builder (checks every quoted number against the results), Word export, supplementary files |
 | [`setup_data.py`](setup_data.py) | Links the downloaded inputs into the paths the frozen scripts expect |
 | [`PROVENANCE.md`](PROVENANCE.md) | Where this repository comes from and how to verify the protocol freeze |
+
+<details><summary>Earlier protocols and files not included</summary>
 
 `verdict_audit/e1_adjusted/` and `verdict_audit/falsifiability/` hold earlier protocols (4 and 6) of the same
 project. They are here only because the analysis code imports from them.
@@ -51,7 +61,10 @@ data registry. With the registered 2026-10-27 copy (`icml2026-challenge-snapshot
 lists one more paper, the script reproduces every value except one descriptive mean (anchored claims per other
 paper, 4.6947 vs 4.6974); no number in the manuscript depends on it.
 
-## Reproduce
+</details>
+
+<details><summary>Reproduce</summary>
+
 
 ```bash
 python -m pip install -r verdict_audit/requirements.txt matplotlib python-docx   # Python 3.11
@@ -81,6 +94,8 @@ The analyses start from the committed codes; the raw inputs are needed only to r
   `build_p9_release.py`).
 
 Listing files, abstracts and full texts are not redistributed: they belong to the venues, arXiv and the authors.
+
+</details>
 
 ## Licence
 
