@@ -11,8 +11,10 @@
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171a;--panel:#1d2126;--ink:#e8ebee;--ink2:#b3bcc5;--mut:#8f9aa5;--line:#2c333a;--dim:#2e353c;--accent:#6fb1ff;--c6:#d6c43a}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
 header{padding:20px 16px 8px;max-width:1280px;margin:0 auto}h1{font-size:22px;margin:0 0 4px}header p{margin:0;color:var(--ink2);max-width:80ch}
-main{display:grid;grid-template-columns:260px minmax(0,1fr) 280px;gap:14px;max-width:1280px;margin:0 auto;padding:12px 16px 40px}
-@media(max-width:1000px){main{grid-template-columns:minmax(0,1fr)}}
+main{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-areas:'map map' 'filt stats';gap:16px;max-width:1280px;margin:0 auto;padding:12px 16px 40px}
+#mapc{grid-area:map}#filt{grid-area:filt}#stats{grid-area:stats}
+@media(max-width:900px){main{grid-template-columns:minmax(0,1fr);grid-template-areas:'map' 'stats' 'filt'}}
+#shares{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
 h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:0 0 8px}
 details{border-top:1px solid var(--line);padding:6px 0}summary{cursor:pointer;font-weight:600;font-size:14px}
@@ -21,11 +23,11 @@ details{border-top:1px solid var(--line);padding:6px 0}summary{cursor:pointer;fo
 .chip[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
 select,input[type=search]{width:100%;padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit;margin-bottom:8px}
 button.link{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font:inherit}
-#wrap{position:relative;height:min(72vh,640px);min-height:380px}canvas{width:100%;height:100%;display:block;border-radius:6px;cursor:crosshair}
+#wrap{position:relative;height:min(78vh,720px);min-height:380px}canvas{width:100%;height:100%;display:block;border-radius:6px;cursor:crosshair}
 #tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.18);border-radius:8px;padding:8px 10px;font-size:13px;max-width:320px;display:none;z-index:3}
 #tip b{display:block;margin-bottom:2px}#tip span{color:var(--ink2)}
 .legend{display:flex;flex-wrap:wrap;gap:4px 12px;margin:8px 0;font-size:12px;color:var(--ink2)}.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
-.row{margin:10px 0}.row .top{display:flex;justify-content:space-between;font-size:13px}.row .top b{font-variant-numeric:tabular-nums}
+.row{margin:4px 0}.row .top{display:flex;justify-content:space-between;font-size:13px}.row .top b{font-variant-numeric:tabular-nums}
 .bar{position:relative;height:8px;background:var(--dim);border-radius:4px;margin-top:4px}.bar>div{height:100%;background:var(--accent);border-radius:4px}.bar>u{position:absolute;top:-3px;width:2px;height:14px;background:var(--ink)}
 small{color:var(--mut)}table{border-collapse:collapse;width:100%;font-size:12px;margin-top:8px}td,th{padding:2px 4px;text-align:right;border-top:1px solid var(--line)}td:first-child,th:first-child{text-align:left}
 #err{color:#b3261e;display:none;margin:0 16px}
@@ -38,7 +40,7 @@ small{color:var(--mut)}table{border-collapse:collapse;width:100%;font-size:12px;
 </header>
 <div id="err" class="card" role="alert"></div>
 <main>
-<aside class="card" aria-label="Filters">
+<aside class="card" id="filt" aria-label="Filters">
 <h2>Filters</h2>
 <input type="search" id="q" placeholder="Search title" aria-label="Search title"/>
 <div id="filters"></div>
@@ -46,12 +48,12 @@ small{color:var(--mut)}table{border-collapse:collapse;width:100%;font-size:12px;
 <h2 style="margin-top:12px">Colour by</h2>
 <select id="colorBy" aria-label="Colour by"></select>
 </aside>
-<section class="card">
+<section class="card" id="mapc">
 <div id="wrap"><canvas id="cv" role="img" aria-label="t-SNE map of medical papers; the table on the right has the numbers"></canvas><div id="tip"></div></div>
 <div class="legend" id="legend"></div>
 <small>Hover a dot for details, click to open it on OpenReview. Positions come from SPECTER2 embeddings and t-SNE; distances between far-apart clusters are not meaningful.</small>
 </section>
-<aside class="card" aria-live="polite">
+<aside class="card" id="stats" aria-live="polite">
 <h2>Selected papers</h2>
 <div><b id="n" style="font-size:26px">-</b> <small id="nsub"></small></div>
 <div id="shares"></div>
