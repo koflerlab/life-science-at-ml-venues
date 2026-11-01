@@ -280,8 +280,9 @@ def fig1(p9: dict) -> None:
     why = Counter(s for _, s in ft.elements())
     lost = {g: sum(n for (gg, _), n in ft.items() if gg == g) for g in ("life_science", "other")}
     nofull = (f"Excluded: no full text{nl}n = {sum(why.values()):,}{nl}medical {lost['life_science']:,}, "
-              f"other {lost['other']:,}{nl}no arXiv match and no{nl}open proceedings: {why['no_match']:,}{nl}"
-              f"download failed: {why['error']}{nl}no usable text: {why['no_fulltext']}")
+              f"other {lost['other']:,}{nl}no match on any{nl}source: {why['no_match']:,}{nl}"
+              f"OpenAlex not checked,{nl}quota reached: {why['error']}")
+    assert set(why) <= {"no_match", "error"}
     assert sum(why.values()) == frame - coded["life_science"] - coded["other"]
     for (y0, y1), text, h, fs in (((Y[1], Y[2]), f"Excluded:{nl}labelled not medical{nl}n = {SCREEN['excluded_no']:,}",
                                    0.085, 8),

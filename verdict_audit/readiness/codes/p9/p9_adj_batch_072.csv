@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P0764,compute,none,"The excerpts give model, data and training details but never state hardware, GPU type or training time."
+P0785,variance,no,"Main results are single values per method; the only standard deviations are of token lengths in data filtering, not of results."
+P0785,compute,none,"No hardware, GPU type or training time is stated anywhere in the excerpts."
+P0794,variance,no,"Main results are reported without seeds, error bars or standard deviations; only hyperparameter and initialization sensitivity tables appear."
+P0808,compute,unclear,"The text only says scorer distillation is over 200 times more expensive on GPU machines and points to Table 7, without showing hardware or times."
+P0831,variance,no,"Comparison tables are described with single PSNR values and no seeds, error bars or standard deviations are mentioned."
+P0831,compute,none,"No hardware, GPU or training time is stated in the excerpts."
+P0838,variance,no,The checklist error-bar question has no visible answer and the reported results (e.g. Table 5) are single values with no seeds or error bars.
+P0845,variance,unclear,"Three seeds with standard deviations are reported only for training wall-clock time, while the main performance table (Table 3) has single values."
+P0873,compute,unclear,"Only a 16-hour runtime for tree-of-life reconstruction is given, with no hardware stated, and details are deferred to an appendix not shown."
+P0883,variance,no,Five model seeds are used only to generate candidate samples for selection; Table 1 reports single success rates without error bars or spread.
+P0898,compute,none,"No hardware, GPU or training time is stated in the excerpts."
+P0993,variance,no,Error bars appear only for the SD-LoRA baseline across task orders in Fig. 2b; main result tables report single mAP values.
+P1007,variance,no,"The untruncated text reports accuracy and F1 as single values with no seeds, error bars or intervals."
+P1007,compute,none,The untruncated text mentions computational overhead but never states hardware or time.
+P1113,compute,none,"No hardware, GPU or training time is stated in the excerpts."
+P1119,compute,none,Only a dollar cost for collecting judge labels is given; no hardware or training time is stated.
+P1124,compute,none,"No hardware, GPU or training time is stated in the excerpts."
+P1125,compute,none,Training hyperparameters are given but no hardware or training time is stated.
+P1167,compute,none,"Pretraining configuration (batch size, steps) is given but no hardware or training time is stated."

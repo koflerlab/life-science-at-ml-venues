@@ -1,14 +1,18 @@
 {
- "papers_with_fulltext": 3278,
+ "papers_with_fulltext": 3787,
  "by_source_and_status": {
-  "arxiv_html|ok": 2845,
+  "arxiv_html|ok": 2867,
   "arxiv_pdf|ok": 18,
-  "cvf|ok": 103,
+  "cvf|ok": 104,
+  "iclr_proc|ok": 278,
+  "neurips_proc|ok": 196,
+  "openalex|ok": 7,
+  "openreview|ok": 5,
   "pmlr|ok": 312
  },
- "truncated": 2793,
- "intro_found": 3191,
- "checklist_items_found": 204,
+ "truncated": 3261,
+ "intro_found": 3691,
+ "checklist_items_found": 210,
  "median_chars": 15000,
- "with_matched_section": 2976
+ "with_matched_section": 3451
 }

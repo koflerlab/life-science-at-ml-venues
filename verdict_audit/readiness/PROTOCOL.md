@@ -936,3 +936,33 @@ blind coders over clusters, and the 2,170 medical papers as the corpus.
 * Map: SPECTER2 base (`allenai/specter2_base`, revision recorded) CLS embedding of title, separator and abstract;
   t-SNE (scikit-learn, cosine metric, perplexity 30, PCA initialisation, random_state 20261101); points coloured by
   final topic, a second panel by venue. The map illustrates the table and is not used for inference.
+
+## Note 9-25 (2026-11-01, outcome of the Note 9-23 recovery, written after the analyses were rerun)
+
+* Retrieval (`fetch_p9.py recover`, 1,062 papers, rows with `recovery: "9-23"`): 509 full texts (proceedings.iclr.cc
+  278, proceedings.neurips.cc 196, arXiv HTML 22, OpenAlex 7, OpenReview 5, CVF 1); 302 medical and 207 other.
+  130 papers had no match on any source. 423 rows are `error`: OpenAlex answered HTTP 429 once its unauthenticated
+  daily quota (1,000 credits, 10 per search) was spent; for these papers every earlier source had already returned
+  nothing, so only the OpenAlex step is missing (in the runs before the quota ran out, OpenAlex gave a PDF for 7
+  papers). They stay `error` and `recover` retries them; a retry with an OpenAlex API key needs no other change.
+* Still without full text: 553 of 4,340 (300 medical, 253 other): NeurIPS 2026 464 (254 medical, 210 other; not
+  public before the conference), ECCV 2026 76 (44, 32), 13 elsewhere. Coverage is 3,787 of 4,340 (87.3%); it is
+  lower for medical than for other NeurIPS 2026 papers (177 of 431 against 221 of 431), a limitation of that stratum.
+* Coding as Note 9-23: coder-1 batches 164 to 189, coder-2 batches 41 to 47 (130 papers of the fixed sample),
+  coder2full batches 124 to 142 (379 papers; `build_p9_sheets.py full2more` appends them, earlier batches unchanged),
+  adjudication batches 71 to 78 (149 disagreements: variance 54, compute 95). Deviation in delivery only: each coder
+  and adjudicator instance received the unchanged prompt text, with this repository's paths, as a file to read
+  rather than inline. Agreement on the new papers alone (coder-2 sample, n = 130): kappa 0.59 (environment) to 1.00;
+  variance 0.85, compute 0.82; variance and compute over all 509 new papers 0.82 and 0.74. Pooled (n = 943 for the
+  sample fields): unchanged gate decisions.
+* Results (main estimates now on 3,787 coded papers; first retrieval on 3,278 at commit 092e8a5 as sensitivity):
+  no L9 label changes (L9.1 to L9.3 not met in both). A9.3 pooled differences keep their sign; the largest moves are
+  weights release +2.0 and outputs release +2.1 percentage points. Note 9-22 E-a keeps every sign; in E-b the pooled
+  outputs-release difference changes sign, from -0.17 to +0.12 percentage points (95% CI -0.83 to 1.04), so it is
+  reported in the abstract as required by Note 9-23.
+* Post hoc (`results/p9_recovery.json`): recovered papers report variance more often than first-retrieval papers
+  within strata (medical +9.0, other +9.3 points, intervals above 0), medical recovered papers report the
+  environment more (+19.8), and enumerated claims less (-2.0 and -3.9); other indicators include 0. Exploratory.
+* `posthoc_p9_uptake.py` reads `claims_anchored.json` from the repository root; that file exists only in the
+  predecessor repository (`icml/icml-repro-working`), so it was run with `p8_common.ROOT` pointed there; its result
+  is unchanged (all its ICML 2026 papers were coded before).

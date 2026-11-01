@@ -1,0 +1,10 @@
+item_id,claims,code,main_data_access,open_data_experiment,synthetic_or_sample_release,weights_release,outputs_release,variance,environment,compute,compute_tier,data_scale
+P4259,none,no,unclear,unclear,unclear,unclear,unclear,unclear,unclear,none,not_stated,not_stated
+P4268,listed,released,unclear,unclear,yes,yes,yes,unclear,unclear,none,not_stated,gt_1e6
+P4273,listed,no,unclear,unclear,unclear,unclear,unclear,unclear,unclear,none,not_stated,1e4_1e6
+P4279,listed,no,unclear,unclear,unclear,unclear,unclear,unclear,unclear,none,not_stated,not_stated
+P4292,listed,no,unclear,unclear,unclear,unclear,unclear,yes,unclear,unclear,not_stated,1e4_1e6
+P4308,listed,released,synthetic_only,no,no,unclear,unclear,unclear,unclear,unclear,not_stated,not_stated
+P4311,listed,released,unclear,unclear,unclear,unclear,unclear,yes,unclear,none,not_stated,lt_1e4
+P4312,listed,released,unclear,unclear,unclear,unclear,unclear,yes,unclear,none,not_stated,not_stated
+P4314,none,no,open,yes,unclear,unclear,unclear,no,unclear,none,not_stated,not_stated

@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P2692,compute,unclear,Elapsed wall time is mentioned but no hardware or GPU time appears in the truncated excerpts; settings are deferred to an appendix not shown.
+P2705,variance,no,"No standard deviations, seeds or intervals appear for results; the only std mention is a cohort-feature formula, and the H100 environment section reports no variance."
+P2726,variance,no,"The only reported results (Table 15) are single point values with no error bars, seeds or intervals."
+P2748,variance,no,"No seeds, error bars or standard deviations of results appear; the std mentioned is the Wiener noise parameter of the model."
+P2748,compute,unclear,"The excerpts give no hardware or run-time information, only a note that simulation is computationally costly, and the text is truncated."
+P2792,variance,no,"No seeds, error bars or standard deviations of results appear; the only std mention is inside a metric formula."
+P2792,compute,unclear,"The agents use GPT-4o but no hardware, run time or API cost is stated in the truncated excerpts."
+P2796,variance,no,"No seeds, error bars or standard deviations appear in the excerpts; the seeds match is just a generated explanation text."
+P2801,variance,no,"No repeated runs, error bars or standard deviations appear; implementation details give single-run settings only."
+P2823,compute,unclear,The text mentions an HPC/SLURM setup but gives no specific hardware or time in the truncated excerpts.
+P2939,compute,amount,The compute checklist states that GPU hardware and training time are specified in Section 4.2.
+P2949,variance,yes,The main results table reports 10/50/90 percentile spreads of F1-scores for each algorithm and dataset.
+P3311,variance,no,"Main result tables report single point values with no standard deviations, seeds or intervals."
+P3319,variance,no,The only standard deviation shown is for the KDE bandwidth in an ablation; main results are reported as averages without error bars.
+P3324,variance,yes,"The checklist says each experiment is run 10 times with different random splits and averaged, although no error bars are reported."
+P3348,compute,unclear,"Implementation sections give parameter counts and batch sizes but no hardware or training time, and the text is truncated."
+P3368,compute,unclear,Only pre-training FLOPs in an ablation figure are mentioned; no hardware or time appears in the truncated excerpts.
+P3383,compute,unclear,"Implementation details give hyperparameters and epochs but no hardware or training time, and the text is truncated."
+P3401,compute,none,"The compute checklist justification says only memory information is offered, with no hardware type or run time."
+P3444,compute,unclear,The excerpts contain no compute information at all and the text is truncated.

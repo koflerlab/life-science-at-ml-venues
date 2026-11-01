@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P1759,compute,hardware_only,The text names the RK3566 SoC (and RK3588) used for all experiments but gives no compute time or GPU-hours for the experiments.
+P1838,compute,none,The excerpts describe the RNN model and training stages but state no hardware or compute time.
+P1880,compute,amount,The setup states an NVIDIA A100-SXM4 80GB GPU and the paper reports per-LLM runtimes in minutes or hours.
+P1883,compute,none,Nothing in the excerpts mentions hardware or compute time.
+P1933,variance,no,"The excerpts report no seeds, error bars, standard deviations or intervals for the results."
+P1933,compute,none,The excerpts mention no hardware or compute time; implementation details are only referred to Appendix E.
+P1969,compute,unclear,"The paper evaluates embedding and extraction times averaged over 100 trials, but the passage is cut and no hardware is shown, so compute reporting cannot be determined."
+P2009,compute,none,The text discusses computational complexity only and states no hardware or compute time.
+P2022,compute,hardware_only,"Models are trained for 100 epochs on a 3090Ti GPU, with no training time stated."
+P2169,compute,none,"The experimental setup lists tasks, data and pretrained models but no hardware or compute time."
+P2174,compute,none,The excerpts state no hardware or compute time for the experiments.
+P2183,compute,none,The training details and checklist excerpts give no hardware or compute time.
+P2207,compute,hardware_only,"The checklist justification says the paper outlines the server specs and memory used, with no execution time mentioned."
+P2209,compute,none,The text only notes the method is compute-intensive as a limitation and states no hardware or compute time.
+P2230,compute,none,The compute-resources checklist answer is missing from the text and no hardware or time is stated anywhere.
+P2232,variance,no,"The setup and results excerpts report no seeds, error bars or intervals for the main results."
+P2232,compute,none,The implementation details give datasets and hyperparameters but no hardware or compute time.
+P2254,variance,no,"The only plus-minus figure describes the range of robustness change across settings, not variance over runs; no seeds or error bars are reported."
+P2255,variance,no,"Results are reported as single AP50/mAP values with no seeds, error bars or intervals; the GP predictive variance is a model output, not result variance."
+P2285,variance,no,"The implementation and results excerpts report no repeated runs, error bars or standard deviations."

@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P0058,variance,no,"The main clustering table (Table 2) reports single values without any spread; the only repeated runs are a 500-run sensitivity ablation on one synthetic point, not the main results."
+P0161,variance,yes,The checklist justification states that all experimental results and latency measurements are averaged over multiple runs.
+P0202,variance,no,"Main results are PCC distributions over samples/CpGs with no seeds, repeated runs or error bars; the standard deviations mentioned refer to data filtering and CpG variability."
+P0205,variance,unclear,"The excerpt shows only the checklist error-bar guidelines without the authors answer and no results tables, so variance reporting cannot be determined."
+P0228,variance,no,"Table 1 (PSNR/SSIM) and the correlation results are single values with no seeds, standard deviations or intervals."
+P0232,variance,no,"Table 3 main diagnosis results are single values; 5-fold cross-validation is described but no spread is reported, and the plus-minus values describe image dimensions."
+P0241,compute,none,"The implementation details give datasets, backbones, epochs and hyperparameters but no hardware or training time."
+P0268,compute,none,Methods use LLM APIs and small entailment models and no hardware or runtime is stated anywhere in the text.
+P0272,compute,none,No GPU/CPU model or training time is specified; the only mention is a vague purely CPU-based machine for runtime comparisons.
+P0279,variance,no,"No seeds, repeated runs or standard deviations are mentioned for the main RAbD results."
+P0345,compute,none,"Implementation details (B.2) list backbone, federated hyperparameters and FedMC parameters but no hardware or compute time."
+P0416,variance,no,"Throughput results (Table 3) are single values with no repeated runs or error bars, and the checklist answer on error bars is not given."
+P0428,compute,none,The text gives code and simulation details but never states hardware or compute time.
+P0494,compute,none,Training details and experimental setup describe architecture and data but no hardware or training time.
+P0518,variance,no,"Main benchmark results are single evaluations with a fixed seed of 42; the reported standard deviation of 5.5% is across models, not across runs."
+P0518,compute,none,Setup mentions only limited GPU resources without naming hardware or stating training time.
+P0525,compute,none,No hardware or runtime is stated; only that training time scales linearly with the number of states.
+P0559,variance,no,"No seeds, repeated runs or error bars are reported for the main benchmark results; the standard deviation mentioned is the GRPO reward normalization."
+P0559,compute,none,Implementation details and reproducibility statement give models and the veRL library but no hardware or compute time.
+P0571,compute,amount,"A.7 states training on a single NVIDIA A100 with per-batch runtimes (0.398 to 5.575 seconds) and 100 epochs, giving hardware and time."
