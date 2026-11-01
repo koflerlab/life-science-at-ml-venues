@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0665,architecture,transformer,"The framework is built entirely on SAM and an efficient SAM variant, a transformer vision foundation model; no CNN is named."
+X0668,method,trustworthy_ml,"The main contribution is an interpretable, explainable forecasting framework built on prototypes for transparent decision-making."
+X0671,modality,none_or_synthetic,It is a theoretical study of contextual dueling bandits with only empirical regret validation and no real data type named.
+X0672,architecture,not_stated,The distilled student is described only as a compact model under 80k parameters without naming its family.
+X0673,modality,image,The task is zero-shot image classification where CLIP localizes objects in images; text only supplies class names.
+X0675,modality,graph_molecule,"The inputs are molecular pairs encoded as 2D molecular graphs and 3D conformations; LLMs are backbones, not a second data type."
+X0675,method,benchmark_dataset,The framework is motivated by benchmarking challenges and fair model comparison and provides comprehensive benchmark results.
+X0676,method,reinforcement_decision,The title and core novelty are evolutionary reinforcement learning for iterative policy refinement of the LLM.
+X0678,method,reinforcement_decision,The contribution is a multi-task GRPO RL post-training algorithm with adaptive task weights for policy gradients.
+X0680,architecture,no_model,The paper is a benchmark of datasets that evaluates existing models rather than building its own model.
+X0685,method,supervised_prediction,"The method improves continual learning of attention MIL classifiers for weakly labeled WSI diagnosis, a supervised prediction task."
+X0686,architecture,llm_vlm,The benchmark evaluates SOTA LLMs and its filtering methodology uses an LLM-based semantic judge.
+X0687,architecture,not_stated,The CSR network is described by its prototype and concept components without naming a model family.
+X0690,method,llm_prompting_agents,"The position paper concerns evaluation practices for LLMs-as-judges in medicine, which is LLM evaluation."
+X0695,modality,multimodal,"The benchmark assesses alignment between audio and text captions, so both data types are jointly central."
+X0695,architecture,llm_vlm,The benchmark is built with LLM-based corruption and evaluates prompted large audio language models.
+X0699,modality,none_or_synthetic,"The paper formally proves properties of learning agents in market games, with no real data type."
+X0707,architecture,not_stated,"The watermark is applied to autoregressive audio generation models whose family is not named, plus a clustering step."
+X0711,method,optimization_efficiency,"The main contribution is a federated learning framework handling non-i.i.d. clients, which falls under federated training."
+X0711,architecture,not_stated,The global MIL model and style-transfer modules are not given a named architecture family.
+X0712,architecture,transformer,"ProTDyn is a protein language model trained by the authors on proteins, not a large natural-language LLM."
+X0715,modality,none_or_synthetic,The framework simulates and trains biophysical network models and names no real input data type.
+X0723,method,supervised_prediction,"The pipeline predicts protein complex structures with accuracy matching AlphaFold3, a structure prediction task."
+X0723,architecture,not_stated,The pipeline wraps an AlphaFold3-style predictor without naming the model family in the text.
+X0724,architecture,transformer,"GauSAM adapts the Segment Anything Model image encoder, a transformer vision model rather than a language or vision-language model."
+X0726,method,optimization_efficiency,"The contribution is a batched simulator with system-level optimizations that cut compute, memory and latency."
+X0727,architecture,llm_vlm,The authors build and pretrain a CLIP-style fine-grained vision-language model on a large CT-report dataset.
+X0732,modality,multimodal,"A multimodal LLM takes language prompts and the rendered sketch canvas, so text and images are both central."
+X0737,method,reinforcement_decision,The paper develops model-free policy gradient algorithms for constrained LQR control.
+X0738,modality,volumetric,The method analyzes 3D CT volumes with a VLM; volumetric CT is the primary input.
+X0740,architecture,transformer,ChannelTokenFormer is explicitly a Transformer-based forecasting framework.
+X0746,architecture,llm_vlm;transformer,NSC-DP is used to discover a Transformer-XL architecture and to prune LLaMA-7B.
+X0752,modality,multimodal,"The benchmark spans text, medical images and structured EHR data with none primary."
+X0762,architecture,transformer,"The method steers protein language models, which are sequence transformers rather than large natural-language LLMs."
+X0764,architecture,not_stated,The BEV encoders and StreamMapNet backbone are not assigned a named model family in the text.
+X0765,architecture,llm_vlm,AcZeroTS is built on a VLM-based prototype-guided zero-shot segmentation model.
+X0766,modality,multimodal,The sampler is model-agnostic and evaluated on both image and video diffusion models with neither primary.
+X0767,architecture,cnn,The pose decoding module is explicitly U-Net-based.
+X0768,architecture,not_stated,The metric-learning detector is not given a named architecture family.
+X0769,method,supervised_prediction,The contribution is a trajectory-prior module that improves promptable volumetric segmentation.
+X0769,architecture,llm_vlm;state_space_rnn;transformer,The method augments SAM2 with an LLM-conditioned Neural ODE.
+X0772,method,supervised_prediction,"The paper fixes tiling artifacts in sliding-window segmentation via normalization choice, improving segmentation prediction."
+X0774,method,reinforcement_decision,The contribution is an RLHF algorithm modelled as an MDP that combines DPO and PPO policy optimization.
+X0775,architecture,llm_vlm,The method leverages a VLM for image-attribute alignment; no CNN is named.
+X0776,architecture,diffusion_flow;transformer,"RankFlow is a conditional flow framework that refines protein language model representations, which are not natural-language LLMs."
+X0777,architecture,not_stated,FAIR is a regularizer applied to existing detectors whose architecture family is not named.
+X0778,modality,text,The environment simulates psychiatric dialogue with LLM standardized patients and evaluates text-based encounters.
+X0779,modality,interactive_environment,Diagnosis is formalized as sequential decision making in a dynamic environment optimized with multi-agent RL.
+X0782,architecture,diffusion_flow;gnn_equivariant;transformer,STAR-MD is an SE(3)-equivariant diffusion model built as a causal diffusion transformer.
+X0785,modality,image,"The method produces pixel-level tumor segmentation from medical images using frozen diffusion models, with no 3D volume named."

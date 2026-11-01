@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X3005,architecture,not_stated,The latent imputation framework is described only as masked representation learning with an alignment objective and no model family is named.
+X3013,architecture,cnn;diffusion_flow,"The framework is applied to U-Nets, U-Net ensembles and generative diffusion models for CT reconstruction."
+X3019,method,llm_prompting_agents,"BiasScope is an LLM-driven framework for discovering biases in LLM-as-a-Judge evaluation, which is LLM evaluation."
+X3024,method,uncertainty_calibration,"The contribution targets open-world novelty and anomaly discovery under shift, detecting unexpected deviations from known patterns."
+X3026,modality,image,The text speaks only of medical images and never states 3D volumes.
+X3026,method,supervised_prediction,"The method's goal is anatomical segmentation, refining predictions from a frozen foundation model with one annotated example."
+X3026,architecture,not_stated,The off-the-shelf segmentation foundation model and the fusion module are not given a named architecture family.
+X3030,method,trustworthy_ml,"The paper addresses pre-deployment safety assessment by making failure rates forecastable via a fine-tuning loss, not mainly theory."
+X3030,architecture,not_stated,Models (a language model and an RL agent) are fine-tuned but their family and scale are not named.
+X3035,modality,image,"MIEB is a benchmark of image embeddings, with image the primary input across tasks."
+X3035,architecture,llm_vlm,The benchmark evaluates 50 vision and vision-language embedding models and relates them to MLLMs.
+X3040,method,generative_modeling,"The framework is a flow-matching generator for 3D de novo molecular design, with RL used to steer generation."
+X3042,modality,multimodal,"The point is fusing LiDAR, 4D radar point clouds and camera data."
+X3045,architecture,not_stated,The dynamic encoding model and the video synthesizer are used without naming their architecture family.
+X3047,modality,image,"The CLIP test-time adaptation classifies images, with text features only as class prototypes."
+X3056,architecture,gp_kernel,GPGapE uses a Gaussian process to model the mapping from data features to data values.
+X3059,method,benchmark_dataset,The main contribution is the million-scale SIU dataset and redefined evaluation for bioactivity prediction.
+X3062,method,optimization_efficiency,"The paper analyses and tunes SSM frequency bias through initialization scaling and a gradient filter, i.e. training dynamics, with substantial experiments."
+X3064,modality,multimodal,MedTok jointly encodes text descriptions and graph relational context of medical codes as two modalities.
+X3064,architecture,gnn_equivariant;transformer,MedTok uses a language model encoder for text and a graph encoder for relational structure.
+X3069,modality,omics_matrix,The method completes biological data matrices and is evaluated on real-world biological datasets.
+X3072,method,benchmark_dataset,"The contribution is an evaluation practice, misaligned baselines, demonstrated through case studies of AIDD evaluation."
+X3087,modality,multimodal,"Text-to-image generation conditions on text prompts and rewards to generate images, a vision-language setting."
+X3089,method,reinforcement_decision,The study compares RL (GRPO) post-training and reward-shaping ablations for a plasmid generator.
+X3090,modality,tabular_records,Var-JEPA is instantiated and evaluated on real-world tabular benchmarks.
+X3093,architecture,no_model,"The paper derives entropy metrics and Markov-chain statistics for point patterns with hypothesis testing, no learned model."
+X3094,architecture,llm_vlm,The framework integrates off-the-shelf medical large models with small models whose family is not named.
+X3095,method,supervised_prediction,The model predicts human scanpaths (fixation sequences) evaluated by log-likelihood and Information Gain.
+X3099,architecture,not_stated,The diagnostic models and the generator of synthesized masking data are not given a named family.
+X3100,modality,multimodal,"The benchmark evaluates LVLMs on question-answer pairs over chest X-rays, combining images and text."
+X3101,method,other,"The contribution is a software library for tuning, deploying and interpreting genomic foundation models."
+X3101,architecture,other_neural;transformer,The library fine-tunes genomic foundation models such as DNABERT-2 and adds a sparse auto-encoder interpreter.
+X3104,method,supervised_prediction,The framework predicts cortical surfaces and developmental trajectories from MRI with semi-supervised training.
+X3104,architecture,state_space_rnn,The method uses an age-conditioned neural ODE; no CNN or graph network is named in the text.
+X3106,architecture,llm_vlm,MobileMoE is a family of on-device MoE language models trained as LLMs.
+X3107,method,generative_modeling,"VaporTok is a video tokenizer whose decoder reconstructs videos for generation, with GRPO tuning the token budget."
+X3111,architecture,diffusion_flow;transformer,The authors pre-train an antibody sequence language model and train a diffusion model for sequence-structure co-design.
+X3113,architecture,not_stated,The pre-trained regression model adapted at test time has no named architecture family.
+X3114,method,uncertainty_calibration,Models are ranked without labels by the consistency of predictions under perturbations under distribution shift.
+X3119,method,supervised_prediction,The MLLM is fine-tuned with SFT and counterfactual RL to make endoscopic diagnoses.
+X3120,modality,volumetric,"The input is fMRI voxel data decoded into text, with text as the output."
+X3120,architecture,llm_vlm;transformer,BIT-LLM adds trained cross-attention adapters and an fMRI encoder to a frozen backbone LLM.
+X3121,modality,biological_sequence,VSD is evaluated on real protein and DNA/RNA sequence-design problems.
+X3123,architecture,not_stated,AdaPert's differentiable subgraph selection model is not given a named architecture family.
+X3124,method,llm_prompting_agents,The proposed fix is an in-context prompting method that steers LM decoding away from explored keys.
+X3124,architecture,llm_vlm,The study probes and prompts pretrained language models.
+X3128,architecture,diffusion_flow,GenMol is a single masked discrete diffusion model; no other family is named.
+X3129,method,uncertainty_calibration,"DynaSub is evaluated on near- and far-OOD detection, its stated goal."
+X3130,architecture,not_stated,The federated MIL model uses attention scores but no backbone or model family is named.
+X3133,architecture,transformer,A pretrained Nucleotide Transformer encodes gene sequences with attention pooling; no graph network is named.

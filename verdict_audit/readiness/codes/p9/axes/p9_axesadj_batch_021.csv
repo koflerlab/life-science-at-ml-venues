@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X2714,architecture,diffusion_flow,Identity-finetuned diffusion models are the only named learned model family; Gaussian maps are a scene representation.
+X2715,modality,image,The method infers structure from noisy 2D electron microscope images.
+X2721,architecture,not_stated,The authors build and adapt baseline agents but the abstract does not name their model family.
+X2722,architecture,gnn_equivariant,The evidential head is implemented via graph neural networks.
+X2725,modality,image,The inverse rendering pipeline takes polarized (DoLP) images as input.
+X2727,architecture,no_model,The contribution is a benchmark that evaluates existing SOTA models rather than building one.
+X2728,architecture,diffusion_flow;gnn_equivariant,The method guides Bayesian Flow Networks while preserving SE(3)-equivariance.
+X2729,method,generative_modeling,The core is aligning a pretrained generative model of atomic positions with experimental distributions.
+X2729,architecture,not_stated,A generative model is trained adversarially but its network family is not named.
+X2731,modality,volumetric,"The method reconstructs MRI on the fastMRI dataset, and MRI is coded volumetric."
+X2732,architecture,diffusion_flow,SGRPO is instantiated on discrete diffusion generators (autoregressive ones unnamed by family).
+X2738,architecture,no_model,"The work is an information-theoretic framework with simulations of analytic decoders, no learned model."
+X2739,modality,video,The framework learns manipulation primarily from action-unlabeled videos.
+X2739,architecture,not_stated,The flow prediction model's architecture is not named in the abstract.
+X2742,modality,image,Spatial gene expression is predicted from histology images as input.
+X2745,method,other,"The paper is an empirical analysis of forgetting with matrix completion, fitting no listed family well."
+X2746,architecture,not_stated,The abstract mentions generative and latent models over grammar sequences without naming a family.
+X2753,architecture,not_stated,NOMAE is applied to existing 3D architectures without naming their family.
+X2754,architecture,gnn_equivariant;gp_kernel,The method is a Graph Neural Tangent Kernel built around GNNs.
+X2757,architecture,other_neural,A shared neural encoder maps metadata to RC model coefficients solved by a linear recurrence.
+X2758,architecture,no_model,"ScopeSelect is a submodular greedy selector with conformal risk control, not a learned model."
+X2759,modality,text,Routing Mamba is trained and evaluated on language modeling.
+X2760,method,trustworthy_ml,The main method is preference optimization that mitigates spurious associations and hallucinations in MLLMs.
+X2761,architecture,not_stated,DARE sits on top of offline RL algorithms whose network family is not named.
+X2762,architecture,not_stated,The model uses unspecified advanced generative technologies.
+X2763,architecture,no_model,PoseX benchmarks existing docking methods plus a physics relaxation step.
+X2765,architecture,other_neural,SPICED is a neuromorphic synaptic network outside the listed named families.
+X2768,architecture,not_stated,The dataset release includes benchmark code but no model family is named.
+X2774,modality,multimodal,"Agents answer natural-language research questions grounded in single-cell experimental datasets, both central."
+X2776,architecture,diffusion_flow,BBFlow is a flow matching model; equivariance is not stated.
+X2777,modality,image,"The survival model takes whole-slide images, with semantics derived from the WSIs themselves."
+X2777,architecture,not_stated,VQA and the dual-stream extractor are used but no model family is named.
+X2778,method,llm_prompting_agents,"The contribution is RL post-training and benchmarking of pretrained MLLMs, closest to the LLM category."
+X2779,architecture,not_stated,The latent dynamics model's architecture is not named in the abstract.
+X2780,architecture,not_stated,The self-supervised visual pretraining encoder's family is not named.
+X2782,method,representation_learning,The point is transfer/finetuning that retains pretrained generalist abilities via weight interpolation.
+X2783,modality,multimodal,"The paper is about video-language alignment, combining video and text."
+X2787,modality,graph_molecule,"Diffusion-based protein design with residue-level guidance; sequence input is not stated, so treated as protein structure."
+X2788,architecture,no_model,FLIP2 is a benchmark that evaluates existing models.
+X2789,method,optimization_efficiency,"The study derives empirical scaling laws for compute efficiency of MoE models, not theory."
+X2796,architecture,not_stated,The dataset paper does not name any model family.
+X2804,method,other,The paper is cognitive modelling of human behavior and neural data with observer models and an RNN.
+X2804,architecture,classical_ml;state_space_rnn,Bayesian observer models are fitted and a thalamocortical recurrent neural network is trained.
+X2813,architecture,state_space_rnn,The fusion block is built on Mamba; no other family is named.
+X2815,architecture,not_stated,Segmentation models are trained in the fixed-budget evaluation but their family is not named.
+X2819,modality,multimodal,Human videos and robot demonstrations are unified via scene point clouds and hand poses.
+X2819,method,representation_learning,The contribution is aligned cross-domain representations for transfer from human videos to robots.
+X2827,method,llm_prompting_agents,"The method is preference-based reinforcement fine-tuning of MLLMs with LLM experts, closest to the LLM category."
+X2833,method,optimization_efficiency,The main contribution is binarization for a lightweight demosaicing network.
+X2836,architecture,diffusion_flow,"ProfileBFN extends Bayesian Flow Networks, a flow-based generative family."

@@ -1,0 +1,21 @@
+item_id,axis,answer,reason
+X1123,architecture,llm_vlm,"GPT-4o is used to extract rationales; the family of the authors own segmentation model is not named, so only llm_vlm is supported."
+X1129,architecture,other_neural,"The authors train a multimodal DeepHit neural survival model; the UNI2-h ViT is only a frozen, pretrained feature extractor."
+X1156,architecture,other_neural;transformer,"Pretrained MolFormer-XL, MolT5 and ESM-2 encoders (BERT-size transformer encoders) are combined with trained MLP projectors (GELU, LayerNorm)."
+X1180,architecture,transformer,"UniZyme builds an attention-based enzyme/substrate encoder with distance and energy biases on attention scores, using small ESM-2 (35M) residue features."
+X1260,architecture,cnn;state_space_rnn,Q-PART uses an R3D convolutional backbone and a convolutional decoder plus Neural CDEs for the aperiodic dynamics.
+X1262,architecture,cnn;state_space_rnn;transformer,"EPS/AWR are applied to ResNets and MobileNetV2, EfficientFormer/MobileViT and MambaOut, which the text calls CNN, ViT and Mamba models."
+X1264,architecture,cnn;transformer,"StructEvo uses an ESM-2-initialised encoder with cross-attention fusion, a fine-tuned transformer-based ProSST proxy and a CNN proxy."
+X1295,architecture,other_neural,"MS-UDG uses an encoder with a projection head, two MLP modules and a reconstruction decoder; no other family is named."
+X1297,architecture,state_space_rnn;transformer,"PyHealth 2.0 implements 25+ models, and its sequence processors are built for recurrent and attention-based models."
+X1314,architecture,cnn,MFC uses a ResNet18 CNN feature extractor and multiscale large-kernel convolutions; no other family is named.
+X1322,architecture,cnn,NEURONA is a lightweight CNN for fMRI features plus a linear classifier; the VLM only builds the dataset scene graphs.
+X1328,architecture,cnn;diffusion_flow;other_neural;transformer,"SonoGym trains PPO agents with a CNN encoder, ACT (a transformer CVAE) and Diffusion Policy agents, and uses a GAN for learning-based ultrasound simulation."
+X1405,architecture,cnn,MetaOptimize is tested on a simple two-layer CNN and ResNet-18; the family of the 15M TinyStories language model is not named.
+X1456,architecture,other_neural;transformer,MM-Lego merges SNN (MLP) and attention-based MIL encoders through cross-attention LegoBlocks; ResNet50 is only a pretrained patch encoder.
+X1471,architecture,classical_ml;other_neural,SIL-C fits K-means and Gaussian prototype memories on top of neural skill decoders and policies trained on GPUs.
+X1584,architecture,not_stated,"WMSE is used to train models across several architectures, but this text does not say which model families the authors trained."
+X1616,architecture,classical_ml;transformer,"NICER is a nonparametric point-process prototype model fitted on frozen UNI features, and a transformer layer predictor is trained downstream."
+X1647,architecture,other_neural;transformer,"DPGS is applied to ABMIL (attention-pooling MIL) and TransMIL (transformer), among other MIL models."
+X1652,architecture,diffusion_flow;llm_vlm,"Images are generated with Stable Diffusion 3.5 and Flux.1-dev, and Qwen2-VL produces the captions used as prompts."
+X1659,architecture,classical_ml;cnn;other_neural,"The benchmark baselines are a linear model, a one-layer MLP on handcrafted features, EEGNet and TimeConv-CNN; no transformer is named."

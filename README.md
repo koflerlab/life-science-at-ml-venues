@@ -8,9 +8,20 @@ them under agentic reproduction. Data, code, frozen protocol and manuscript for:
 > medRxiv. An earlier version was submitted as the PSE9 abstract "Well documented, rarely picked".
 
 The frame is every paper labelled clinical or life science at CVPR 2025, ICCV 2025, ECCV 2026, ICLR 2025 and 2026,
-ICML 2025 and 2026 and NeurIPS 2025 and 2026 (2,170) plus an equal random sample of other papers; 3,278 full texts
+ICML 2025 and 2026 and NeurIPS 2025 and 2026 (2,170) plus an equal random sample of other papers; 3,787 full texts
 were coded on twelve practices. Reproduction outcomes come from the ICML 2026 agent reproduction challenge. The study
 is built to be rerun on later venue-years with the same frame procedure and codebook.
+
+## What the papers are about
+
+Topics of the 2,170 medical papers (two blind coders, kappa 0.91; Note 9-24), and type of data, method and
+architecture of all 4,340 frame papers (Notes 9-26 and 9-27). Post hoc and descriptive.
+
+![Topic by venue](manuscript/figures/fig_topics_venue.png)
+
+![t-SNE map of medical abstracts](manuscript/figures/fig_topics_map.png)
+
+![Data, method and architecture, medical vs other](manuscript/figures/fig_axes.png)
 
 ## Where things are
 

@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X2323,method,supervised_prediction,"The method learns metriplectic dynamics from trajectory data, a prediction model fitted to observed states."
+X2329,architecture,llm_vlm,"The benchmark is used to run and evaluate current AI coding agents, which are language-model agents."
+X2332,architecture,diffusion_flow,Each process is learned by a dedicated flow matching network.
+X2333,architecture,cnn;diffusion_flow,The proposed codec is a one-step lightweight convolution diffusion codec.
+X2335,architecture,not_stated,"Reference reports are rewritten and nine RRG models evaluated, but no model family for the method is named."
+X2337,modality,text,Experiments are on large language model pre-training.
+X2338,architecture,diffusion_flow,Reconstruction uses a pre-trained text-to-video diffusion model and no other family is named.
+X2340,architecture,diffusion_flow;transformer,The paper proposes a transformer-based Diffusion Planner.
+X2345,architecture,not_stated,The excerpt discusses dataset distillation for image enhancement without naming a network family.
+X2350,architecture,cnn,The case study retrains the ModelAngelo CNN component on the new dataset.
+X2353,method,other,"The contribution is a new input-dependent rotary position embedding architecture for sequence models, not efficiency or prediction per se."
+X2355,modality,none_or_synthetic,RNNs are trained on synthetic cognitive tasks with no real data type.
+X2361,modality,graph_molecule,"The method reasons over knowledge graph relation paths, making the graph the primary input."
+X2362,modality,none_or_synthetic,This is a theoretical differentially private algorithm with runtime guarantees and no real data type.
+X2363,method,benchmark_dataset,The main contribution is a controlled evaluation study of what five DNA foundation models encode versus k-mer baselines.
+X2363,architecture,classical_ml;transformer,Frozen DNA foundation model embeddings such as DNABERT-2 are evaluated with a fixed Random Forest classifier.
+X2364,modality,multimodal,"The guidance method is applied across DNA, protein sequence and molecule generation with none primary."
+X2365,architecture,transformer,The shared representation is learned with a ViT-based masked autoencoder.
+X2375,method,other,"The goal is characterizing and aligning invariance manifolds of biological neurons, a neuroscience analysis method not covered by the listed families."
+X2381,architecture,not_stated,Protein generative models are evaluated but their families are only described as sequence-based and structure-based.
+X2382,modality,text,"The monitored inputs are multi-agent LLM interaction events such as prompts, tool calls and memory."
+X2383,method,trustworthy_ml,"ProGrad provably enforces gradient constraints for interpretability and safety, e.g. Grad-CAM and Integrated Gradients constraints."
+X2385,method,generative_modeling,The authors build a task-amortized VAE generative model of V1 with adaptable priors.
+X2388,method,generative_modeling,The framework post-trains medical report generation models with DPO to improve generated reports.
+X2389,modality,volumetric,"Registration is evaluated mainly on brain MRI, lung CT and cardiac MRI volumes."
+X2389,architecture,not_stated,The flow map is learned on top of unnamed standard registration backbones.
+X2391,method,representation_learning,The contribution is large-scale PDE pre-training of a sparse MoE operator transformer evaluated zero-shot.
+X2392,architecture,not_stated,Neither the vision foundation model nor the IMIS baseline network family is named.
+X2393,architecture,not_stated,"The method uses shape carving and 3D Gaussian splatting with an embedding technique, but no neural network family is named."
+X2396,architecture,diffusion_flow,The method is an energy-based diffusion model with a Fokker-Planck regularizer and no equivariant network is mentioned.
+X2399,architecture,diffusion_flow;transformer,The framework is built on Diffusion Transformer (DiT) generative priors.
+X2403,modality,multimodal,The task maps image pairs to text captions and is evaluated with large multimodal models.
+X2409,architecture,classical_ml;diffusion_flow;other_neural,"Propagators compared are score-guided Langevin dynamics, Koopman linear operators and autoregressive neural networks within an encoder-decoder."
+X2410,architecture,transformer,"The method is a query-based segmentation framework where queries interact with image features, and no CNN is named."
+X2415,architecture,llm_vlm,The benchmark is used to evaluate LLMs on pharmacological reasoning.
+X2416,method,representation_learning,The beta-VAE learns disentangled shared and modality-specific cell representations for multi-omics integration.
+X2418,architecture,llm_vlm,The kernel targets MLA attention in LLMs such as DeepSeek-v3 and measures end-to-end LLM throughput.
+X2419,method,biostatistics_inference,The study addresses missing-data imputation and its effect on prediction across datasets.
+X2421,architecture,not_stated,Pretrained hand reconstructors and a small residual corrector are used without naming their families.
+X2422,modality,multimodal,SensorLM aligns wearable sensor data with natural language.
+X2422,architecture,llm_vlm,SensorLM extends CLIP and CoCa style multimodal pretraining architectures.
+X2425,architecture,not_stated,A pre-trained autoregressive model is fine-tuned with RL but its family is not named.
+X2426,architecture,llm_vlm,The benchmark evaluates 19 vision-language models.
+X2427,method,representation_learning,The main point is parameter-efficient adaptation of 2D SAM foundation models to 3D and 4D volumes.
+X2428,architecture,cnn;transformer,The encoder is a ResNet or Vision Transformer.
+X2430,architecture,llm_vlm,The benchmark evaluates general and medical multimodal large language models.
+X2431,method,other,"The contribution is a new distribution-level evaluation metric, not a dataset or benchmark."
+X2431,architecture,not_stated,MID evaluates real segmentation models but the text names no model family.
+X2433,method,other,"The contribution is unsupervised vessel segmentation via deformable neural representations and layer separation, not generation."
+X2440,architecture,transformer,The paper analyzes and trains a one-layer softmax attention model.

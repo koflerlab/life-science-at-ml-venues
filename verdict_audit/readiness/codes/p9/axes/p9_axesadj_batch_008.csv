@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1068,method,optimization_efficiency,The headline contribution is token pruning and merging for an 8x real-time speedup of the FWL transformer.
+X1073,method,representation_learning,The study pretrains an encoder and evaluates its frozen representations for cross-panel transfer.
+X1074,modality,image,Scanpaths are predicted on static images of the MIT1003 dataset.
+X1074,architecture,classical_ml,"The authors extend and fit the mechanistic SceneWalk model, while DeepGaze III is only used as a diagnostic tool."
+X1079,method,optimization_efficiency,The main contribution is a new federated optimization algorithm with improved communication and computation complexity.
+X1084,architecture,transformer,The method treats each fMRI voxel as a token with a learnable embedding to handle variable-length inputs.
+X1086,architecture,not_stated,The clustering method uses granular-balls and an information bottleneck objective without naming a model family.
+X1090,architecture,diffusion_flow;transformer,MoGen is a flow matching model with a latent transformer backbone.
+X1091,architecture,no_model,"The contribution is a KL divergence estimator used to evaluate existing trajectory inference methods, with no model family built."
+X1094,architecture,no_model,The paper derives statistical formulas and allocation schemes for validating LLM judges rather than building a model.
+X1097,architecture,llm_vlm,Flick uses an out-of-the-box LLM to distill knowledge into prompts for data generation; no other family is named.
+X1100,architecture,llm_vlm,The benchmark evaluates 20+ multimodal large language models.
+X1101,method,reinforcement_decision,"The core is an agent that plans viewpoint search trajectories, optimized with RL post-training."
+X1106,architecture,no_model,The paper evaluates 28 competition-submitted algorithms rather than building its own model.
+X1107,architecture,llm_vlm,Only protein language model embeddings are named as a model family; the TITO architecture is not specified.
+X1110,method,llm_prompting_agents,"The main contribution is a modular LLM-based pipeline for lemma discovery, formalization and proving, with the benchmark derived from it."
+X1111,architecture,gp_kernel,The reference process of the Schrodinger bridge is a smooth Gaussian process such as Matern.
+X1113,method,reinforcement_decision,PUPO is a policy optimization training paradigm for neural routing solvers that construct solutions sequentially.
+X1115,method,uncertainty_calibration,The proposed framework is built on a reliability assessment that decouples confidence from uncertainty to correct pseudo-label bias.
+X1116,modality,tabular_records,All experiments are on tabular regression and classification datasets.
+X1116,method,supervised_prediction,RFRBoost is a new model construction for supervised regression and classification.
+X1121,method,other,"The contribution is a new spectral operator for higher-order structures applied to clustering, smoothing and positional encoding."
+X1124,method,supervised_prediction,The paper proposes a new risk estimator for PU binary classification with empirical accuracy gains.
+X1125,modality,multimodal,The method jointly uses fMRI brain activity and video stimuli for decoding and reanimation.
+X1126,modality,multimodal,"GRNAgent integrates RNA-seq, chromatin accessibility and motif priors as heterogeneous evidence."
+X1126,architecture,llm_vlm;transformer,TF-EAGER is a transformer-based cross-attention model and the system uses an LLM for literature verification.
+X1129,modality,tabular_records,Survival models are explained over clinical features in time-to-event tasks.
+X1129,architecture,not_stated,The paper explains machine learning survival models whose family is not named.
+X1131,architecture,diffusion_flow;other_neural,The framework trains a structure encoder-decoder and a conditional flow model.
+X1135,architecture,llm_vlm,The benchmark evaluates more than 10 VLMs such as Gemini-2.5-Pro.
+X1136,method,supervised_prediction,"The framework solves 3D landmark detection, with self-supervision as the training means rather than representation as the goal."
+X1137,method,optimization_efficiency,Balanced Fine-Tuning is a token and sequence reweighting post-training objective for LLMs.
+X1141,architecture,llm_vlm,Large multimodal models generate semantic prompts; the 3D detector family is not named.
+X1142,modality,none_or_synthetic,The paper analyses random-weight RNNs theoretically and validates with simulations only.
+X1143,method,representation_learning,A coupled sparse autoencoder learns a sparse basis of semantic-cortical atoms.
+X1144,modality,multimodal,The benchmark is built on aptamer DNA/RNA sequences paired with small-molecule ligands.
+X1144,architecture,not_stated,"Baselines span descriptor-based models, pretrained encoders and fusion architectures without specific families named."
+X1153,method,representation_learning,The contribution is a construction of low-distortion hyperbolic tree embeddings.
+X1153,architecture,no_model,The embeddings come from a combinatorial construction rather than a learned model.
+X1155,modality,none_or_synthetic,The paper is a theoretical regret analysis of a semi-bandit problem with no data.
+X1155,method,theory,The contributions are regret upper and lower bounds for FTPL.
+X1155,architecture,no_model,"FTPL is an analysed bandit policy, not a fitted learned model."
+X1161,architecture,llm_vlm,The benchmark evaluates 14 open-weight LMMs and frontier proprietary models.
+X1164,architecture,llm_vlm,Experiments adapt representative multimodal models on the dataset.
+X1165,method,llm_prompting_agents,The key idea is an LLM-based Planner that parses instructions into a plan before command generation.
+X1170,architecture,llm_vlm,The benchmark is built partly with LLM-based generation and targets LLM clinical QA.
+X1171,modality,volumetric,The method takes CT scans as input to segment tumors and generate reports.
+X1171,method,benchmark_dataset,The title and main output are a public 3D image-text tumor dataset built with Rad-GPT.
+X1171,architecture,llm_vlm,Rad-GPT is a vision-language agent; the segmentation model family is not named.
+X1172,architecture,not_stated,"The GRPO policy model family is not named, and DrugCLIP is only enhanced as an external model."

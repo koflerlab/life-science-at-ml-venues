@@ -1,0 +1,31 @@
+item_id,axis,answer,reason
+X4272,method,trustworthy_ml,The paper is a mechanistic interpretability study using linear probes and logit lens on looped transformers.
+X4273,method,benchmark_dataset,The main contribution is an evaluation framework and a benchmark of ten datasets for assessing existing tokenizers.
+X4278,architecture,not_stated,The abstract describes FBAM and conditional layer normalization modules but never names the backbone model family.
+X4280,modality,multimodal,"GenEx combines generated 360-degree visual environments with GPT-assisted language agents, so no single modality is primary."
+X4282,architecture,not_stated,"The DAG distribution and flexible conditional density models are not tied to a named model family, and no neural network is mentioned."
+X4285,method,trustworthy_ml,The paper verifies robustness and fairness properties of tree ensembles.
+X4285,architecture,classical_ml,"The method operates on decision tree ensembles, a non-neural model family."
+X4286,method,benchmark_dataset,COOPERA is mainly a framework and benchmark for long-term human-robot collaboration with simulated humans.
+X4287,architecture,llm_vlm,"The benchmark evaluates 30 (M)LLMs, which the paper prompts as part of its evaluation."
+X4291,architecture,not_stated,"IgGM uses a pretrained language model, a feature learning module and a prediction module without naming the model families."
+X4292,architecture,no_model,"The paper is a theoretical analysis of continuous attractor network dynamics, with no learned model trained."
+X4293,method,other,"The contribution is a surrogate loss for predict-then-optimize with robust constraints, which fits none of the listed families well."
+X4293,architecture,not_stated,The predictive machine learning model is not named by family.
+X4299,method,benchmark_dataset,ML4TSPBench is a unified benchmark and design-space reassessment of existing learning-based TSP solvers.
+X4299,architecture,not_stated,The abstract does not name the model families of the learning-based solvers.
+X4304,architecture,transformer,"Frag2Seq applies language models with cross-attention to fragment sequences; the SE(3)-equivariant frames are geometric constructions, not a network."
+X4305,architecture,diffusion_flow;llm_vlm,"BRIDGE builds on CLIP representations and uses a pretrained diffusion prior for generation, while the brain encoder family is not named."
+X4307,architecture,not_stated,The text refers only to large high-dimensional models without naming a family.
+X4309,architecture,not_stated,The read-level classifier in Syto is not named by model family.
+X4311,architecture,diffusion_flow;transformer,PAB adapts DiT-based (diffusion transformer) video generation models.
+X4312,architecture,cnn;transformer,"The paper trains E2E-VarNet, U-Net and ViT models on its dataset as part of its study."
+X4313,architecture,transformer,GaussianReg trains a cross-modality attention mechanism to match rays to the target X-ray.
+X4316,architecture,transformer,"MLRG pretrains visual and textual representations and generates reports, with no named large pretrained LLM."
+X4321,modality,omics_matrix,"The real data is single-cell RNA-seq snapshots from blood development, beyond synthetic examples."
+X4326,method,reinforcement_decision,The core contribution is a world model used in risk-aware model-predictive planning for sequential decision making.
+X4329,modality,interactive_environment,MedAgentGym is an executable sandbox environment in which LLM agents act and receive interactive feedback.
+X4330,architecture,diffusion_flow;transformer,The decoder backbone autoregressively predicts representation tokens and performs pixel diffusion within the same model.
+X4334,architecture,cnn;llm_vlm,NeuroRefiner uses reasoning agents that generate correction instructions together with a 3D U-Net-based refinement tool.
+X4337,method,optimization_efficiency,TPDiff's stated goal is to improve training and inference efficiency of video diffusion models.
+X4339,architecture,not_stated,The mixture-of-experts components are not named by model family.

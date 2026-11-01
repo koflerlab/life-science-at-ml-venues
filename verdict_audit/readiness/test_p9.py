@@ -131,3 +131,25 @@ def test_note_9_22_results_match_the_release_table():
             sel = [r for r in rows if r["group"] == g]
             share = sum(r[field] == pos for r in sel) / len(sel)
             assert abs(share - res["E_b"][field]["share"][key]) < 1e-12, (field, g)
+
+
+def test_axes_architecture_sets_are_canonical_and_exclusive():
+    import build_p9_axes as A
+    assert A.norm_arch("transformer; cnn") == "cnn;transformer"
+    assert A.norm_arch("cnn,cnn") == "cnn"
+    assert A.norm_arch("not_stated") == "not_stated"
+    assert A.norm_arch("cnn;not_stated") is None and A.norm_arch("no_model;gp_kernel") is None
+    assert A.norm_arch("resnet") is None and A.norm_arch("") is None
+    assert A.valid("method", " theory ") == "theory" and A.valid("modality", "pixels") is None
+
+
+def test_axes_agreement_scores_architecture_per_label():
+    import build_p9_axes as A
+    a = {"X1": dict(modality="image", method="theory", architecture="cnn;transformer"),
+         "X2": dict(modality="text", method="theory", architecture="llm_vlm")}
+    b = {"X1": dict(modality="image", method="theory", architecture="cnn"),
+         "X2": dict(modality="image", method="theory", architecture="llm_vlm")}
+    ag = A.agreement(a, b, A.PASS["a"]["axes"])
+    assert ag["modality"]["n_disagreements"] == 1 and ag["method"]["raw"] == 1.0
+    k = ag["architecture"]["per_label_kappa"]
+    assert k["cnn"] == 1.0 and k["transformer"] == 0.0 and k["llm_vlm"] == 1.0 and ag["architecture"]["n_disagreements"] == 1

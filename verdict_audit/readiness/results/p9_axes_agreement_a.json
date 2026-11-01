@@ -1,0 +1,30 @@
+{
+ "n": 4340,
+ "modality": {
+  "raw": 0.9154,
+  "n_disagreements": 367,
+  "kappa": 0.9055
+ },
+ "method": {
+  "raw": 0.8959,
+  "n_disagreements": 452,
+  "kappa": 0.8825
+ },
+ "architecture": {
+  "raw": 0.8131,
+  "n_disagreements": 811,
+  "per_label_kappa": {
+   "cnn": 0.7588,
+   "transformer": 0.8111,
+   "llm_vlm": 0.9122,
+   "gnn_equivariant": 0.8656,
+   "diffusion_flow": 0.9409,
+   "state_space_rnn": 0.9017,
+   "other_neural": 0.7567,
+   "gp_kernel": 0.8959,
+   "classical_ml": 0.7757,
+   "not_stated": 0.5731,
+   "no_model": 0.7333
+  }
+ }
+}

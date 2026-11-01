@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X2575,architecture,not_stated,The generative distributional reward model and policy are described without naming a network family.
+X2581,architecture,not_stated,The benchmark compares published and baseline models but names no architecture family.
+X2584,modality,image,"The abstract names no data type; nothing indicates combined modalities, so the single-modality default image is kept."
+X2584,architecture,not_stated,Model merging of task vectors and layer matrices is described without naming the network family.
+X2590,method,reinforcement_decision,The main contribution is a new RL paradigm with tournament-based advantage estimation for training agents.
+X2591,architecture,diffusion_flow;llm_vlm,"The method post-trains a diffusion large language model (LLaDA), which is both a diffusion model and an LLM."
+X2592,architecture,not_stated,Unlearning is evaluated across multiple dataset-architecture settings without naming a family.
+X2593,architecture,llm_vlm,The benchmark evaluates multiple LLMs on research mathematics.
+X2597,method,supervised_prediction,The core models are task-optimized ConvRNNs trained for supervised tactile categorization; SSL is a secondary comparison.
+X2599,method,representation_learning,The main contribution is a contrastively learned dense 3D feature field used as a foundation feature for manipulation.
+X2609,method,representation_learning,"The model is trained with self-supervision from three sensor modalities with no human annotation, which is its central point."
+X2609,architecture,not_stated,The world model is described without naming its network family.
+X2613,method,representation_learning,The paper learns hash code embeddings for retrieval by shaping the geometry of the hash space.
+X2620,architecture,diffusion_flow,The pipeline builds on video diffusion model outputs to create 3D worlds; no other family is named.
+X2625,architecture,not_stated,Microscopy image profiling models are pretrained and fine-tuned without naming a family.
+X2628,architecture,not_stated,The ProLearn segmentation framework and PSA module are described without naming a CNN or transformer.
+X2629,method,llm_prompting_agents,The contribution is a fine-tuning and self-training scheme that improves language-model search and reasoning at inference.
+X2632,architecture,transformer,"The authors pre-train dense and MoE models themselves with width expansion, i.e. transformer models trained from scratch."
+X2637,modality,multimodal,The model combines panorama depth images with reference RIR audio samples.
+X2637,architecture,not_stated,The geometric feature extractor and RIR encoder are not assigned a model family.
+X2638,method,supervised_prediction,The task solved is epidemic forecasting; diffusion is the tool for forecasting accuracy.
+X2640,method,optimization_efficiency,The contribution is a personalized federated training scheme for recommender clients.
+X2641,modality,multimodal,The method jointly uses medical time series and textual knowledge in LLM prompts (series-text).
+X2648,method,theory,Contributions are Bellman equations and order-optimal regret bounds for tabular RL with no experiments described.
+X2651,modality,volumetric,"The data are MR imaging sequences from OASIS-3, which belong to the volumetric category."
+X2652,architecture,diffusion_flow,The method guides pretrained molecular diffusion models; no equivariant network is named.
+X2662,modality,tabular_records,The input is a sparse model-by-dataset performance score matrix.
+X2666,method,generative_modeling,JODA is a framework for generating joint-level dynamics fields.
+X2666,architecture,llm_vlm,A vision-language model proposes the structured dynamical primitives in the method.
+X2667,modality,time_series,"The dataset consists of EEG and eye-tracking recordings, both signal time series."
+X2669,modality,tabular_records,"The real-world application is clinical prediction for cross-disease transfer, beyond simulations."
+X2669,method,representation_learning,The point is transfer and task-shift adaptation via meta-learning with causal task embeddings.
+X2673,modality,graph_molecule,The benchmark evaluates PPI prediction at the level of protein interaction networks/graphs.
+X2677,modality,multimodal,"The model is applied to single-cell RNA, spatial transcriptomics and 3D point clouds with none primary."
+X2680,architecture,transformer,Chemical foundation models are LoRA-fine-tuned with cross-attention; these are not large language models.
+X2685,modality,none_or_synthetic,The paper is purely theoretical about principal-agent MDPs with no data.
+X2685,method,theory,"The results are proofs, reductions to concave optimization, welfare bounds and NP-hardness."
+X2691,modality,interactive_environment,LLMs act as embodied agents in MATLAB simulation with a perception-execution loop.
+X2692,architecture,not_stated,The adaptive-depth multimodal network is not tied to a named family.
+X2693,method,supervised_prediction,"RAD trains a multimodal diagnosis model with contrastive loss and transformer decoder; retrieval injects knowledge, not LLM prompting."
+X2693,architecture,transformer,The method uses a dual transformer decoder for cross-modal fusion; no LLM is named.
+X2697,method,supervised_prediction,The main task is forecasting future brain shapes and disease progression.
+X2699,architecture,not_stated,The degradation model's modules are described without naming a network family.
+X2700,architecture,diffusion_flow,The framework builds protein structure generative models with AlphaFold3 as prior; no separate transformer is named.
+X2702,architecture,not_stated,PointMIL wraps point cloud classifier backbones without naming their family.
+X2705,modality,biological_sequence,"The task predicts MS/MS spectra from peptide sequences, with sequence-disjoint splits."
+X2705,architecture,not_stated,The benchmark evaluates six representative learned architectures without naming families.
+X2709,architecture,not_stated,The experts and role-aligned modules of AdaST are not assigned a model family.
+X2710,architecture,not_stated,The progress-based reward estimator is described without naming a network family.
+X2713,architecture,diffusion_flow,The method uses a pretrained image-editing diffusion model; the LVLM is only one of the classifiers being explained.

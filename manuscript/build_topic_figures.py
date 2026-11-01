@@ -115,11 +115,34 @@ def fig_venue(res: dict) -> None:
     save(fig, "fig_topics_venue")
 
 
+def fig_axes() -> None:
+    """Note 9-26: share of medical and other papers per label of each axis (all 4,340 papers)."""
+    res = json.loads((RES / "p9_axes.json").read_text(encoding="utf-8"))["X1"]
+    fig, axes = plt.subplots(1, 3, figsize=(11, 5.2))
+    for ax, (axis, title) in zip(axes, (("modality", "(a) Type of data"), ("method", "(b) Type of method"),
+                                       ("architecture", "(c) Architecture (several allowed)"))):
+        med, oth = res[axis]["life_science"]["all"]["labels"], res[axis]["other"]["all"]["labels"]
+        labs = sorted(med, key=lambda k: med[k]["share"] + oth[k]["share"])
+        y = np.arange(len(labs))
+        ax.barh(y + 0.2, [100 * med[k]["share"] for k in labs], 0.4, color="#2a78d6", label="Medical")
+        ax.barh(y - 0.2, [100 * oth[k]["share"] for k in labs], 0.4, color="#a3a29d", label="Other")
+        ax.set_yticks(y, [k.replace("_", " ") for k in labs], fontsize=7.5)
+        ax.set_title(title, loc="left", fontsize=9)
+        ax.set_xlabel("% of papers", fontsize=8)
+        ax.tick_params(labelsize=7.5)
+        for s in ("top", "right"):
+            ax.spines[s].set_visible(False)
+    axes[0].legend(frameon=False, fontsize=8, loc="lower right")
+    fig.tight_layout()
+    save(fig, "fig_axes")
+
+
 def main() -> None:
     res = json.loads((RES / "p9_topics.json").read_text(encoding="utf-8"))
     fig_map(points())
     fig_venue(res)
-    print("wrote", FIG / "fig_topics_map.png", FIG / "fig_topics_venue.png")
+    fig_axes()
+    print("wrote", FIG / "fig_topics_map.png", FIG / "fig_topics_venue.png", FIG / "fig_axes.png")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X4045,architecture,gnn_equivariant,A heterogeneous graph over TME components is built and learned for outcome prediction; no LLM or transformer is named.
+X4051,modality,none_or_synthetic,"Only unspecified numerical experiments are reported, with no real data type named."
+X4051,method,optimization_efficiency,"The contribution adapts sharpness-aware minimization, an optimization procedure, to hybrid model training."
+X4051,architecture,not_stated,The method is explicitly architecture-agnostic and names no model family.
+X4053,modality,multimodal,The task jointly aligns natural-language intents with 3D point cloud features.
+X4054,architecture,not_stated,A generative docking model is trained with RL but its family is not named.
+X4055,architecture,not_stated,An adaptation of CLIP-style alignment with pretrained foundation models is described without naming encoder families.
+X4056,architecture,not_stated,Learned modules map graph differences to targets but no network family is named.
+X4062,architecture,other_neural,"The paper trains spiking neural networks, listed under other_neural."
+X4063,method,generative_modeling,It improves sampling of co-folding structure generators to produce better ligand poses.
+X4063,architecture,diffusion_flow,It adapts AlphaFold-3-style co-folding models whose sampling dynamics are diffusion-based; no GNN is named.
+X4065,method,generative_modeling,The framework models latent dynamics with a diffusion interpolator and neural ODEs for interpolation and generation.
+X4066,architecture,not_stated,A binary classifier is used to identify the target model but its family is not named.
+X4067,architecture,no_model,The paper is a benchmark evaluating existing depth models without building one.
+X4068,architecture,not_stated,The abstract describes a density model on self-supervised dense features without naming the network families.
+X4070,modality,image,The method values training data for image generation tasks.
+X4070,method,trustworthy_ml,Data valuation attributing generated samples to training data is an attribution/interpretability contribution.
+X4070,architecture,not_stated,"The approach is training-free and model-agnostic, applied to generative models whose families are not named."
+X4071,architecture,diffusion_flow,Flow-MIL is built on a normalizing-flow latent space; no transformer is named for the method.
+X4075,architecture,no_model,MedMosaic is a benchmark that evaluates existing models without training one.
+X4076,method,trustworthy_ml,"The framework evaluates deception risk and user trust, a safety contribution beyond the benchmark alone."
+X4076,architecture,llm_vlm,LLMs drive the simulation and are evaluated; the trained IntentNet/TrustNet families are not named.
+X4079,architecture,diffusion_flow,DCFold is a single-step consistency distillation of the diffusion-based AlphaFold3; no GNN is named.
+X4084,architecture,not_stated,Seq2Exp is a network whose family is not named.
+X4086,architecture,no_model,The benchmark evaluates existing text-to-image models without building one.
+X4088,architecture,not_stated,LVCG is a self-supervised framework whose encoder family is not named.
+X4091,method,benchmark_dataset,HIVE is an evaluation infrastructure studying existing VLMs' reasoning.
+X4097,modality,multimodal,The model takes EEG visualizations together with text instructions and dialogue.
+X4097,method,llm_prompting_agents,The contribution is instruction-tuning a large vision-language model for EEG interpretation.
+X4099,method,representation_learning,GDE learns embeddings of distributions as its main point.
+X4099,architecture,other_neural,Encoders are coupled with conditional generative models whose families are not specified beyond autoencoder-style networks.
+X4100,method,supervised_prediction,"CMLR is a decoding model mapping neural activity to covariates, evaluated on decoding accuracy against DNNs and XGBoost."
+X4101,architecture,no_model,The paper introduces a dataset as its contribution.
+X4105,method,trustworthy_ml,"Omni-Reward targets reward modeling for aligning AI with human preferences, combining benchmark, data and model."
+X4109,architecture,not_stated,RNA-BAnG is a deep learning model whose family is not named.
+X4111,modality,none_or_synthetic,"RNNs are trained to emulate HMM emission statistics, i.e. synthetic data."
+X4115,architecture,llm_vlm,Large foundation models with generative backbones are fine-tuned on VQA.
+X4117,modality,time_series,RNNs are trained on movement trajectories and sensory input sequences derived from rat locomotion data.
+X4119,modality,volumetric,MultiMorph builds 3D atlases from brain MRI volumes.
+X4119,method,other,Atlas construction via group registration is not prediction or generative modeling in the listed sense.
+X4120,method,other,"The contribution is an attention-gating architecture modification for LLMs, not an optimization algorithm."
+X4121,method,biostatistics_inference,The paper analyzes practical Type I error and power of the KCI conditional independence test.
+X4121,architecture,gp_kernel,The studied method is the kernel-based conditional independence test.
+X4122,architecture,not_stated,RL agents are trained but no network family is named.
+X4126,method,biostatistics_inference,"A state-space model with EM inference estimates brain connectivity, which is statistical estimation."
+X4126,architecture,classical_ml,"The authors fit a state-space model by EM, a probabilistic model without neural networks."
+X4130,architecture,not_stated,The segmentation model with prototype matching does not name its network family.
+X4131,architecture,transformer,"MELP pretrains a cardiology-specific language model and ECG encoder for alignment, not a large pretrained LLM."
+X4136,modality,multimodal,"Segmentation is conditioned on text descriptions with BiomedCLIP and MedSAM2, combining text and image."
+X4138,architecture,transformer,The predictive network uses stacked attention blocks.

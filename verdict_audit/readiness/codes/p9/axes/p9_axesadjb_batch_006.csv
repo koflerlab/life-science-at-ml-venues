@@ -1,0 +1,21 @@
+item_id,axis,answer,reason
+X2796,architecture,cnn;llm_vlm;transformer,"The authors train classification baselines including EfficientNet, Inception and MobileViT, and prompt the Molmo-7B VLM with SAM for zero-shot segmentation."
+X2798,architecture,other_neural,"Brain-TIM uses modality-specific embedding layers and a Time Interval MLP module, and the text names no transformer or other named family."
+X2841,architecture,classical_ml,"The proposed decision-aware training is applied to a negative binomial mixed effects regression model, and EpiGNN appears only as a compared baseline."
+X2864,architecture,not_stated,IDEAS uses an explainable model to guide mutations but the excerpt never names its architecture; ESM-2 with a linear layer serves only as the evaluation oracle.
+X2920,architecture,transformer,"NCfold is a transformer with REF-weighted self-attention over frozen RNA foundation model embeddings, and these are not natural-language LLMs."
+X2923,architecture,cnn;transformer,EEG is encoded with a CNN-Transformer (EEG-Conformer) encoder and decoded by a convolutional VAE decoder with transposed convolutions.
+X2938,architecture,transformer,"SASHA uses a pre-trained ViT feature extractor with a multi-head attention feature distiller, and the RL policy network family is not named."
+X2962,architecture,classical_ml;cnn,A CNN core-readout predictive model is trained jointly with a multivariate Student t mixture clustering model fitted by EM.
+X2969,architecture,cnn;transformer,The source model is a DeiT-base network and the GUES generator is an eight-layer convolutional VAE.
+X3022,architecture,cnn;state_space_rnn,The GFlowNet policy is a two-layer LSTM and the proxy models are parameterized as CNN ensembles.
+X3026,architecture,not_stated,"AtlasSegFM adapts frozen segmentation foundation models with a registration network and a lightweight 3D encoder, but none of their families are named."
+X3030,architecture,cnn;llm_vlm,Forecastability fine-tuning is applied with LoRA to the Qwen3-0.6B language model and to a small task-conditioned U-Net RL policy.
+X3045,architecture,classical_ml;diffusion_flow;transformer,NEvo fits voxel-wise ridge regressions on V-JEPA 2 features and generates videos with the LTX-Video diffusion transformer.
+X3059,architecture,cnn;gnn_equivariant;other_neural,"The authors train a GNN, a 3D-CNN, and MLP heads on pretrained Uni-Mol and ProFSA encoders whose families are not named."
+X3090,architecture,classical_ml;other_neural;transformer,"Var-JEPA uses MLP-based variational encoders, Var-T-JEPA uses attention-based token pooling and mask tokens, and XGBoost is among the downstream predictors on the embeddings."
+X3099,architecture,diffusion_flow,"Aegis generates defense data with a pretrained latent diffusion model, and the federated model architecture is not named in the text."
+X3193,architecture,cnn;other_neural,"The authors train a ResNet18 image encoder, a CNN text encoder and MLP encoders and regressors; CLIP appears only in a case study."
+X3309,architecture,transformer,"MethylProphet is a transformer encoder, and its bottleneck MLP is a sub-module of that same model."
+X3336,architecture,cnn,Pancakes uses a UNet-like convolutional architecture with convolutional layers and skip connections.
+X3351,architecture,other_neural,"DSRF is built from custom gated attention reasoning blocks and Gram matrices, with CNNs and MLPs mentioned only as prior work and ablation alternatives."

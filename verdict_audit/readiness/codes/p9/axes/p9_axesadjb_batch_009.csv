@@ -1,0 +1,9 @@
+item_id,axis,answer,reason
+X4070,architecture,diffusion_flow;llm_vlm;other_neural,"GMValuator embeds samples with a pretrained CLIP encoder and is validated on GANs (BigGAN trained by the authors), VAEs and diffusion models."
+X4147,architecture,not_stated,PB-SAC places a Gaussian posterior over SAC policy and critic networks whose family is never named.
+X4240,architecture,not_stated,The image and LiDAR networks are described only abstractly; no backbone family is named in the text.
+X4282,architecture,classical_ml;other_neural,PACER uses linear-Gaussian mechanisms for its analytic version and also supports neural conditional density parameterizations.
+X4291,architecture,diffusion_flow;transformer,IgGM is a diffusion/consistency model built on a frozen ESM-PPI protein language model and Sgformer feature encoder; no natural-language LLM is used.
+X4299,architecture,diffusion_flow;transformer,The unified framework trains diffusion-based solvers and attention-based encoder-decoder sequence models; no GNN is named.
+X4309,architecture,classical_ml;other_neural;transformer,"Syto plugs in learnable classifiers including MethylBERT and deconvolvers XGB and MLP, with a linear calibrator."
+X4339,architecture,cnn;llm_vlm;transformer,COME extends DINO with a ResNet-50 backbone and Transformer layers and fine-tunes MedCLIP-SAMv2 built on BiomedCLIP.

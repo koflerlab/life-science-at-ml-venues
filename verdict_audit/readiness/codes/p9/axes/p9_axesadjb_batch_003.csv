@@ -1,0 +1,21 @@
+item_id,axis,answer,reason
+X1676,architecture,classical_ml;other_neural,DPsurv combines Gaussian mixture model slide embeddings with evidential neural networks on frozen UNI2-h features.
+X1691,architecture,other_neural;transformer,"CogniMap3D builds on the VGGT/DINOv2 backbone and LoFTR attention matching, and encodes point clouds with a modified PointNet++."
+X1758,architecture,cnn;state_space_rnn,"Prism adds a three-layer 1D-CNN confounder encoder to a Caduceus backbone, which the text groups with Mamba and HyenaDNA."
+X1776,architecture,classical_ml;diffusion_flow;other_neural,"Profile2Gen trains CTGAN, TVAE, DDPM, normalizing flows and a Bayesian network as generators."
+X1786,architecture,not_stated,"NeurAlign trains volumetric and spherical registration networks (with a VoxelMorph base), but the text never names their family."
+X1792,architecture,gnn_equivariant;other_neural;transformer,"NeuralCohort uses graph propagation over a patient adjacency matrix and an encoder-decoder, plugged into ClinicalBERT, Med2Vec and MiME backbones."
+X1818,architecture,transformer,AANet trains contrastive pocket/ligand encoders (family not named) and a cross-attention adapter that aggregates candidate cavities.
+X1819,architecture,cnn;llm_vlm;transformer,"The authors pretrain ResNet-50 and CLIP, adapt the PLIP vision-language model and fine-tune PubMedBERT."
+X1829,architecture,cnn;state_space_rnn,"CRAFT is applied to an EEGNet-style CNN with LSTMs, a 3D SFCN CNN and a ResNet50 with an attention head."
+X1837,architecture,diffusion_flow;other_neural;transformer,"The paper uses MLP probes on frozen Boltz2 features, a diffusion GruM model with a Pairformer attention denoiser and graph-transformer SynFlowNet policies."
+X1844,architecture,transformer,"The student model fine-tunes an ESM2-650M encoder, a BERT-size protein language model rather than a GPT/Llama-scale LLM."
+X1861,architecture,diffusion_flow;transformer,"APM is a flow-matching model whose trunk stacks IPA and Transformer-encoder structure modules, with an ESM protein language model."
+X1869,architecture,not_stated,"The study benchmarks pretrained and untrained vision backbones and geometric encoders (DINOv2, MAE), but this text names no family."
+X1875,architecture,cnn,"TinyMIG trains a U-shaped segmentation network with a ResNet-34 encoder distilled from SAM/DINOv2 teachers, whose family is not named."
+X1882,architecture,llm_vlm,"HandEdit trains no model; its metric suite includes VLM-based judgment, and SAM3/ProPainter are used only in data curation."
+X1895,architecture,not_stated,"TTA trains prototypes, projections and an OT module on frozen UNI or ResNet50 features, but never names the family of its own encoders."
+X1955,architecture,transformer,The only named mechanisms in GDNet are cross-attention in the detail encoder and MLP fusion; CNNs appear only in related work.
+X1995,architecture,cnn,"ProSpero uses EvoDiff, which the text describes as a ByteNet-style CNN, and an ensemble of 1D CNN surrogates; ESM-2 appears only in baselines."
+X2029,architecture,other_neural,H2DiLR learns vector-quantized neural codes with shared and private codebooks (VQ-VAE style tokenizers) for masked pretraining.
+X2056,architecture,cnn;other_neural;transformer,dMoE adds MLP expert layers to TransUNet (ViT-B) and a 3D Residual U-Net backbone.

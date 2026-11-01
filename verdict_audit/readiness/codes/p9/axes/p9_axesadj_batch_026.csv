@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X3453,architecture,not_stated,The abstract mentions regression and generative baselines but never names their model families.
+X3456,architecture,llm_vlm,The dataset pipeline uses LLM-based information extraction from radiology reports to build scene graphs.
+X3458,method,llm_prompting_agents,The method is training-free use of pretrained vision-language models with prompt decomposition and layer weighting.
+X3465,architecture,not_stated,The benchmark trains and evaluates pretrained foundation models and compositional baselines without naming their families.
+X3466,architecture,classical_ml,The method fits Hodgkin-Huxley biophysical models via differentiable simulation and simulation-based inference; no neural family is named.
+X3469,method,generative_modeling,"The title and results lead with Bio-xLSTM as a generative language model for DNA, protein and chemical sequences."
+X3471,modality,none_or_synthetic,The RNNs are trained on synthetic neuroscience tasks such as flip-flop memory and sine wave generation.
+X3471,method,other,"The contribution is a framework to quantify and control solution degeneracy across trained RNNs, which fits no listed family."
+X3474,architecture,not_stated,"HistAug is described only as a generative model in latent space, with no named family."
+X3481,modality,image,SpRePE is a position embedding for Vision Transformers evaluated on spherical image classification.
+X3483,architecture,llm_vlm,The benchmark evaluates 15 multimodal large language models via in-context learning.
+X3486,modality,interactive_environment,The task is framed as sequential decision-making by a tool-calling agent in a queryable FHIR environment built by the authors.
+X3486,method,reinforcement_decision,"The main contribution is RL post-training of the agent, improving over prompt-based baselines."
+X3490,modality,image,"The method aligns text-to-image diffusion models, whose generated data are images."
+X3501,method,theory,The paper's core is a theoretical reformulation of data valuation as dynamic programming with analysis of optimality and provable guarantees.
+X3501,architecture,not_stated,Experiments use classical ML and LLM fine-tuning data selection without naming the model families trained.
+X3502,architecture,llm_vlm;transformer,The framework adapts SAM and uses contrastive language-image pretraining and visual question answering for prompts.
+X3503,architecture,no_model,The paper presents a dataset and tooling with no model described.
+X3504,modality,graph_molecule,"All three input types (SMILES, molecular graph, fingerprint) are representations of molecules."
+X3506,architecture,gnn_equivariant,The key module uses equivariant feature aggregation; no other family is named.
+X3509,method,theory,The paper proves exact learnability results for graph algorithms using NTK theory.
+X3510,architecture,not_stated,The channel-rearrangement and reconstruction modules are not tied to a named model family.
+X3511,modality,multimodal,FAN is a general architecture applied across a range of task types with none primary.
+X3514,architecture,diffusion_flow,The authors fine-tune AlphaFold3-based biomolecular diffusion models; no transformer is named in the text.
+X3515,architecture,other_neural,The routing architecture with modality paths and task heads is not described with any specific named family.
+X3516,method,supervised_prediction,"CRONOS forecasts a target 3D volume from past scans, which is forecasting trained on observed targets."
+X3521,architecture,not_stated,The framework accelerates existing deep learning registration pipelines without naming their model family.
+X3522,architecture,not_stated,The benchmark has models rank variants but never names the model families used.
+X3523,architecture,not_stated,Baseline methods are benchmarked on the dataset but their families are not named.
+X3524,method,representation_learning,The contribution is cross-subject functional alignment to transfer pretrained decoders to new subjects.
+X3524,architecture,not_stated,The Brain Transfer Matrix and alignment module are learned but no model family is named.
+X3525,architecture,cnn,HiMAE uses a hierarchical convolutional encoder-decoder.
+X3528,modality,interactive_environment,MindDrive is trained via online reinforcement learning by acting in a driving environment.
+X3530,architecture,not_stated,The VSRL framework is described without naming any model family.
+X3531,method,llm_prompting_agents,The contribution DICL is an in-context learning method for pretrained LLMs to predict MDP dynamics.
+X3536,modality,geometry_3d,Scenes are represented and shared as sparse 3D Gaussians for collaborative perception.
+X3536,method,optimization_efficiency,"The central aim is cutting communication volume in collaborative perception, achieving 500x lower bandwidth."
+X3538,modality,text,The benchmark evaluates conversational LLM agents producing SQL from user questions.
+X3539,architecture,llm_vlm,Frontier language models are evaluated as agents and an LLM is used for rubric-guided judging.
+X3541,method,reinforcement_decision,CFlower is an offline policy-learning objective (conservative SubTB GFlowNet) for an LLM recommender.
+X3545,architecture,llm_vlm,The authors train a medical vision-language pretraining model in the CLIP style.
+X3546,architecture,gnn_equivariant;transformer,"The authors train GATE, a graph transformer-based EMA method, on the benchmark."
+X3547,modality,time_series,The decoding framework takes EEG signals as input.
+X3547,architecture,diffusion_flow,A diffusion-based colored point cloud decoder is proposed.
+X3548,modality,multimodal,The point is combining structured training data with textual descriptions at inference via LLMs.
+X3550,architecture,no_model,The paper proves generalization bounds; experiments only illustrate the bound.
+X3551,modality,image,SD-LoRA performs few-shot image classification with a CLIP model.
+X3551,method,representation_learning,The main point is few-shot adaptation (transfer) of vision-language models.
+X3560,method,optimization_efficiency,GNN-Diff aims at efficient hyperparameter tuning by generating high-performing GNN weights.
+X3561,modality,none_or_synthetic,It is a position paper with no data.

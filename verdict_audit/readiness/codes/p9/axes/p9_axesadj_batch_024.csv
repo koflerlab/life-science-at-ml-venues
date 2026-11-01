@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X3136,method,reinforcement_decision,"The main contribution is an RLVR training framework that shapes the model policy, not prompting or agents."
+X3137,architecture,diffusion_flow,Di-Fusion is a self-supervised denoiser built on diffusion steps and adaptive sampling; no CNN is named.
+X3138,architecture,diffusion_flow;llm_vlm,NExT-OMNI is a large omnimodal foundation model doing any-to-any understanding and generation via discrete flow matching.
+X3139,modality,multimodal,"The method rescales CLIP image-text similarity scores, so vision and language are jointly central."
+X3144,architecture,not_stated,The paper is a dataset and benchmark that evaluates existing HPE models without naming their families.
+X3148,method,supervised_prediction,INFER regresses continuous frequency response fields from measured acoustic responses with spectral supervision.
+X3150,architecture,not_stated,"A lightweight gating policy on top of a planner is trained, but its model family is not named."
+X3151,modality,interactive_environment,Circuit designs are optimized by evolution evaluated against a design evaluator rather than a fixed dataset type.
+X3155,architecture,no_model,The paper is a theoretical analysis of GD dynamics on logistic and cross-entropy losses with no model built.
+X3169,architecture,diffusion_flow;llm_vlm,LMFusion adapts pretrained Llama-3 with parallel image modules trained with diffusion; the added modules are LLM-style copies.
+X3173,architecture,transformer,CoMEL is built on a Grouped Double Attention Transformer for instance encoding with LoRA adaptation.
+X3174,architecture,not_stated,ART is a gradient-descent-ascent learning algorithm for MARL agents whose network family is not named.
+X3176,architecture,diffusion_flow,Pallatom is a generative model of all-atom structures; the abstract names no graph or equivariant network.
+X3178,architecture,other_neural,"AminoAseed improves codebook updates of a structure tokenizer, a vector-quantized autoencoder-style model."
+X3181,architecture,diffusion_flow,The method extends flow-based latent protein generation architectures; no GNN or equivariant network is named.
+X3183,method,llm_prompting_agents,"SePer is an LLM-based evaluation metric for retrieval utility in RAG, which falls under RAG and LLM evaluation."
+X3185,architecture,not_stated,RxnFlow is trained with a GFlowNet objective but the network family of the policy is not named.
+X3188,architecture,cnn,"The method modifies ProtoPNet variants with image backbones; prototypes are part of that network, not a separate family."
+X3190,architecture,cnn;other_neural;state_space_rnn;transformer,"The backbone combines SNN layers, an attention bridge, dense ANN conv blocks and DWConvLSTM RNN blocks."
+X3193,architecture,not_stated,The work analyses multimodal contrastive learning with latent variable models and runs experiments without naming encoder families.
+X3200,architecture,gnn_equivariant;transformer,BGT-ESRE is a graph transformer over brain connectivity graphs with edge-aware attention.
+X3201,architecture,llm_vlm,"CODA is a multimodal clinical foundation model doing QA and report generation, i.e. a large language or vision-language model."
+X3208,architecture,no_model,WISE is a hand-designed hierarchical and dictionary-based lossless compressor with no learned model.
+X3219,method,llm_prompting_agents,The contribution is a training-free inference-time sampling algorithm to improve LLM reasoning.
+X3221,modality,multimodal,Medex pairs natural-language facts with SMILES or RefSeq representations and models reason jointly over text and design targets.
+X3221,architecture,llm_vlm,"The authors train LLM, CLIP and LLaVA architectures on the data and build it with LLM pipelines."
+X3224,method,causal_inference_trials,"BioBO addresses design of genomic perturbation experiments, selecting interventions via Bayesian optimization."
+X3225,modality,time_series,The model takes EEG recordings as input and synthesizes fMRI from them.
+X3225,architecture,transformer,"UniEFS uses condition-aware prompt tokens with a pretrained fMRI decoder, a token-based transformer design."
+X3229,method,optimization_efficiency,SoLoPO is a new preference-optimization training objective that improves long-context ability and training efficiency.
+X3232,method,supervised_prediction,Cello is a WSI framework for diagnosis and prognosis trained with WSI labels; contrastive learning is only a module.
+X3235,architecture,other_neural,"SOCP fits a Self-Organizing Map, a neural network, to discover calibration groups."
+X3236,method,generative_modeling,"Dyn-O is a world model evaluated on rollout prediction and imagined trajectory generation, not on policy learning."
+X3236,architecture,not_stated,The abstract describes an object-centric world model without naming its network family.
+X3238,method,uncertainty_calibration,The paper studies verbal uncertainty quantification of LLMs and proposes VOCAL to fit marker-uncertainty mappings to correctness.
+X3239,method,supervised_prediction,The MR block is a module for few-shot WSI classification with labels.
+X3240,architecture,not_stated,The MIL framework uses unbalanced transport for instance weighting but names no network family.
+X3242,modality,image,DART is an image generation model; text is conditioning and the generated data are images.
+X3248,architecture,other_neural;transformer,FLeRM is applied to MLPs with residual connections and transformers trained by the authors.
+X3265,method,uncertainty_calibration,"GeoR is a self-evaluation of correctness scored by AUROC, AUPR and FPR@95, i.e. error detection."
+X3266,architecture,not_stated,Bonobo trains a GFlowNet generative model whose network family is not named; GFlowNets are not diffusion or normalizing flows.
+X3267,architecture,gnn_equivariant;transformer,"FlashIPA reformulates Invariant Point Attention, a geometry-aware invariant attention mechanism."
+X3268,modality,biological_sequence,PoET-2 models protein sequences with only optional structure conditioning.
+X3279,modality,graph_molecule,The data are activity measurements of pooled molecules such as antibodies.
+X3279,method,biostatistics_inference,The method is a neural compressed-sensing estimator that deconvolutes molecule-activity maps from pooled measurements.
+X3285,modality,none_or_synthetic,The paper proves convergence of projected policy gradient with exact policy evaluations and uses no data.
+X3291,method,trustworthy_ml,The main contributions are differentially private algorithms for vaccination strategy design.
+X3297,method,reinforcement_decision,GALAX integrates GNNs into LLMs via reinforcement learning guided by a graph process reward model.
+X3298,modality,none_or_synthetic,Core findings come from transformers trained on synthetic Markov-chain and modular-addition tasks.
+X3310,architecture,not_stated,The dataset benchmark evaluates models from linear to foundation models without the authors building a named model family.

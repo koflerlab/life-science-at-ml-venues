@@ -966,3 +966,62 @@ blind coders over clusters, and the 2,170 medical papers as the corpus.
 * `posthoc_p9_uptake.py` reads `claims_anchored.json` from the repository root; that file exists only in the
   predecessor repository (`icml/icml-repro-working`), so it was run with `p8_common.ROOT` pointed there; its result
   is unchanged (all its ICML 2026 papers were coded before).
+
+## Note 9-26 (2026-11-01, data, method and architecture of all frame papers, post hoc, codebook frozen before any paper is coded)
+
+Kate asked on 2026-11-01 for further splits beside the application topic (Note 9-24): by type of data, by type of
+method ("which mathematics", including biostatistics and clinical trials) and by architecture. She chose all three
+axes and both groups. Post hoc and exploratory, like Note 9-24.
+
+* Units: all 4,340 frame papers. Item ids `X0000` onward in random order (seed 20261102); keys in
+  `data/p9/axes_keys.json` (git-ignored, SHA-256 in `results/p9_axes_manifest.json`). Venue, year, group and label
+  hidden from coders and adjudicators.
+* Pass A (title and abstract from `papers.json`, every paper): three axes per paper; prompt
+  `codes/p9/axes/AXES_PROMPT.md`; sheets of 50, two sheets per coder instance.
+  * `modality`, one primary type of data the method takes as input: image, volumetric, video, geometry_3d, text,
+    audio_speech, tabular_records, time_series, biological_sequence, omics_matrix, graph_molecule,
+    interactive_environment, multimodal, none_or_synthetic.
+  * `method`, one primary methodological family: supervised_prediction, generative_modeling,
+    representation_learning, causal_inference_trials, biostatistics_inference, uncertainty_calibration,
+    reinforcement_decision, llm_prompting_agents, optimization_efficiency, trustworthy_ml, theory,
+    benchmark_dataset, other.
+  * `architecture`, every model family the paper builds, trains or adapts (several allowed, `;`-separated): cnn,
+    transformer, llm_vlm, gnn_equivariant, diffusion_flow, state_space_rnn, other_neural, gp_kernel, classical_ml;
+    or exactly one of not_stated (a learned model is used but its family is not named) and no_model.
+* Pass B (architecture only, full text): papers whose final pass-A architecture is `not_stated` and that have a
+  Protocol 9 excerpt are coded again on title and excerpt, sheets of 20, same labels; the pass-B label replaces
+  `not_stated`. Papers without an excerpt keep the pass-A label.
+* Coders: two blind claude-sonnet-5-5 subagents (roles axes1, axes2) code every item of both passes. Agreement:
+  Cohen's kappa per single-label axis; for architecture, kappa per label as a binary indicator and exact-set
+  agreement; reported, no gate. Every item where the coders differ on an axis goes to blind adjudication by
+  claude-opus-5-5 for that axis (the two answers in random order, one-sentence reason). Final: agreed or adjudicated.
+* Analyses (`posthoc_p9_axes.py`, `results/p9_axes.json`), all descriptive, Wilson intervals, no multiplicity
+  correction:
+  * X1 share of each label by group, by group and venue, by group and year.
+  * X2 medical minus other share of each label, Mantel-Haenszel over venue-years, paper bootstrap as A9.3.
+  * X3 per group, venue by label chi-square for modality and method with adjusted standardised residuals (read only
+    at |r| >= 3, as Note 9-24).
+  * X4 per label and group among coded papers, the four Note 9-5 indicators (code, open main data, weights,
+    variance; `unclear` excluded).
+  * X5 the A9.3 medical minus other differences for those four indicators with strata venue-year x modality and
+    venue-year x method instead of venue-year, against the main estimates; strata with one group drop out as in
+    A9.3. X5 asks whether the differences are explained by what data and methods the groups use; it does not change
+    any L9 label.
+* Medical topic (Note 9-24) is crossed with the three axes in X1 for the medical papers.
+
+## Note 9-27 (2026-11-01, outcome of Note 9-26, written after the analyses were run)
+
+* Pass A (4,340 papers): kappa modality 0.91, method 0.88; architecture exact-set agreement 0.81, per-label kappa
+  0.57 (not_stated) to 0.94; 1,630 item-axis disagreements adjudicated (modality 367, method 452, architecture 811).
+  593 papers had `not_stated` architecture; 514 had an excerpt and went to pass B.
+* Pass B (514): exact-set agreement 0.63, per-label kappa 0.56 to 1.00; 188 adjudicated. Final architecture from
+  pass B for 514 papers, pass A for 3,826.
+* Deviations in delivery only: prompts given to each instance as a file to read; pass-B batches 10 to 25 and the
+  pass-B adjudication were given two sheets per instance (Kate asked on 2026-11-01 to cut agent overhead). One pass-B
+  coder instance (axes1b batches 12 and 13) reported writing a helper script to a temporary folder and reading each
+  excerpt's introduction and architecture-term sentences rather than the whole excerpt; its codes are kept (agreement
+  with the other coder on those 40 papers 30, above the pass mean).
+* X5 (exploratory): code and variance differences are stable when strata add modality or method (code +10.8 and
+  +11.7, variance +21.2 and +24.4 percentage points); weights shrink (+20.3, +14.3) but stay above 0; open main data
+  falls from +13.5 to +4.7 (0.9 to 8.7) with method and reverses to -6.1 (-10.3 to -2.0) with modality: within the
+  same data type, medical papers do not report open main data more often. No L9 label changes.

@@ -1,0 +1,15 @@
+item_id,architecture
+X4223,transformer
+X4224,cnn;state_space_rnn
+X4240,not_stated
+X4259,transformer
+X4265,cnn
+X4278,transformer
+X4282,other_neural
+X4291,diffusion_flow;llm_vlm
+X4293,classical_ml
+X4299,diffusion_flow
+X4307,classical_ml
+X4309,cnn
+X4325,cnn;llm_vlm
+X4339,cnn;llm_vlm;transformer

@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0247,architecture,not_stated,VADB-Net is described only as a dual-modal pre-training framework without naming a model family.
+X0252,modality,image,"The method learns from 2D cryo-EM projection images y, with atomic structures never observed."
+X0253,modality,none_or_synthetic,Experiments use a controlled synthetic 2D Gaussian bump generation task.
+X0253,architecture,not_stated,The abstract mentions standard generative architectures and architectural modifications but names no model family.
+X0255,method,other,"The contribution is a decision-variable-correlation measure comparing model and monkey representations, a neuroscience comparison rather than any listed family."
+X0255,architecture,not_stated,Network models trained on image classification are used without naming their family.
+X0257,architecture,not_stated,The benchmark evaluates 24 post-hoc OOD methods on learned models whose family is not named.
+X0258,architecture,not_stated,"The dataset is demonstrated with forecasting, classification and causal analysis tasks, implying learned models whose family is not named."
+X0265,method,reinforcement_decision,The main contribution is a scalable reinforcement learning method to train continuous chain-of-thought tokens.
+X0266,modality,multimodal,ProVideLLM is a video-language model interleaving visual and verbalized text tokens in a multimodal cache for streaming dialogue.
+X0266,method,llm_prompting_agents,The contribution is a streaming VideoLLM assistant framework built around a pretrained language model.
+X0266,architecture,llm_vlm;transformer,The system is a VideoLLM with visual tokens encoded by a DETR-QFormer transformer module built by the authors.
+X0267,architecture,not_stated,The method learns a dependency model and an RL selection policy whose family is not named; LLMs are only the objects being evaluated.
+X0268,method,other,"The contribution is a byte-level sampling algorithm for tokenized LMs grounded in a lemma and validated on FIM and ensemble benchmarks, not mainly theory."
+X0269,architecture,transformer,"The paper samples from protein masked language models, which are BERT-style sequence transformers rather than large natural-language LLMs."
+X0271,method,other,"The contribution is a new positional encoding component for transformers, an architectural design not covered by the listed families."
+X0277,modality,multimodal,The point of the method is fusing multiple incomplete views through a shared codebook and fused-teacher distillation.
+X0281,architecture,no_model,"The paper proposes a nonparametric causal identification framework checked by Monte Carlo simulation, with no learned model."
+X0285,method,optimization_efficiency,DEPO targets data efficiency and reduced rollout cost of RLVR training through data selection.
+X0288,modality,image,The model takes H&E histology as input to predict gene expression.
+X0290,architecture,llm_vlm,"The authors train MedEmb, an MLLM-based reference embedding model."
+X0291,architecture,transformer,The method enhances DETR-based detectors via distillation; no convolutional family is named.
+X0296,modality,image,The input is native-resolution chest X-ray images from which reports are generated.
+X0304,modality,graph_molecule,OligoGym frames oligonucleotide therapeutics as compounds with molecular representations and featurizations.
+X0305,modality,volumetric,"The method reconstructs MRI scans, which the scheme classes as volumetric."
+X0307,modality,tabular_records,"ESENSC attributes predictions over input features of neural network and XGBoost models, i.e. tabular feature data."
+X0308,method,llm_prompting_agents,QCA is a training-free keyframe selection plugged into existing Video-LLMs at inference.
+X0321,architecture,diffusion_flow,"KIDOT models reconstruction as a learned continuous transport path governed by a transport equation, a flow-type model."
+X0323,modality,multimodal,BSS links vision model encodings of pathology images with LLM encodings of pathology reports.
+X0327,architecture,other_neural,"The authors train sparse cross-layer transcoders on the existing pLM ESM2, which they analyze rather than train."
+X0330,architecture,not_stated,The generative stages of MuCO are described without naming a model family.
+X0331,modality,multimodal,"Models are trained on speech and on head-cam video to predict auditory and visual cortex responses, with neither primary."
+X0331,architecture,not_stated,The abstract refers only to deep neural networks without naming a family.
+X0334,modality,multimodal,ASIGN combines 3D WSI histology sections with a 2D spatial transcriptomics slide.
+X0334,method,supervised_prediction,The task is predicting (imputing) spatial transcriptomics from histology with a graph network.
+X0338,method,other,"The contribution is fitting a differentiable biophysical simulator to recordings by gradient descent, explicitly without likelihood or posterior estimation."
+X0338,architecture,no_model,"The fitted object is a mechanistic biophysical membrane and volume-conductor simulator, not a learned ML model family."
+X0343,architecture,gnn_equivariant;other_neural,The dataset is tested by training PointNet and graph U-Nets for WSS prediction.
+X0344,architecture,cnn,MCPNet extracts positional features from CNN feature maps with a custom attention mechanism.
+X0351,modality,image,The retina model is trained on a visual classification task over light stimuli.
+X0353,architecture,state_space_rnn,FlyNet is a continuous-time recurrent network constrained by the connectome.
+X0354,modality,multimodal,Omni-View is a unified multimodal understanding and generation model over multiview images with scene QA.
+X0354,architecture,llm_vlm,"The core is a unified multimodal understanding model, i.e. a vision-language model."
+X0357,architecture,not_stated,Foundation model architectures are optimized but no family is named.
+X0362,modality,video,"The benchmarked models take videos as input, with fMRI used for alignment scoring."
+X0364,method,reinforcement_decision,"The contribution is active next-best-view selection, a sequential decision-making framework driven by ensemble variance."
+X0365,method,llm_prompting_agents,VILA-M3 adds instruction fine-tuning of a VLM using domain expert models as tools.
+X0367,architecture,other_neural,Single neuron units with dendritic structures are trained to learn Boolean functions.
+X0374,method,llm_prompting_agents,OpenTSLM integrates time series into pretrained LLMs via soft prompting or cross-attention for natural-language reasoning.
+X0386,modality,text,The method uses LLMs to synthesize textual process traces and compile them into material graphs.

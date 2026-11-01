@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0007,modality,none_or_synthetic,Abstract treats generic CO instances as probability measures and names no real data type.
+X0012,architecture,llm_vlm,The benchmark evaluates state-of-the-art multimodal LLMs by prompting them on ECG reasoning.
+X0014,architecture,not_stated,"The method optimizes Gaussian control points using unnamed vision foundation model priors and spline trajectories, with no model family named."
+X0018,method,other,"The contribution is incomplete multi-view clustering via tensor and graph learning, which fits no listed family."
+X0018,architecture,classical_ml,"CAMEL uses latent embeddings, low-rank tensor constraints and k-means with no neural network."
+X0019,method,other,The main contribution is an architectural change (gated attention) to LLMs rather than an optimization algorithm.
+X0019,architecture,llm_vlm,The authors pretrain 15B MoE and 1.7B dense large language models.
+X0024,modality,geometry_3d,The method learns semantic 3D Gaussian Splatting scene representations; vision-language priors are auxiliary.
+X0024,architecture,llm_vlm,"Object-level priors come from vision-language models while the refined representation is 3D Gaussians, not a named neural family."
+X0025,method,representation_learning,"The main point is online adaptation of segmentation models to distribution shifts, i.e. domain adaptation."
+X0025,architecture,not_stated,The interactive segmentation network is never named by family.
+X0030,architecture,not_stated,"Encoder, decoder ensemble and policy are learned but their family is not named."
+X0031,modality,video,"The rPPG data are synchronized RGB and NIR camera video, with PPG only as reference ground truth."
+X0033,method,supervised_prediction,"GDT is trained and evaluated for forecasting and clinical event prediction (MASE, C-index)."
+X0042,architecture,not_stated,Only generic neural networks are mentioned without a family.
+X0043,method,supervised_prediction,"ProbIP predicts human motion from IMU data with a predictive distribution, not data generation."
+X0043,architecture,state_space_rnn,The model is built from RU-Mamba blocks.
+X0049,architecture,transformer,The architecture uses enhanced Physics-Sliced Attention with gated expert routing.
+X0050,method,theory,The contribution is a finite-sample analysis and error bounds for linear OPE.
+X0051,architecture,state_space_rnn,The framework is built on a multi-view Hilbert curve-based Mamba block.
+X0052,method,supervised_prediction,"The goal is improving fMRI-to-image decoders trained on real plus synthetic data, not the generator itself."
+X0053,architecture,not_stated,Experts and classifiers are used but no network family is named.
+X0054,method,trustworthy_ml,"The study identifies and ablates interpretable word-form-selective units in VLMs, an interpretability analysis."
+X0055,modality,multimodal,The point is aligning molecular graphs with LLMs for molecular question answering.
+X0058,architecture,transformer,NOVA trains a vector-quantised transformer.
+X0060,architecture,not_stated,The registration encoder and vision foundation model are not named by family.
+X0063,modality,multimodal,"The benchmark aligns deep video model features with EEG recordings, both jointly central."
+X0066,method,representation_learning,The contribution is structural-temporal embeddings and tokenizers to transfer LLMs to clinical profiles.
+X0067,architecture,not_stated,Only generic deep neural networks with a classification layer are mentioned.
+X0069,architecture,not_stated,The detection model is not named by family.
+X0072,method,generative_modeling,"ByteFlow Net is a tokenizer-free language model, i.e. generative modeling of byte streams."
+X0075,architecture,diffusion_flow;transformer,The flow-matching framework is modeled as a single unified Diffusion Transformer.
+X0080,method,benchmark_dataset,The paper presents a multi-seed benchmark of FL and KD for point cloud classification.
+X0086,architecture,not_stated,Mixture-of-experts client models are described without naming a network family.
+X0087,architecture,gp_kernel,The generative framework is a latent heteroscedastic Gaussian process with an OT objective; neural ODEs are only criticized prior work.
+X0089,method,benchmark_dataset,The main contribution is a systematic evaluation study of LLM scale and compression on brain alignment.
+X0091,architecture,other_neural,DeepOSets is a set-based neural architecture with no transformer named.
+X0092,architecture,not_stated,Multi-branch segmentation networks are not named by family.
+X0094,architecture,classical_ml,The authors fit linear and quadratic statistical detectors on foundation model latents.
+X0095,modality,volumetric,The decoder takes fMRI brain data as input to reconstruct videos.
+X0095,architecture,not_stated,The abstract names no generative or network family for VCFlow; the name alone does not establish a flow model.
+X0101,architecture,not_stated,The classifier is a neural model whose family is not named.
+X0105,modality,geometry_3d,"Affordance fields are embedded in 3D scenes from RGB-D sensing, with language only as queries."
+X0107,modality,volumetric,The dataset is fMRI activity used as input for visual decoding.
+X0107,architecture,no_model,The authors release a dataset and only evaluate existing pretrained decoding models.
+X0109,architecture,not_stated,Preliminary AI models are built on the dataset but their family is not named.
+X0113,modality,text,"Evaluation condensation is demonstrated on text benchmarks MMLU, Hellaswag, Winogrande and ARC."
+X0118,architecture,not_stated,Discovered hybrid architectures are not named by family in the text.
+X0120,modality,biological_sequence,Experiments are on protein fitness optimization benchmarks over protein designs.
+X0120,architecture,not_stated,GPE is architecture-agnostic and names no generative model family.

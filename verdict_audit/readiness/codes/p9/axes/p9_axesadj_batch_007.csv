@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0918,architecture,not_stated,"Decoding is run with linear and unnamed neural network models, so a learned model is used but its family is not stated."
+X0925,architecture,no_model,The contribution is a benchmark comparing existing foundation models; the authors do not build or adapt a model of their own.
+X0926,architecture,transformer,SAM is a vision (not language) foundation model whose transformer image encoder and mask decoder are fine-tuned with adapters.
+X0928,architecture,classical_ml,"The method is a semiparametric multiply robust statistical estimator fitted to EHR data, with no neural network."
+X0934,architecture,not_stated,The benchmarking study evaluates unnamed state-of-the-art models on the new dataset.
+X0937,architecture,classical_ml,"Neural data are reanalysed with classification and a simple synthetic margin-maximisation model, no neural network named."
+X0942,modality,image,"The key experiments are on image homographies, with PDE symmetries as a secondary application."
+X0944,modality,multimodal,"A vision-language model maps X-ray images to radiology report text, so image and text are jointly central."
+X0947,architecture,other_neural,KMD is a plug-and-play neural module inserted into unnamed backbones; no convolutional family is named.
+X0951,architecture,classical_ml,"The algorithm is a Lasso (sparse linear) bandit, a non-neural linear model."
+X0956,architecture,gnn_equivariant;transformer,DeepSADR uses a supervised graph autoencoder on interaction graphs and a Set Transformer readout.
+X0958,architecture,llm_vlm,The benchmark evaluates a wide variety of frontier vision-language models.
+X0964,architecture,not_stated,The text describes an energy-based density model and autoregressive fragment extension without naming a network family.
+X0968,modality,volumetric,Cardiac MRI is processed across slices with differentiable volume computation.
+X0969,modality,none_or_synthetic,Tadpole is pre-trained solely on synthetic 3D PDE data generated online.
+X0970,method,causal_inference_trials,"The system compiles evidence into estimand objects supporting do-calculus, counterfactual and intervention-effect queries."
+X0972,modality,biological_sequence,"The benchmark concerns peptides, which are amino-acid sequences, with sequence-based PLM and SMILES baselines."
+X0972,architecture,no_model,"The contribution is datasets, a preprocessing pipeline and a leaderboard; the model families listed are only baselines."
+X0974,method,optimization_efficiency,The framework targets limited hospital compute via low-rank pre-training and generated LoRA weights for efficient personalization.
+X0977,method,other,"It is a computational neuroscience attractor-network model explaining perceptual biases, not formal theory or a listed ML family."
+X0978,method,supervised_prediction,FIGRDock replaces generative sampling with a one-shot regression model for pose prediction.
+X0982,architecture,llm_vlm,The benchmark collects and evaluates responses from five LLMs.
+X0987,architecture,transformer,"SAM, a vision foundation model rather than a language or vision-language model, is integrated to produce boxes for the detector."
+X0989,architecture,other_neural,"The method distils 2D foundation-model embeddings into an optimised 3D Gaussian Splatting semantic field, a learned scene representation."
+X0993,method,uncertainty_calibration,"The task solved is failure detection of segmentation models, with interpretability (sparse autoencoders) as the means."
+X0996,modality,time_series,The method decomposes fMRI time series into multiscale temporal trends.
+X1001,architecture,diffusion_flow,NeuralPLexer3 is described as a flow-based generative model; no graph or equivariant network is named.
+X1006,architecture,not_stated,The conformal method wraps any pre-trained segmentation model and the three models used are not named.
+X1009,modality,interactive_environment,Agents execute commands and observe outputs in task environments.
+X1010,modality,omics_matrix,The input is a matrix of individual-level genotypes over about 140k variants.
+X1016,architecture,gp_kernel;llm_vlm,The theory analyses kernel ridge regression and validates it by fine-tuning pretrained language models.
+X1019,method,generative_modeling,UNA reconstructs healthy brain anatomy from scans with pathology.
+X1020,architecture,diffusion_flow,Guidance strategies are evaluated on discrete diffusion models; RL with protein language models is only an alternative compared against.
+X1023,architecture,not_stated,The benchmark evaluates adjacency-informed forecasting models whose families are not named.
+X1026,architecture,diffusion_flow,Time2Track uses a physics-conditioned motion diffusion model.
+X1030,method,supervised_prediction,"MIST is a plug-in projection layer improving supervised MIL prediction of survival, subtype and biomarkers."
+X1031,architecture,llm_vlm;transformer,"Experiments fine-tune small models and prompt frontier LLMs, and their comparison is a central finding."
+X1039,modality,multimodal,"Flexibility predictors use sequence or sequence plus structure, and the steered inverse folding model takes structure, so both are central."
+X1040,architecture,not_stated,Experiments train AF-style structure predictors whose architecture family is not named in the text.
+X1044,modality,omics_matrix,"The primary input is patient gene expression profiles, with prior gene networks as auxiliary knowledge."
+X1044,architecture,gnn_equivariant,A graph neural network encodes prior gene networks alongside an unnamed deep generative model.
+X1047,method,trustworthy_ml,The main contribution is mechanistic interpretability of erroneous attention heads and a test-time intervention for robustness of reasoning.
+X1049,modality,none_or_synthetic,"The merging method is data-free and operates on model weights, with no data type named."
+X1050,method,generative_modeling,"Depth is estimated by pixel-space diffusion generation, which is the core contribution."
+X1051,method,representation_learning,The paper studies transfer of pretrained RNA foundation model representations to downstream tasks.
+X1052,modality,audio_speech,"The models fine-tuned are speech language models taking speech input, with fMRI used as the training target."
+X1055,architecture,diffusion_flow,The first stage is flow matching; no graph or equivariant network is named.
+X1059,modality,multimodal,The method links vision classifier embeddings with text class names to produce natural-language explanations.
+X1061,architecture,not_stated,FragCLIP is a tri-modal contrastive framework whose encoder families are not named.
+X1063,architecture,gnn_equivariant,REACT modulates graph-based spatial propagation among neighbours on top of a linear encoder.

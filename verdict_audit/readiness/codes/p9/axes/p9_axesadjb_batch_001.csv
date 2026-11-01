@@ -1,0 +1,21 @@
+item_id,axis,answer,reason
+X0383,architecture,cnn;state_space_rnn,"The attacked PPO agents use LSTM and CNN architectures, which the results explicitly compare."
+X0395,architecture,classical_ml;cnn;other_neural,"AdamCB is evaluated on MLPs, CNNs (VGG, ResNet-18) and a logistic regression model."
+X0401,architecture,diffusion_flow;other_neural,The method is energy-guided diffusion posterior sampling over SAE/transcoder features; DINOv3 is the analyzed model and is not described as a transformer.
+X0418,architecture,diffusion_flow,"STEAM augments generic generative models, and TabDDPM, a diffusion model, is the one named."
+X0433,architecture,diffusion_flow;other_neural,"PRESCRIBE combines an MLP encoder, a linear decoder and a normalizing flow for evidence."
+X0462,architecture,classical_ml;transformer,"Pretrained transformer-type motion encoders (PoseFormerV2, MotionBERT, MotionAGFormer) are evaluated with fitted linear probes."
+X0541,architecture,diffusion_flow;other_neural,The trained SCMs use feed-forward Distributional Causal Nodes and normalizing flows; the linear SCM is only a baseline.
+X0559,architecture,gnn_equivariant,CombiMOTS uses Chemprop D-MPNN activity predictors inside MCTS; random forests serve only the baselines.
+X0581,architecture,classical_ml;cnn,Private models trained and merged are a logistic regression on MNIST and ResNet18 on CIFAR-10.
+X0594,architecture,cnn,The model uses a ConvNeXt-Base backbone with 1x1 convolution routing heads; transformers are mentioned only in related work.
+X0608,architecture,not_stated,"The method uses unnamed off-the-shelf depth and optical-flow estimators plus Gaussian splatting optimization, so learned models are used but their families are not named."
+X0633,architecture,classical_ml;other_neural;transformer,"WASP aligns frozen ViT foundation model features using CCA, ridge and MLP alignment."
+X0689,architecture,cnn;gnn_equivariant;state_space_rnn;transformer,"The benchmark trains YOLOv10, recurrent and sparse event detectors, and KPConv/RandLA-Net point-set networks."
+X0711,architecture,other_neural;transformer,HistoFS uses an SSL-ViT feature extractor with an attention-based MIL model and federated style-transfer augmentation.
+X0822,architecture,cnn;other_neural;transformer,"The encoders are ResNet18/ResNet-50, ViT-B/16, BERT-base and a sparse neural network for genomic profiles."
+X0841,architecture,classical_ml;cnn;other_neural,"The design-algorithm menu uses ridge regression, fully connected and convolutional predictors and VAEs, and the forecasts fit GMMs."
+X0939,architecture,other_neural;transformer,VPFA is a three-layer MLP module on a TransReID transformer backbone.
+X1023,architecture,classical_ml;gnn_equivariant;state_space_rnn,"The benchmark trains graph-convolutional and recurrent spatiotemporal models (DCRNN, AGCRN, STGCN, MTGNN) and fits ARIMA."
+X1070,architecture,cnn;diffusion_flow;state_space_rnn;transformer,"The model uses a latent diffusion UNet, convolutional residual blocks, cross-attention, and ViT and VisionMamba ReID models."
+X1120,architecture,cnn;diffusion_flow;llm_vlm;other_neural;transformer,"LBP uses MLP predictors, cross-attention fusion, frozen SigLIP/DecisionNCE encoders, a ResNet-34 backbone and a diffusion-loss residual-MLP policy."

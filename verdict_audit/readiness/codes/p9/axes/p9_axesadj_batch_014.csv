@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1761,architecture,no_model,Position paper arguing a research program with no model built or trained.
+X1763,architecture,other_neural,"Uses attention-weighted embedding and alignment modules with no graph, CNN or transformer family named."
+X1765,modality,none_or_synthetic,"A meta-review of literature and a checklist applied to published studies, with no data type as model input."
+X1765,method,other,Position paper giving recommendations and a reporting checklist rather than a new benchmark or dataset.
+X1766,architecture,llm_vlm,Adapts LLMs with LoRA; the latent interaction graph is inferred but no graph neural network is named.
+X1770,architecture,transformer,Adapts a Mixture-of-Experts transformer architecture; no CNN is mentioned.
+X1772,method,generative_modeling,"The core novelty is unifying understanding with medical image generation (virtual staining, synthesis) in one model."
+X1779,modality,video,Video-LLMs for temporal localization in videos are the primary input.
+X1784,method,llm_prompting_agents,Proposes a collaborative group of small LLM agents for clinical reasoning.
+X1785,modality,multimodal,"The point is speech-text interleaved pretraining, combining speech and text."
+X1786,architecture,not_stated,A deep learning registration framework whose network family is not named.
+X1787,architecture,not_stated,Backpropagates through structure prediction models whose family is not named.
+X1790,architecture,llm_vlm;other_neural,Works with sparse autoencoders on language model hidden states.
+X1791,modality,image,"Neural classifiers evaluated on nine real-world datasets with discriminative representation learning, most plausibly images; no data type named explicitly."
+X1792,architecture,not_stated,A neural plug-in module for backbone models whose family is not named.
+X1793,modality,multimodal,"Integrates structured covariates with unstructured notes, audio and video via multimodal LLMs, illustrated with speech data."
+X1801,method,representation_learning,Domain generalization by adapting vision foundation models is the main point.
+X1809,modality,multimodal,Evaluates bias mitigation across both vision and language tasks with neither primary.
+X1812,architecture,cnn;llm_vlm;transformer,Multimodal transformer combining a CheXNet visual encoder with LLaVA-Med priors.
+X1814,method,llm_prompting_agents,"An evaluation of LLM-based virtual patients built by persona prompting, i.e. LLM evaluation."
+X1815,architecture,transformer,STRATA is explicitly an autoregressive atmosphere transformer architecture.
+X1818,architecture,not_stated,"Contrastive encoders and a cross-attention adapter are used, but the encoder families are not named."
+X1823,method,supervised_prediction,Learns a neural surrogate PDE solver that predicts field evolution.
+X1828,architecture,diffusion_flow;llm_vlm,Projects fMRI into a language model text space and uses an object-centric diffusion module.
+X1829,modality,multimodal,The method is applied to both EEG and structural MRI with neither primary.
+X1830,method,trustworthy_ml,"Develops privacy-auditing attacks for differential privacy, with empirical audits."
+X1832,architecture,not_stated,A benchmark where gradient-trained aggregators and linear probes are trained but no family is named.
+X1837,architecture,not_stated,"Transfers Boltz2 representations by probing and distillation, without naming the model family."
+X1838,architecture,llm_vlm,A routing system that selects among candidate LLMs; the router family is not named.
+X1841,method,llm_prompting_agents,Studies chain-of-thought training order for code LLMs.
+X1844,architecture,not_stated,An unsupervised distillation framework is trained but its family is not named.
+X1849,modality,interactive_environment,LM agents interact with a software development environment.
+X1849,method,reinforcement_decision,DAgger-style imitation learning for multi-turn agent policies.
+X1852,architecture,not_stated,A continual self-supervised framework with no backbone family named.
+X1853,modality,multimodal,"Jointly generates RNA sequences and 3D structures, combining both types."
+X1854,modality,graph_molecule,Structural and functional connectivity are both brain network graphs.
+X1855,modality,tabular_records,Structured EHR measurements from MIMIC-IV are the primary input.
+X1856,architecture,state_space_rnn;transformer,Uses regularized transformer attention plus a spatio-temporal Mamba module.
+X1861,architecture,not_stated,An all-atom generative model whose family is not named.
+X1863,method,other,"A topographic language model used to explain cortical functional organization, a neuroscience modelling contribution."
+X1865,architecture,not_stated,A hierarchical contrastive framework with no backbone family named.
+X1873,architecture,other_neural,"Avey is an attention-free architecture, not a transformer."
+X1875,architecture,not_stated,Distills from vision foundation models into specialized models of unnamed family.
+X1880,architecture,no_model,"An analytic flux probing algorithm estimating Fourier coefficients, with no learned model."
+X1881,architecture,no_model,An HSIC-based statistical independence evaluation without training any model.
+X1882,modality,image,An image-editing dataset on egocentric frames.
+X1883,method,representation_learning,Transferring LoRAs across distilled video diffusion variants is the main point.
+X1885,modality,graph_molecule,LLM framework for drug discovery and biomolecular optimization of molecules.
+X1888,modality,interactive_environment,Vision-language-action models for robotic manipulation.
+X1892,method,benchmark_dataset,Releases a suite of over 100 LMs and datasets for systematic evaluation of training stages.
