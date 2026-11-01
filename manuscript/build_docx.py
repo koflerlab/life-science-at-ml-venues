@@ -122,6 +122,8 @@ def main() -> None:
     OUT.mkdir(exist_ok=True)
     tables = json.loads((HERE / "tables.json").read_text(encoding="utf-8"))
     figs = {n: HERE / "figures" / f"fig{n}.png" for n in ("1", "2", "3", "4")}
+    figs.update({n: HERE / "figures" / f"{f}.png" for n, f in (("5", "fig_topics_venue"), ("6", "fig_topics_map"),
+                                                               ("7", "fig_axes"))})
     render(HERE / "manuscript.md", OUT / "manuscript.docx", tables, figs)
     render(HERE / "supplementary" / "S2_PRISMA_2020_checklist.md", OUT / "S2_PRISMA_2020_checklist.docx")
     # S1: the frozen protocols (7 for the medical label, 9 for this study, with all notes).

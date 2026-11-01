@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X3918,architecture,classical_ml;state_space_rnn,The method is a controlled neural ODE coupled to a fitted mechanistic compartmental epidemiological model.
+X3922,modality,tabular_records,"Conformal tests for conditional distributions of responses given covariates, validated on real-data regression examples."
+X3923,modality,interactive_environment,"Input is behavioral data from agents performing a reward-learning task, modeled as decision-making programs."
+X3928,architecture,transformer,CodeFP is a protein language model decoding sequence and structure tokens; no diffusion is described.
+X3929,architecture,diffusion_flow,The method extends Bayesian Flow Networks; no GNN or equivariant network is named.
+X3930,method,reinforcement_decision,The contribution is an on/off-policy reinforcement learning objective for fine-tuning diffusion models.
+X3938,modality,image,"CLIP-based class-incremental learning classifies images, with text only from template prompts."
+X3940,modality,none_or_synthetic,Purely theoretical regret analysis of adversarial kernelized bandits with no data.
+X3940,architecture,gp_kernel,The algorithm operates over RKHS reward functions with Matern kernels and Nystrom approximation.
+X3945,architecture,not_stated,The abstract never names the EEG model family used in BrainUICL.
+X3949,modality,graph_molecule,The method builds prompt graphs with L3 paths over protein interaction structure.
+X3950,architecture,classical_ml,"A Bayesian encoding-decoding model is fitted to behavioral data, with no neural network."
+X3954,architecture,other_neural;transformer,"Region-specific temporal encoders with a learned adjacency and autoregressive decoder, coded as attention-based plus other neural components."
+X3963,modality,tabular_records,Applied to kidney transplant patient data with biomarkers and patient characteristics.
+X3963,method,biostatistics_inference,Censored quantile survival modelling with conformal significance testing of functional-scalar interactions.
+X3965,modality,text,Experiments on Bias in Bios and Winobias remove concepts from text representations.
+X3969,architecture,llm_vlm;transformer,A dual-stream attention EEG encoder is aligned with knowledge-anchored textual semantic profiles from a language model.
+X3970,modality,none_or_synthetic,Routing problem instances are synthetic distributions of node coordinates and demands.
+X3974,architecture,llm_vlm,The paper trains new runs of the Pythia decoder-only language model suite.
+X3977,architecture,diffusion_flow,UniGEM is a diffusion model; no GNN or equivariant network is named.
+X3983,modality,graph_molecule,Diffusion solvers act on combinatorial optimization problem instances defined on graphs.
+X3983,method,optimization_efficiency,The main problem solved is combinatorial optimization with an unsupervised training framework for solvers.
+X3988,architecture,other_neural,Ensembits is trained as a Residual VQ-VAE; no GNN is named.
+X3996,modality,volumetric,"Segmentation is benchmarked on BraTS, KiTS23 and LiTS voxel volumes."
+X4003,architecture,diffusion_flow,The method distills diffusion policies into a one-step generator; no CNN is named.
+X4004,architecture,not_stated,The feed-forward 3DGS network family is not named; the layer is model-agnostic.
+X4009,architecture,transformer,The method introduces cross-attention pooling with novel attention functions.
+X4012,method,other,The contribution is an evolutionary model of opsin spectral sensitivity to test evolutionary biology hypotheses.
+X4012,architecture,not_stated,The machine vision recognition model family is not named.
+X4014,architecture,other_neural;transformer,ECHOPulse uses VQ-VAE tokenization with masked visual token modeling; no diffusion is described.
+X4015,architecture,diffusion_flow,InVirtuoGen is a discrete flow model; no transformer is named.
+X4016,architecture,diffusion_flow,"Diffusion-based material priors are integrated into Gaussian Splatting optimization, which is not a neural family."
+X4017,method,representation_learning,DiffRisk is presented as a diffusion-based representation learning approach for patient representations.
+X4017,architecture,diffusion_flow,The model is a conditional score-based denoising diffusion; no transformer is named.
+X4019,architecture,llm_vlm,The watermarking algorithm uses a surrogate model and is applied to Llama2-13B and Mistral models.
+X4020,method,benchmark_dataset,The main contribution is a comprehensive evaluation of attention transfer across 20 ViT teachers.
+X4023,architecture,llm_vlm,"The study evaluates LLMs from Llama, Qwen, Gemma, Phi, GPT and DeepSeek families."
+X4026,architecture,not_stated,OOD features are built for neural networks whose family is not named.
+X4030,modality,none_or_synthetic,"Decoding of cyclic codes uses simulated codewords and channel noise, not a real data type."
+X4031,architecture,transformer,"The method adapts the SAM vision foundation model with residual experts, not a language or vision-language model."
+X4033,architecture,diffusion_flow,The planner is a morphology-aware flow-matching model.
+X4034,modality,image,The NAS search targets standard NAS benchmarks and downstream vision tasks.
+X4035,method,generative_modeling,"The main problem is RNA inverse design generating sequences for target structures, solved via multi-agent RL."
+X4035,architecture,not_stated,The policy network family is not named.
+X4036,modality,multimodal,The point is aligning GNN graph structure and LLM text embeddings on text-attributed graphs.
+X4038,method,trustworthy_ml,A position paper on AI-text detection robustness and accountability.
+X4041,method,representation_learning,The contribution is mask-attribute vision-language alignment transferring pre-trained knowledge to zero-shot segmentation.
+X4041,architecture,cnn;transformer,"A 3D segmentation network with cross-modal text features from a medical vision-language pre-training setup, no LLM named."
+X4043,modality,image,Few-shot image recognition via CLIP adaptation on synthetic images.
+X4044,method,other,A normative probabilistic model of cortical computation explains visual cortical dynamics.

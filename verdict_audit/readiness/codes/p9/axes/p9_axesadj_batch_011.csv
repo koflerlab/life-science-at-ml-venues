@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1456,architecture,not_stated,The wrapper works on any unimodal encoder and no model family (transformer or LLM) is named.
+X1458,architecture,other_neural,The method embeds encrypted neural networks in host model weights; no LLM is named as host.
+X1467,architecture,not_stated,A newly designed view-transformation architecture is described without naming its family.
+X1471,architecture,not_stated,Skill decoders and policies are learned but their model family is not named.
+X1474,method,trustworthy_ml,The core problem is faithful grounding of medical VLM reasoning in visual evidence for trustworthy use.
+X1475,modality,graph_molecule,"SMILES, 2D graphs and 3D conformations are all representations of molecules."
+X1475,architecture,not_stated,Modality encoders are trained contrastively but their family is not named.
+X1481,method,supervised_prediction,The method trains a 3D LLM to perform 3D visual grounding (box prediction) and spatial reasoning with annotated data.
+X1482,architecture,cnn;transformer,It adapts a SAM-based (ViT) segmentation architecture and adds a learnable CNN branch.
+X1483,method,benchmark_dataset,The main contribution is the 1.47M-instance MedMax instruction-tuning dataset and evaluation suite.
+X1487,architecture,gnn_equivariant;transformer,HEIST is a hierarchical graph transformer using message passing.
+X1491,method,reinforcement_decision,"The world model's goal is trajectory planning for driving, evaluated by planning error and collision rate."
+X1494,modality,graph_molecule,Input is protein pockets and 3D molecules for structure-based drug design.
+X1494,method,generative_modeling,"The problem solved is structure-based molecule generation, with LLM reasoning added on top of generative models."
+X1497,method,supervised_prediction,"It proposes a GNN architecture shown to outperform MPNNs on graph learning tasks, not only theoretical results."
+X1498,architecture,transformer,"DEPfold uses biaffine attention on pretrained (RNA) language model representations, a transformer-type encoder."
+X1501,modality,image,The model takes H&E histology images as input and infers gene expression as output.
+X1502,modality,image,"RGB, near-infrared and thermal inputs are all 2D images."
+X1502,method,supervised_prediction,Object re-identification trained and evaluated by mAP/Rank-1 is a supervised task.
+X1503,architecture,diffusion_flow,It uses a latent diffusion P2S model and an MPP model; GPT-4o is only a baseline.
+X1507,architecture,diffusion_flow,"CryoBoltz guides the sampling trajectory of a pretrained structure prediction model, a diffusion-style sampler."
+X1509,architecture,classical_ml,"The authors fit a mixture of Beta-Binomial models; the LLM judges are only evaluated, not built or adapted."
+X1510,architecture,no_model,The paper is a benchmark that wraps arbitrary existing reconstruction methods without its own named model.
+X1511,architecture,llm_vlm,An LLM is integrated with a DNA foundation model whose family is not named.
+X1512,modality,multimodal,"The setting is LVLM chest X-ray VQA, joint image and question text."
+X1517,method,other,"The contribution is an active learning algorithm for label selection, not in the listed families."
+X1520,method,supervised_prediction,The task is few-shot weakly supervised WSI classification evaluated by macro F1.
+X1523,architecture,no_model,"The baseline scReebTower extracts Reeb graphs via diffusion geometry, not a learned model."
+X1524,architecture,transformer,The paper learns single-layer linear attention Transformers and validates empirically.
+X1526,architecture,diffusion_flow,Flow-SSN uses autoregressive and continuous-time flow parameterisations; no CNN is named.
+X1527,method,llm_prompting_agents,"VLMs are equipped with visual tool operations (zoom-in, select-frame); RL is the training means."
+X1528,method,representation_learning,CARMANIA is a self-supervised pretraining framework for nucleotide sequences.
+X1529,architecture,llm_vlm,It uses an LLM agent and steers large DNA language models (Evo).
+X1530,architecture,no_model,The contribution is a dynamic programming conformal algorithm with no specific learned model.
+X1532,architecture,diffusion_flow;other_neural,PULSE uses B-spline flow residual transforms (normalizing flows) with gated residual neural dynamics and Gaussian heads.
+X1535,architecture,llm_vlm,Results are confirmed empirically by installing backdoors in pretrained large language models.
+X1536,architecture,diffusion_flow,TriFuser is a latent diffusion model.
+X1539,architecture,no_model,This is a position paper proposing an evaluation standard without building a model.
+X1541,method,llm_prompting_agents,The paper evaluates inference-time polling/aggregation of language models for truthfulness.
+X1542,architecture,state_space_rnn,STDDNet is built on Mamba blocks; no CNN is named.
+X1548,method,theory,The main content is expressivity and complexity analysis of encoder-only next-token prediction with supporting experiments.
+X1549,modality,tabular_records,"Methods are validated on diverse real datasets of data points, not synthetic only; tabular data is the plausible type."
+X1549,method,trustworthy_ml,The paper studies robustness of data valuation results to utility choice and proposes a robustness metric.
+X1549,architecture,not_stated,A downstream learned model defines utility but its family is not named.
+X1550,modality,multimodal,The task requires segmentation from images guided by multi-round text dialogue.
+X1552,architecture,not_stated,"Benchmark baselines (supervised, domain adaptation, generalization) are learned models of unnamed family."
+X1555,method,trustworthy_ml,The work targets adversarial robustness of ensembles via diversity decomposition and a new ensemble method.
+X1555,architecture,not_stated,The ensemble networks are not named by family.
+X1557,method,supervised_prediction,RayletDF regresses raylet distances to predict surface points from point clouds.
+X1559,architecture,classical_ml,InfoGlobe is a statistical manifold learning method based on Multinomial models; no neural network named.

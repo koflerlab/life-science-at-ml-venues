@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X2840,modality,time_series,Input is longitudinal behavioral sensing trajectories (GLOBEM) decomposed into temporal and spectral streams.
+X2841,architecture,not_stated,Text describes a probabilistic spatiotemporal model of event counts without naming its model family.
+X2848,method,trustworthy_ml,"Data selection targets shortcut-solvable samples and hidden stratification to strengthen visual grounding and robustness, not efficiency."
+X2850,architecture,classical_ml,"SWIRL is a switching, history-dependent IRL probabilistic model with no neural network family named."
+X2851,method,reinforcement_decision,Main contribution is a solver-guided reinforcement learning framework with process rewards.
+X2857,architecture,classical_ml,"The method studies linear shared subspace estimation, a linear statistical model fitted by the authors."
+X2862,modality,multimodal,"A video LLM that shapes multimodal language models over streaming video and generated language, combining vision and language."
+X2862,method,llm_prompting_agents,Framework turns multimodal language models into proactive real-time interactive agents.
+X2864,architecture,not_stated,Mutations are guided by an unnamed explainable model.
+X2871,architecture,classical_ml;llm_vlm,Authors synthesize and fit a Bayesian network and integrate it with small language models.
+X2874,architecture,llm_vlm,The benchmark evaluates MLLMs and uses multimodal verification with such models.
+X2875,method,generative_modeling,Point cloud completion reconstructs missing 3D data.
+X2876,method,generative_modeling,Core method is VAE-based latent-space synthesis of preference data for reward modeling.
+X2881,architecture,not_stated,Benchmark reports regression representations and prediction results without naming model families.
+X2888,modality,multimodal,The point is interleaved image-text instructions for vision-language-action robot policies.
+X2888,method,reinforcement_decision,The method learns robot control policies generating continuous action sequences.
+X2889,modality,geometry_3d,Method reconstructs and edits 3D Gaussian scenes from sparse views.
+X2894,modality,none_or_synthetic,"A technical post analysing attention kernels, with no real data type as input."
+X2894,method,optimization_efficiency,Focus is IO-aware efficient attention computation and throughput.
+X2894,architecture,no_model,The post analyses kernel algorithm design and does not build or train a learned model.
+X2895,architecture,llm_vlm,The framework evaluates many language models on accuracy and inference cost.
+X2896,modality,time_series,Input is tracked 3D animal pose motion sequences over time.
+X2898,modality,omics_matrix,Input is tandem mass spectrometry (proteomics) data from which peptides are decoded.
+X2899,method,representation_learning,MoE routing aims to transfer and generalize medical LLMs to low-resource languages.
+X2906,architecture,classical_ml,Method optimizes differentiable d-separation scores over causal graphs with no neural network named.
+X2907,method,representation_learning,Work probes mid-layer VLE representations to build better spatial maps for zero-shot grounding.
+X2923,modality,time_series,The model takes EEG signals as input to decode facial expressions.
+X2926,architecture,other_neural,"SynBrain is built around a BrainVAE and a mapper, with no other named family."
+X2928,architecture,diffusion_flow;transformer,LiT is a linear diffusion transformer for image generation.
+X2931,modality,image,The benchmark and adaptor concern VLM understanding of compressed images.
+X2932,method,reinforcement_decision,3A-VLA learns action policies for agents in 3D game environments.
+X2935,architecture,cnn;transformer,PSDNorm is evaluated within U-Net and transformer backbones trained by the authors.
+X2937,modality,multimodal,TRAC is one fine-tuning method applied across text and image tasks with none primary.
+X2938,architecture,not_stated,An attention-based MIL model and deep RL are used without naming a family such as CNN.
+X2942,architecture,not_stated,Training-free framework uses segmentation and inpainting models whose families are not named.
+X2945,architecture,not_stated,The audit uses machine-learning structure predictors as oracles without naming their families.
+X2951,modality,geometry_3d,The contribution is perceptive processing of point clouds for an LLM assistant.
+X2957,architecture,transformer,The topological layer is integrated into Swin Transformers trained on medical images.
+X2959,modality,time_series,Input is calcium imaging neural population activity for decoding.
+X2962,modality,multimodal,"Models predict neural activity from visual input and behaviour, with several data types jointly central."
+X2962,architecture,not_stated,Abstract refers only to deep neural predictive models without naming the family.
+X2967,architecture,no_model,"A hand-constructed circuit motif is analysed geometrically and simulated, not learned."
+X2972,architecture,not_stated,Uses a momentum encoder initialized from image-pretrained models without naming the family.
+X2974,method,llm_prompting_agents,EMRs are generated by a Critic-Adviser-Reviser loop of LLM agents.
+X2975,architecture,cnn;llm_vlm,BTB3D is a causal convolutional encoder-decoder used with vision-language modeling for report generation.
+X2982,architecture,diffusion_flow,Method designs transition kernels for diffusion language models; transformer is not named.
+X2992,architecture,not_stated,dnaHNet is a dynamic chunking autoregressive model whose family is not named and is contrasted with Transformers.
+X2995,modality,image,"The text describes EM images and patches, not volumes."
+X3000,architecture,not_stated,VISTA3D is built on a 3D segmentation pipeline without naming the network family.
+X3001,method,causal_inference_trials,Main contribution is an active experimental design policy selecting measurement times.

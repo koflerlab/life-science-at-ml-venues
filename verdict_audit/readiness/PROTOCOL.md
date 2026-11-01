@@ -868,3 +868,160 @@ estimates of E-a from `results/p9_papers.csv` before this note was written (code
   E-c, claim verdicts of medical vs other attempted papers: verified 21.7% vs 49.7%, falsified 3.6% vs 4.7%, toy
   25.5% vs 20.9% (difference +4.7, -0.6 to +10.7), inconclusive 49.2% vs 24.8%; papers with any toy verdict 64.5% vs
   71.3% (-6.8, -15.9 to +2.3).
+
+## Note 9-23 (2026-11-01, full-text recovery, frozen before any recovery request)
+
+Kate decided on 2026-10-31 to complete full-text coverage of the frame and to report the result in version 1 of the
+medRxiv manuscript (not yet approved for posting). 1,062 of the 4,340 frame papers had no full text (1,057
+`no_match`, 4 `error`, 1 `no_fulltext`). The frozen rule lists proceedings.neurips.cc and ECVA among the open
+proceedings, but `fetch_p9.py` indexed only PMLR and CVF; NeurIPS 2025 is now on proceedings.neurips.cc and ICLR
+2025 and 2026 on proceedings.iclr.cc (not named in the protocol). The protocol excluded OpenReview scraping;
+unauthenticated OpenReview requests now meet a bot check (HTTP 403, `ChallengeRequiredError`).
+
+Disclosure of what was seen before this note (2026-10-31): one unauthenticated OpenReview request per stratum
+(403); with Kate's own OpenReview session token (she logged in herself; the token is stored outside the repository
+and the data tree and never logged), one ICLR 2025 PDF (HTTP 200, content discarded) and five NeurIPS 2026 notes
+(HTTP 403 "no permission": NeurIPS 2026 papers are not public before the conference); title counts of the missing
+papers against the proceedings listings (476 of 493 missing NeurIPS 2025, ICLR 2025 and ICLR 2026 papers have an
+identical normalised title); arXiv and OpenAlex on a random 20 of the missing NeurIPS 2026 and ECCV 2026 papers (0
+arXiv matches, 1 OpenAlex open-access PDF). No recovered text was read and nothing was coded.
+
+* Units: frame papers whose last manifest row is not `ok`. Script `fetch_p9.py index-recovery` and
+  `fetch_p9.py recover`; manifest rows carry `recovery: "9-23"`.
+* Order: arXiv HTML, arXiv PDF (unchanged search and title rule); open proceedings (PMLR and CVF as before,
+  proceedings.neurips.cc 2025 and proceedings.iclr.cc 2025 and 2026 by a unique normalised title similarity of at
+  least 0.95); the OpenReview API PDF with Kate's session token (public notes only); a unique OpenAlex work with
+  title similarity of at least 0.95 and publication year at least the venue year minus 1 that lists an open-access
+  PDF. A bot check or an access refusal counts as no full text and is never worked around. Spacing as before.
+* Excerpts, sheets and coding exactly as Protocol 9: `build_p9_excerpts.py`, then `build_p9_sheets.py final` (item
+  ids and the 25% coder-2 sample were fixed over the whole frame by `init`); coder 1 on every new paper, coder 2 on
+  the new papers in its sample, coder2full on the rest for variance and compute (Note 9-6), every variance and
+  compute disagreement adjudicated (Note 9-6, claude-opus-5-5, labels in random order); other fields from coder 1
+  (Note 9-5). Coders claude-sonnet-5-5, unchanged `CODER_PROMPT.md` with this repository's paths, one batch of 20
+  per instance (Note 9-18). Agreement is reported for the new papers alone and pooled.
+* Analyses: A9.3 and Note 9-22 E-a and E-b are rerun on all coded papers; these become the main estimates of the
+  manuscript. The estimates on the 3,278 papers of the first retrieval (results at commit 092e8a5) are reported as a
+  sensitivity analysis. Labels L9.1 to L9.3 are re-evaluated by the unchanged rule; any change in a label or in the
+  sign of a pooled difference is reported in the abstract.
+* Post hoc, exploratory (`posthoc_p9_recovery.py`, `results/p9_recovery.json`): within venue-year strata, the
+  pooled difference in each A9.3 indicator between recovered papers and papers of the first retrieval (MH and
+  bootstrap as in A9.3), by group; it asks whether papers found on arXiv document more than the others.
+* Papers still without a full text are counted by group and venue-year. A later pass after the NeurIPS 2026 papers
+  become public would need its own note.
+
+## Note 9-24 (2026-11-01, topics of the medical papers, post hoc, codebook frozen before any paper is coded)
+
+Kate asked on 2026-10-31 for a summary table of the topics of the medical papers and a t-SNE map of their abstracts
+showing which topics appear more often at which venue. Post hoc and descriptive. Kate chose a fixed codebook with two
+blind coders over clusters, and the 2,170 medical papers as the corpus.
+
+* Units: all 2,170 medical papers, with or without a full text. Input: title and abstract from the venue listing
+  (`papers.json`). Venue, year, group and the clinical or life-science label are hidden; items in random order
+  (seed 20261101), item ids `T0000` onward; keys in `data/p9/topic_keys.json` (git-ignored).
+* Codebook (one primary topic, the application domain the paper's method is built for or evaluated on; prompt
+  `codes/p9/topics/TOPIC_PROMPT.md`): radiology, pathology_microscopy, other_clinical_imaging, ehr_clinical_text,
+  physiological_signals, neuroscience, genomics_omics, proteins, molecules_drug_discovery, chemistry_materials,
+  epidemiology_public_health, other_biology, other.
+* Coders: two blind claude-sonnet-5-5 subagents (roles topic1, topic2) code every paper, batches of 50, several
+  batches per instance (Note 9-16). Cohen's kappa reported, no gate; every disagreement adjudicated blind by
+  claude-opus-5-5 (labels in random order, one-sentence reason; `ADJ`-style prompt in the same folder). Final topic:
+  the agreed label or the adjudicated one.
+* Analyses (`posthoc_p9_topics.py`, `results/p9_topics.json`): T1 counts and shares of each topic per venue (six
+  venues, years pooled) and per venue-year, Wilson intervals; T2 chi-square test of venue by topic with adjusted
+  standardised residuals, a cell read as over- or under-represented only if its residual is at least 3 in absolute
+  value; T3 shares by year (2025 versus 2026); T4 per topic among coded papers, the shares reporting code released,
+  open main data, weights released and variance (Note 9-5 indicators, `unclear` excluded); T5 among attempted ICML
+  2026 medical papers (Note 9-10), papers and the decided share per topic. All descriptive, no multiplicity
+  correction.
+* Map: SPECTER2 base (`allenai/specter2_base`, revision recorded) CLS embedding of title, separator and abstract;
+  t-SNE (scikit-learn, cosine metric, perplexity 30, PCA initialisation, random_state 20261101); points coloured by
+  final topic, a second panel by venue. The map illustrates the table and is not used for inference.
+
+## Note 9-25 (2026-11-01, outcome of the Note 9-23 recovery, written after the analyses were rerun)
+
+* Retrieval (`fetch_p9.py recover`, 1,062 papers, rows with `recovery: "9-23"`): 509 full texts (proceedings.iclr.cc
+  278, proceedings.neurips.cc 196, arXiv HTML 22, OpenAlex 7, OpenReview 5, CVF 1); 302 medical and 207 other.
+  130 papers had no match on any source. 423 rows are `error`: OpenAlex answered HTTP 429 once its unauthenticated
+  daily quota (1,000 credits, 10 per search) was spent; for these papers every earlier source had already returned
+  nothing, so only the OpenAlex step is missing (in the runs before the quota ran out, OpenAlex gave a PDF for 7
+  papers). They stay `error` and `recover` retries them; a retry with an OpenAlex API key needs no other change.
+* Still without full text: 553 of 4,340 (300 medical, 253 other): NeurIPS 2026 464 (254 medical, 210 other; not
+  public before the conference), ECCV 2026 76 (44, 32), 13 elsewhere. Coverage is 3,787 of 4,340 (87.3%); it is
+  lower for medical than for other NeurIPS 2026 papers (177 of 431 against 221 of 431), a limitation of that stratum.
+* Coding as Note 9-23: coder-1 batches 164 to 189, coder-2 batches 41 to 47 (130 papers of the fixed sample),
+  coder2full batches 124 to 142 (379 papers; `build_p9_sheets.py full2more` appends them, earlier batches unchanged),
+  adjudication batches 71 to 78 (149 disagreements: variance 54, compute 95). Deviation in delivery only: each coder
+  and adjudicator instance received the unchanged prompt text, with this repository's paths, as a file to read
+  rather than inline. Agreement on the new papers alone (coder-2 sample, n = 130): kappa 0.59 (environment) to 1.00;
+  variance 0.85, compute 0.82; variance and compute over all 509 new papers 0.82 and 0.74. Pooled (n = 943 for the
+  sample fields): unchanged gate decisions.
+* Results (main estimates now on 3,787 coded papers; first retrieval on 3,278 at commit 092e8a5 as sensitivity):
+  no L9 label changes (L9.1 to L9.3 not met in both). A9.3 pooled differences keep their sign; the largest moves are
+  weights release +2.0 and outputs release +2.1 percentage points. Note 9-22 E-a keeps every sign; in E-b the pooled
+  outputs-release difference changes sign, from -0.17 to +0.12 percentage points (95% CI -0.83 to 1.04), so it is
+  reported in the abstract as required by Note 9-23.
+* Post hoc (`results/p9_recovery.json`): recovered papers report variance more often than first-retrieval papers
+  within strata (medical +9.0, other +9.3 points, intervals above 0), medical recovered papers report the
+  environment more (+19.8), and enumerated claims less (-2.0 and -3.9); other indicators include 0. Exploratory.
+* `posthoc_p9_uptake.py` reads `claims_anchored.json` from the repository root; that file exists only in the
+  predecessor repository (`icml/icml-repro-working`), so it was run with `p8_common.ROOT` pointed there; its result
+  is unchanged (all its ICML 2026 papers were coded before).
+
+## Note 9-26 (2026-11-01, data, method and architecture of all frame papers, post hoc, codebook frozen before any paper is coded)
+
+Kate asked on 2026-11-01 for further splits beside the application topic (Note 9-24): by type of data, by type of
+method ("which mathematics", including biostatistics and clinical trials) and by architecture. She chose all three
+axes and both groups. Post hoc and exploratory, like Note 9-24.
+
+* Units: all 4,340 frame papers. Item ids `X0000` onward in random order (seed 20261102); keys in
+  `data/p9/axes_keys.json` (git-ignored, SHA-256 in `results/p9_axes_manifest.json`). Venue, year, group and label
+  hidden from coders and adjudicators.
+* Pass A (title and abstract from `papers.json`, every paper): three axes per paper; prompt
+  `codes/p9/axes/AXES_PROMPT.md`; sheets of 50, two sheets per coder instance.
+  * `modality`, one primary type of data the method takes as input: image, volumetric, video, geometry_3d, text,
+    audio_speech, tabular_records, time_series, biological_sequence, omics_matrix, graph_molecule,
+    interactive_environment, multimodal, none_or_synthetic.
+  * `method`, one primary methodological family: supervised_prediction, generative_modeling,
+    representation_learning, causal_inference_trials, biostatistics_inference, uncertainty_calibration,
+    reinforcement_decision, llm_prompting_agents, optimization_efficiency, trustworthy_ml, theory,
+    benchmark_dataset, other.
+  * `architecture`, every model family the paper builds, trains or adapts (several allowed, `;`-separated): cnn,
+    transformer, llm_vlm, gnn_equivariant, diffusion_flow, state_space_rnn, other_neural, gp_kernel, classical_ml;
+    or exactly one of not_stated (a learned model is used but its family is not named) and no_model.
+* Pass B (architecture only, full text): papers whose final pass-A architecture is `not_stated` and that have a
+  Protocol 9 excerpt are coded again on title and excerpt, sheets of 20, same labels; the pass-B label replaces
+  `not_stated`. Papers without an excerpt keep the pass-A label.
+* Coders: two blind claude-sonnet-5-5 subagents (roles axes1, axes2) code every item of both passes. Agreement:
+  Cohen's kappa per single-label axis; for architecture, kappa per label as a binary indicator and exact-set
+  agreement; reported, no gate. Every item where the coders differ on an axis goes to blind adjudication by
+  claude-opus-5-5 for that axis (the two answers in random order, one-sentence reason). Final: agreed or adjudicated.
+* Analyses (`posthoc_p9_axes.py`, `results/p9_axes.json`), all descriptive, Wilson intervals, no multiplicity
+  correction:
+  * X1 share of each label by group, by group and venue, by group and year.
+  * X2 medical minus other share of each label, Mantel-Haenszel over venue-years, paper bootstrap as A9.3.
+  * X3 per group, venue by label chi-square for modality and method with adjusted standardised residuals (read only
+    at |r| >= 3, as Note 9-24).
+  * X4 per label and group among coded papers, the four Note 9-5 indicators (code, open main data, weights,
+    variance; `unclear` excluded).
+  * X5 the A9.3 medical minus other differences for those four indicators with strata venue-year x modality and
+    venue-year x method instead of venue-year, against the main estimates; strata with one group drop out as in
+    A9.3. X5 asks whether the differences are explained by what data and methods the groups use; it does not change
+    any L9 label.
+* Medical topic (Note 9-24) is crossed with the three axes in X1 for the medical papers.
+
+## Note 9-27 (2026-11-01, outcome of Note 9-26, written after the analyses were run)
+
+* Pass A (4,340 papers): kappa modality 0.91, method 0.88; architecture exact-set agreement 0.81, per-label kappa
+  0.57 (not_stated) to 0.94; 1,630 item-axis disagreements adjudicated (modality 367, method 452, architecture 811).
+  593 papers had `not_stated` architecture; 514 had an excerpt and went to pass B.
+* Pass B (514): exact-set agreement 0.63, per-label kappa 0.56 to 1.00; 188 adjudicated. Final architecture from
+  pass B for 514 papers, pass A for 3,826.
+* Deviations in delivery only: prompts given to each instance as a file to read; pass-B batches 10 to 25 and the
+  pass-B adjudication were given two sheets per instance (Kate asked on 2026-11-01 to cut agent overhead). One pass-B
+  coder instance (axes1b batches 12 and 13) reported writing a helper script to a temporary folder and reading each
+  excerpt's introduction and architecture-term sentences rather than the whole excerpt; its codes are kept (agreement
+  with the other coder on those 40 papers 30, above the pass mean).
+* X5 (exploratory): code and variance differences are stable when strata add modality or method (code +10.8 and
+  +11.7, variance +21.2 and +24.4 percentage points); weights shrink (+20.3, +14.3) but stay above 0; open main data
+  falls from +13.5 to +4.7 (0.9 to 8.7) with method and reverses to -6.1 (-10.3 to -2.0) with modality: within the
+  same data type, medical papers do not report open main data more often. No L9 label changes.

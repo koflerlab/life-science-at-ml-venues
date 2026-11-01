@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P1189,compute,none,"The excerpts state no hardware, GPU type or training time anywhere."
+P1207,variance,no,"The checklist says 'See tables' but the main results table (Table 1) gives single values with no error bars, standard deviations or seeds."
+P1235,compute,unclear,"Table 5 reports computation time and the repo is said to specify compute resources, but no hardware is named in the text, so the amount cannot be determined."
+P1270,compute,none,"The excerpts mention no hardware, GPU type or runtime."
+P1346,compute,none,Only generic remarks about computational resources appear; no hardware or time is stated.
+P1385,variance,no,"The checklist answers No and states most computational experiments (pre-training, alignment) have no error bars; only wet-lab data have replicate error bars."
+P1457,variance,unclear,"Three executions per task are mentioned but the text never shows standard deviations or error bars for the results, so whether variance is reported is unclear."
+P1458,compute,none,No hardware or training/inference time is stated; only a vague 'real-time speed' claim.
+P1469,compute,none,The text says discriminator training is cheaper but gives no hardware or time.
+P1471,compute,none,The implementation details give no hardware or runtime.
+P1478,variance,no,The checklist answers NA for error bars and no standard deviations or multiple seeds are reported for the main results.
+P1502,compute,none,Hyperparameters and architecture are given but no hardware or training time.
+P1509,compute,none,The text claims negligible overhead but states no hardware or runtime.
+P1526,compute,none,The excerpts describe data and architecture but no hardware or runtime.
+P1585,compute,unclear,"An inference speed of 23.04 FPS is reported but no hardware is named, so the compute statement is incomplete."
+P1596,compute,unclear,The compute-resources checklist question appears but its answer is cut off and no hardware or time is visible.
+P1615,compute,none,Only a mention of reducing computational time; no hardware or runtime is stated.
+P1624,compute,none,Inference-only API and model evaluation is described with no hardware or time stated.
+P1630,compute,none,No hardware or runtime is stated in the excerpts.
+P1697,compute,amount,The text states a single NVIDIA A100 GPU and an Intel Xeon 6980P CPU with measured times (5.7 and 3.3 minutes end-to-end).

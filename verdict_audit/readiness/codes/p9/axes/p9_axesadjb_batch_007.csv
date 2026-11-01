@@ -1,0 +1,21 @@
+item_id,axis,answer,reason
+X3358,architecture,transformer,MaskCO adopts an encoder-decoder Transformer with adjacency added as an attention bias.
+X3374,architecture,cnn,"PaLoRA is evaluated by adding adapters to LeNet, ResNet and SegNet architectures."
+X3392,architecture,other_neural;transformer,"The detector is a DINOv2 backbone fine-tuned with LoRA, and data alignment uses the Stable Diffusion 2.1 VAE for reconstruction."
+X3447,architecture,not_stated,"CocoRNA trains PPO multi-agent policies, but the network architectures are deferred to an appendix that is not in the text."
+X3461,architecture,transformer,HASSL trains a student ViT by DINOv3-style double-teacher distillation.
+X3474,architecture,llm_vlm;transformer,HistAug is a cross-attention transformer generator on features from UNI and from the vision-language model CONCH.
+X3501,architecture,classical_ml;llm_vlm,The data-value experiments retrain models on classical OpenML benchmarks and select data for LLM fine-tuning.
+X3522,architecture,other_neural;transformer,The benchmark probes and fine-tunes pretrained biological language models such as ESM2 and NT with trained two-layer MLP regression heads.
+X3536,architecture,cnn,GSCOOP uses a ResNet34 camera encoder and a 3D convolutional network to decode Gaussian parameters.
+X3553,architecture,classical_ml;cnn,The unlearning experiments train a multinomial logistic regression and a simple CNN.
+X3564,architecture,classical_ml;other_neural,"Cursor scores hypotheses with linear regression, SVR and MLP estimators, and its stimuli come from a pretrained GAN."
+X3571,architecture,cnn;state_space_rnn,"The stimulation-response model is a CNNxLSTM, and its inverse model is trained with behavioral cloning."
+X3573,architecture,cnn,"The pretext-trained backbone is a convolutional SEANet-style encoder, with a linear probe on top."
+X3608,architecture,cnn;transformer,"The unlearnability experiments train ResNet-18, ResNet-50, SENet-18 and ViT models."
+X3627,architecture,diffusion_flow;other_neural,The study runs GAN-based and diffusion-based de-identification methods and scores them with pretrained estimators.
+X3631,architecture,cnn;other_neural;transformer,"alpha-SVRG is applied when training MLPs, ConvNeXt, ResNet-18, ViT, Swin and Mixer models."
+X3637,architecture,cnn,The socialized coevolution classification and detection models are evaluated on a ResNet50 backbone.
+X3667,architecture,cnn;llm_vlm,"U-Net reconstruction networks are trained for the evaluation, and GPT-4o is prompted as a VLM quality score."
+X3676,architecture,cnn;llm_vlm;transformer,HAM is applied to train ResNet18/50 and DeiT models and also to LLM fine-tuning.
+X3689,architecture,cnn,"Each REDCLIFF-S factor is a cMLP, which the text describes as a 1D convolutional neural network."

@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0786,modality,multimodal,The paper centres on integrating DNA sequence with multimodal epigenomic signals.
+X0787,modality,time_series,Treatment effects over time are modelled from sequential patient data with LSTMs or transformers.
+X0789,architecture,transformer,"The method builds on the MASt3R backbone and a frozen DINOv3 encoder, both transformer models."
+X0793,modality,none_or_synthetic,Experiments are on generated streams corroborating the theory; no real dataset is named.
+X0793,method,theory,"The technical core is a routing concentration and convergence analysis, with experiments corroborating the theory."
+X0794,modality,graph_molecule,Inverse folding takes a target 3D protein structure as input.
+X0795,architecture,transformer,"The framework adapts Med-VLP encoders with a gated cross-attention module, not a large pretrained LLM."
+X0804,architecture,llm_vlm,The method uses LLM-generated class descriptions to build anchors; client model families are not named and no CNN is mentioned.
+X0805,architecture,diffusion_flow;transformer,"CFP-Gen is a diffusion language model for protein sequences, i.e. a transformer-based diffusion model."
+X0806,method,supervised_prediction,A neural PDE solver is trained to predict multiscale basis functions.
+X0807,architecture,not_stated,Conditional outcome distributions are estimated but the model family is not named.
+X0808,architecture,cnn,"The abstract names no transformer; the segmentation network with frequency-spatial modules is taken as convolutional, the label both coders share."
+X0819,method,supervised_prediction,The model is trained end to end to predict trial-level choices and reaction times from stimuli and evaluated against benchmarks.
+X0819,architecture,state_space_rnn,"The model is a neural stochastic differential equation, the neural-ODE family."
+X0821,architecture,llm_vlm,The authors fine-tune a large vision-language model on SpineMed-450k.
+X0827,architecture,diffusion_flow,The abstract describes a generative framework without naming a transformer.
+X0829,architecture,llm_vlm,The benchmark employs a fine-tuned vision-language model.
+X0836,architecture,no_model,"The paper is normative theory about convex optimisation problems and identifiability, with no learned model fitted."
+X0837,method,trustworthy_ml,"The contribution is activation steering to suppress an identity shortcut, a robustness and interpretability intervention."
+X0840,method,optimization_efficiency,"The contribution is a plug-and-play gradient optimizer, CAME-Grad."
+X0840,architecture,not_stated,The optimizer is backbone-agnostic and no model family is named.
+X0841,method,biostatistics_inference,"The method uses prediction-powered inference to give high-probability guarantees on label distributions, a statistical inference approach."
+X0848,architecture,other_neural;state_space_rnn,An image tokenizer (autoencoder) is trained with a regularizer derived from state-space models.
+X0851,architecture,not_stated,A geometric deep learning framework is proposed without naming the network family.
+X0852,modality,text,The agent answers biomedical text questions using an LLM and knowledge graph triplets.
+X0856,architecture,transformer,"The paper analyses softmax attention predictors, an attention model."
+X0857,method,benchmark_dataset,The main contribution is a systematic evaluation study with the new VGMED dataset; VGRefine is secondary.
+X0860,method,llm_prompting_agents,"Personalisation is done by evolving a natural-language context without updating model parameters, i.e. prompting a language model."
+X0863,method,benchmark_dataset,The paper is an evaluation study over hundreds of deep mutational scans of when pLMs succeed.
+X0867,modality,image,The input data are noisy 2D cryo-EM projection images.
+X0869,architecture,other_neural,A hyperbolic mixture-of-curvature experts network is proposed with no named family.
+X0870,method,llm_prompting_agents,The contribution is a scoring rule for likelihood-based multiple-choice LLM evaluation.
+X0876,modality,interactive_environment,An LLM agent acts in a wireless network control environment.
+X0876,method,causal_inference_trials,"The core task is counterfactual generation using a structural causal model, with conformal calibration as support."
+X0882,architecture,diffusion_flow,The policy is diffusion-based and no transformer is named.
+X0883,architecture,transformer,"The method prompts the Segment Anything Model, a vision foundation model rather than a language or vision-language model."
+X0884,architecture,not_stated,CCL-Net modules are described but the network family is not named.
+X0894,modality,multimodal,The method bridges transcriptomic perturbation signatures and molecules as jointly central inputs.
+X0896,architecture,llm_vlm;transformer,The framework combines pathology foundation models with language prompts for semantic relevance.
+X0897,architecture,diffusion_flow,The method is flow matching; no equivariant network is named.
+X0902,architecture,no_model,"The contribution is a benchmark evaluating existing models, with no model built or trained."
+X0903,architecture,other_neural,The theory is applied to teacher-student neural network models.
+X0904,modality,interactive_environment,Effects are demonstrated in navigation simulations in RatatouGym and Habitat Sim.
+X0904,method,theory,"The paper proposes a system-level theory with analytical results, demonstrated with an RNN."
+X0905,method,biostatistics_inference,The model is a point-process GLM for estimating directed coupling between neural populations.
+X0905,architecture,classical_ml;transformer,A Transformer-based VAE is combined with a nonparametric GLM coupling component.
+X0908,modality,multimodal,ModalTune integrates new modalities with WSIs and text-encoded labels.
+X0911,architecture,gnn_equivariant;transformer,The framework uses a topology-aware graph tokenizer with foundation-model embeddings over network data.
+X0913,architecture,no_model,"TRACER is an aggregated metric over signals, with no model trained."
+X0916,method,supervised_prediction,The method improves compositional zero-shot recognition accuracy on benchmarks.

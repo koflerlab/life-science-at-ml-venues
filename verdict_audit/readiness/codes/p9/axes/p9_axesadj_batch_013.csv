@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1671,modality,multimodal,"The model jointly handles neural recordings, visual stimuli and behavior as a multi-modal model."
+X1676,method,uncertainty_calibration,"The core contribution is evidential fusion producing uncertainty-aware, well-calibrated survival intervals."
+X1676,architecture,not_stated,The text describes a prototype evidential fusion network without naming a model family.
+X1678,architecture,state_space_rnn;transformer,SSM-based window Mamba fusion plus attention adapters are trained; no large pretrained language model is named.
+X1680,modality,multimodal,"The method explicitly integrates sequence, structure and function modalities."
+X1680,architecture,gnn_equivariant;transformer,Spatially-informed motif encoders over residues and attention-style protein encoders are trained; no large language model is named.
+X1681,method,theory,"The contribution is a shuffling algorithm with proven k-wise independence and convergence guarantees, with no experiments described."
+X1682,modality,none_or_synthetic,"Evaluation is on standard black-box optimization benchmark functions, not a real data type."
+X1683,modality,none_or_synthetic,"A theoretical bandit model with unspecified experiments, no real data type."
+X1684,architecture,classical_ml,"The method is a double machine learning statistical estimator with nuisance models fitted by the authors, not a neural network."
+X1690,modality,none_or_synthetic,A mainly theoretical linear bandit study with numerical experiments and no specific data type.
+X1690,method,reinforcement_decision,The main results are regret bounds and algorithms for adaptive targeting in a bandit setting.
+X1690,architecture,classical_ml,The paper uses a sparse linear outcome model.
+X1691,modality,video,The model takes an image stream and is evaluated on video depth and camera pose.
+X1691,method,other,"The contribution is a 3D mapping and memory retrieval system, not one of the listed families."
+X1691,architecture,not_stated,No model family is named for the framework.
+X1692,architecture,no_model,The paper is an auction-theoretic mechanism design analysis with no learned model trained.
+X1694,architecture,llm_vlm,The method uses the explainability map of a pretrained VLM to prompt grounding.
+X1696,architecture,other_neural,"The network uses mixture-of-splines experts and a decoder, with no convolutional family named."
+X1698,architecture,transformer,The TCC module uses a multi-scale temporal attention mechanism trained by the authors.
+X1699,method,reinforcement_decision,Partitions are treated as arms in a multi-armed bandit that allocates computation.
+X1702,method,llm_prompting_agents,The contribution is a decoding strategy built around pretrained LVLMs at inference time.
+X1703,modality,multimodal,The framework is validated on multiple medical tasks with no single primary data type.
+X1703,architecture,not_stated,Lightweight head models and a mixture of experts are used without naming a model family.
+X1709,method,supervised_prediction,"GPEN is a subgraph network evaluated on labelled subgraph benchmarks, not self-supervised pretraining."
+X1711,modality,text,SC-Arena is a natural language benchmark with natural language tasks for LLMs.
+X1712,architecture,not_stated,The models whose circuits are analyzed are not named in the text.
+X1713,modality,multimodal,The task aligns egocentric videos with natural language instructions across modalities.
+X1719,architecture,diffusion_flow;llm_vlm;transformer,A flow-matching MMDiT decoder is trained and the tokenizer is used within autoregressive vision-language-action models.
+X1728,modality,text,"The LLM generates executable branching-policy programs, which are the main data of the method."
+X1728,method,llm_prompting_agents,The framework uses an LLM to generate policy program skeletons.
+X1731,method,other,"It is an empirical scaling-law analysis of AlphaZero, not a theory paper or another listed family."
+X1731,architecture,not_stated,The neural network family used by AlphaZero is not named in the text.
+X1734,method,llm_prompting_agents,The main point is testing and evaluating LLM-assisted decision pipelines.
+X1734,architecture,diffusion_flow;llm_vlm,A flow-based surrogate model is trained to test LLM pipelines.
+X1736,method,llm_prompting_agents,It is an empirical study of how post-training data shape reasoning and evaluation of a language model.
+X1737,architecture,diffusion_flow;transformer,A diffusion model builds the DiffVERI dataset and masked autoencoders are pretrained.
+X1738,method,representation_learning,The main point is domain generalization across distribution shift.
+X1738,architecture,not_stated,No model family is named.
+X1739,modality,none_or_synthetic,Experiments are on synthetic optimal stopping problems in a finite-space environment.
+X1740,modality,image,All evaluated models take retinal fundus images as the primary input.
+X1741,method,other,"It is a neuroscience finding about preferred and anti-preferred stimuli, not a listed ML family."
+X1743,architecture,not_stated,"A network predicts a mixture model, but its family is not named."
+X1745,method,generative_modeling,Stereo super-resolution reconstructs high-resolution images.
+X1746,method,benchmark_dataset,The main contribution is a rigorous evaluation study and a standardized evaluation pipeline.
+X1750,modality,none_or_synthetic,Experiments are on standard benchmark test functions in a noiseless setting.
+X1751,method,benchmark_dataset,The main output is the Bioscan-Traits annotation dataset.
+X1751,architecture,llm_vlm;other_neural,Sparse autoencoders are trained on foundation features and vision-language prompting generates descriptions.
+X1754,architecture,diffusion_flow,"The attack uses a diffusion model with learnable text prompts, and the attacked classifiers are not named."
+X1758,architecture,not_stated,The Prism framework does not name a model family.

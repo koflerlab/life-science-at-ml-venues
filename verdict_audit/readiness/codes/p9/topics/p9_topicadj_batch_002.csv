@@ -1,0 +1,51 @@
+item_id,topic,reason
+T1095,molecules_drug_discovery,The paper predicts drug-target interactions from small-molecule and protein inputs for drug discovery.
+T1096,epidemiology_public_health,The paper forecasts epidemic spread with a disease transmission graph for public health.
+T1098,radiology,"Registration is evaluated on brain MRI, lung CT, cardiac MRI and ultrasound."
+T1099,genomics_omics,The method recovers dynamics from snapshots and is validated on real single-cell datasets.
+T1119,other,"The diffusion reward-optimization method is applied to both protein and DNA design, with no single domain."
+T1149,epidemiology_public_health,"The paper is causal inference of treatment effects, applied to a cancer immunotherapy dataset."
+T1163,other,"The sequence design method is applied to both DNA and protein sequences, with no single domain."
+T1208,ehr_clinical_text,"It is a medical vision-language model for medical tasks without a stated imaging modality, so medical language modelling dominates."
+T1210,other,"It mines PubMed into datasets spanning bioactivity, genomics, chemistry and proteins, with no single domain."
+T1235,other,"Segmentation is across seven unseen biomedical domains, with brain MRI only an example."
+T1239,neuroscience,It fits Bayesian actor models of perception and sensorimotor control to behavioral data from cognitive neuroscience tasks.
+T1295,other,"It is federated multimodal psychiatry from audio, visual and text signals, which fits no listed topic."
+T1307,genomics_omics,"It is de novo peptide sequencing from proteomics mass-spectrometry data, an omics assay rather than protein structure."
+T1371,ehr_clinical_text,It adapts LLMs to longitudinal clinical biological profiles.
+T1378,proteins,It samples and simulates biomolecular systems including fast-folding proteins and dipeptides.
+T1412,neuroscience,"It decodes EEG for brain-computer interfaces, emotion recognition and evoked potentials."
+T1420,proteins,It accelerates neural molecular dynamics of coarse-grained proteins.
+T1439,genomics_omics,The count diffusion model's highlighted biological application is single-cell RNA-seq imputation.
+T1460,ehr_clinical_text,It is reasoning for medical VLMs on medical VQA benchmarks without a stated imaging modality.
+T1470,genomics_omics,"It is a proteomics mass-spectrometry dataset and benchmark, an omics measurement resource."
+T1477,physiological_signals,It is an iEEG foundation model from clinical sources evaluated mainly on seizure detection.
+T1495,ehr_clinical_text,It studies compact medical multimodal LLMs on medical VQA benchmarks without a stated imaging modality.
+T1496,radiology,The medical VQA method is evaluated on chest radiographs (CheXpert).
+T1513,other,"OOD detection is evaluated across dermatology, chest X-ray, breast ultrasound and histopathology, with no single domain."
+T1518,ehr_clinical_text,The multimodal method is evaluated on MIMIC datasets with EHR and clinical notes.
+T1541,radiology,It is registration of a high-resolution human brain MRI volume.
+T1544,other_biology,The CLIP method targets biological data with a new plant-domain dataset.
+T1602,pathology_microscopy,It translates H&E pathology images into confocal laser endomicroscopy images for cell counting.
+T1604,radiology,"Segmentation is evaluated on X-ray, ultrasound and abdominal CT."
+T1613,neuroscience,It generates fMRI BOLD time series for brain network classification.
+T1629,other,It is generic medical imaging domain generalization with no stated modality.
+T1631,other,"Detection is on 13 cross-modal, multi-organ clinical datasets, with no single modality."
+T1632,other,Text-guided segmentation is on four unspecified medical imaging datasets.
+T1644,ehr_clinical_text,It is RL for medical multimodal reasoning and question answering without a stated imaging modality.
+T1645,other,Test-time adaptation is on varied unspecified 2D/3D medical data.
+T1647,other,Continual segmentation spans 16 tasks across four imaging modalities.
+T1657,epidemiology_public_health,It compiles medical evidence into causal intervention-effect estimates across studies.
+T1664,radiology,The dataset is CT-derived abdominal surface meshes paired with CT biomarkers.
+T1683,radiology,It is semi-supervised multi-organ segmentation of anatomy on medical scan datasets.
+T1692,other,Lesion segmentation is evaluated on 13 datasets across 5 imaging modalities.
+T1697,ehr_clinical_text,It is a medical audio question-answering benchmark including clinical conversations for reasoning models.
+T1699,other,Few-shot classification is on unspecified medical imaging benchmarks.
+T1701,other,"Survival analysis fuses histopathology and genomic data equally, with no single domain."
+T1715,neuroscience,It learns brain functional networks as representations of the brain.
+T1724,other_biology,"It is a benchmark for glycan biomolecules, not covered by other topics."
+T1726,pathology_microscopy,It evaluates vision models on digital pathology from TCGA with pathology reports.
+T1733,other_clinical_imaging,Segmentation experiments are on skin lesions and polyps.
+T1734,other,"The wet-lab acquisition method is demonstrated on antibodies and cell therapies, with no single domain."
+T1741,other,"Conformal segmentation is on skin lesions and anatomical structures, with no single modality."
+T1747,other,It is a 3D biomedical volume representation across unspecified modalities and procedures.

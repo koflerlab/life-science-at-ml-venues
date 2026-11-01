@@ -1,0 +1,10 @@
+item_id,field,label,reason
+P4232,compute,amount,"Appendix B.1 states 32 NVIDIA A100 80GB GPUs and about 1.5 hours per epoch, so both hardware and time are given."
+P4259,compute,none,"The excerpts give model, optimizer and 1,000 training steps but never mention GPUs, hardware or runtime."
+P4268,compute,none,"The excerpts mention 1 million training steps but state no hardware, GPU type or compute time."
+P4273,compute,none,The implementation details describe CLIP ViT-L/14 and hyperparameters but say nothing about hardware or training time.
+P4279,compute,none,The reproducibility statement and method text describe architectures and training procedures without any hardware or compute time.
+P4308,variance,no,"The experiments report only average competitive ratios over 10,000 samples, with no error bars, standard deviations or intervals shown."
+P4311,compute,none,"The excerpts describe models, data and evaluation but contain no statement of hardware or compute time."
+P4312,compute,none,"The implementation details give framework, optimizer and hidden size but state no hardware or compute time."
+P4314,compute,none,"The excerpts, including the checklist sections shown, never state hardware or compute time used for the experiments."

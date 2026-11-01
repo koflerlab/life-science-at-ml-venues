@@ -8,7 +8,7 @@ for coder 1 and, for the coder-2 sample, to new coder-2 batches, in item-id orde
 
 `final`, once the download is complete, is `wave` that also adds the last partial batch of each role.
 
-Usage: python build_p9_sheets.py init | wave | final | rebuild | status
+Usage: python build_p9_sheets.py init | wave | final | full2 | full2more | rebuild | status
 """
 from __future__ import annotations
 
@@ -98,18 +98,19 @@ def wave(final: bool = False) -> None:
     print("new batches:", {r: (v[0], v[-1], len(v)) for r, v in new.items()} or "none")
 
 
-def full2() -> None:
-    """Note 9-6: coder 2 codes every remaining coded paper (fields below the gate), role coder2full, same prompt."""
+def full2(more: bool = False) -> None:
+    """Note 9-6: coder 2 codes every remaining coded paper (fields below the gate), role coder2full, same prompt.
+    more (Note 9-23): append batches for coder-1 papers added since, earlier coder2full batches never change."""
     keys = json.loads(KEYS.read_text(encoding="utf-8"))
     batches = json.loads(BATCHES.read_text(encoding="utf-8"))
-    if batches.get("coder2full"):
+    if batches.get("coder2full") and not more:
         raise SystemExit("coder2full batches exist")
     ex = excerpts()
     in1 = {i for b in batches["coder1"] for i in b["items"]}
-    in2 = {i for b in batches["coder2"] for i in b["items"]}
+    in2 = {i for b in batches["coder2"] + batches.get("coder2full", []) for i in b["items"]}
     todo = sorted(in1 - in2)
-    batches["coder2full"] = []
-    for n, start in enumerate(range(0, len(todo), BATCH)):
+    batches.setdefault("coder2full", [])
+    for n, start in enumerate(range(0, len(todo), BATCH), len(batches["coder2full"])):
         items = todo[start:start + BATCH]
         with (SHEETS / f"p9_coder2full_batch_{n:03d}.csv").open("w", newline="", encoding="utf-8") as fh:
             w = csv.DictWriter(fh, ["item_id", "title", "truncated", "excerpt"])
@@ -160,5 +161,6 @@ def status() -> None:
 
 
 if __name__ == "__main__":
-    {"init": init, "wave": wave, "final": lambda: wave(final=True), "full2": full2, "rebuild": rebuild,
+    {"init": init, "wave": wave, "final": lambda: wave(final=True), "full2": full2,
+     "full2more": lambda: full2(more=True), "rebuild": rebuild,
      "status": status}[sys.argv[1] if len(sys.argv) > 1 else "status"]()

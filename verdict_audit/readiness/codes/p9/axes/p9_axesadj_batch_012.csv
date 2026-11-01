@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1560,modality,image,"The VLM takes dermatology images as its diagnostic input; text is reasoning supervision, not a jointly central input."
+X1560,method,supervised_prediction,"The goal is diagnostic prediction accuracy, trained via label-derived SFT and hierarchical-label rewards."
+X1562,method,supervised_prediction,The task is action recognition evaluated on labeled video datasets; disentanglement serves classification.
+X1567,method,other,"It is a neuroscience analysis mapping LLM intermediate states to brain voxels, not a robustness or fairness method."
+X1568,architecture,no_model,ProteinBench evaluates existing protein foundation models and builds or trains no model of its own.
+X1572,method,generative_modeling,"XSurfer reconstructs pial surfaces by optimizing an untrained network on single images, without labeled training."
+X1573,modality,biological_sequence,ProDVa designs protein sequences with a protein language model.
+X1574,modality,time_series,"Both embedded inputs, activity autocorrelations and extracellular waveforms, are electrophysiological signals."
+X1577,method,representation_learning,"The contribution is a wavelet-based SSM for representing signals, validated empirically rather than mainly theoretical."
+X1581,method,reinforcement_decision,"The problem is contextual dynamic pricing, a sequential decision task, with regret bounds plus extensive experiments."
+X1582,architecture,diffusion_flow;transformer,A flow-matching module completes articulation on top of a regression network both coders identified as transformer.
+X1584,method,benchmark_dataset,The main contribution is new DEG-aware evaluation metrics and calibrated baselines for perturbation benchmarks.
+X1584,architecture,not_stated,WMSE is applied across unnamed multiple model architectures.
+X1590,architecture,diffusion_flow,"The generator is a diffusion-type model; the attention module is a component, not a separate transformer model."
+X1591,modality,geometry_3d,The task is dense 3D affordance prediction on 3D objects; diffusion priors are a knowledge source.
+X1593,method,llm_prompting_agents,Meow-Omni is a multimodal LLM built by surgery on a pretrained LLM backbone for intent reasoning.
+X1597,modality,geometry_3d,VesselTok encodes tubular geometry as neural implicit shape representations from centerline points.
+X1597,architecture,other_neural;transformer,It learns latent tokens conditioned on centerline points to encode neural implicit representations.
+X1598,architecture,no_model,It is a position paper with no model built or trained.
+X1603,method,supervised_prediction,"AFANet is a lightweight GNN trained to identify faulty agents and error types, not an LLM-based pipeline."
+X1605,method,supervised_prediction,"The task is segmentation of echocardiographic structures, evaluated by Dice."
+X1605,architecture,gnn_equivariant;llm_vlm;transformer,Echo-SAM adapts SAM with text prompts and explicitly uses a knowledge-grounded Graph Neural Network.
+X1606,architecture,transformer,SAFER is a tabular-language model on EHR and notes; no large pretrained LLM is described.
+X1607,method,benchmark_dataset,The primary contribution is the first large-scale OrthoLoC UAV dataset for benchmarking.
+X1607,architecture,not_stated,AdHoP works with any feature matcher and no model family is named.
+X1608,method,trustworthy_ml,"The paper studies LLM dishonesty and its impact on safety evaluations, with probes for detection."
+X1609,modality,image,SAFE-Hair takes a single portrait image as input to reconstruct strands.
+X1609,architecture,diffusion_flow,It uses a conditional Rectified Flow model to generate latent scalp fields.
+X1612,modality,image,"Evolved plasticity rules are evaluated on cross-domain visual tasks inside a V1 model, so the input data are visual stimuli."
+X1614,architecture,state_space_rnn,HoME is built on the Mamba SSM backbone; no transformer is described.
+X1615,method,representation_learning,"MoS is a data valuation method for vision-language pre-training, not a benchmark."
+X1616,architecture,not_stated,Condensation operates under a fixed representational lens whose model family is not named.
+X1621,method,llm_prompting_agents,"Spire trains collaborating agents for agentic slide generation; denoising is a surrogate task, not data generation."
+X1628,modality,image,cryoSplat reconstructs from raw 2D cryo-EM particle images.
+X1634,modality,tabular_records,"The method uses labeled source and unlabeled target outcome-covariate data, evaluated on simulated and real data."
+X1634,architecture,classical_ml,The robust model aggregates source models such as random forests and boosting within a statistical framework.
+X1635,architecture,diffusion_flow;other_neural,DeFlow keeps a flow prior and trains a lightweight residual module.
+X1639,modality,graph_molecule,"The input is functional connectivity brain networks (SPD matrices), not voxel volumes."
+X1643,modality,multimodal,The paper jointly centers human behavioral experiment data and RNNs trained on the same WM task.
+X1646,method,biostatistics_inference,The contribution is a consistent mutual information estimator with empirical validation.
+X1647,architecture,not_stated,DPGS is a training framework for MIL with no model family named.
+X1649,method,other,"TopoLM is a computational neuroscience model of cortical organization, not representation learning per se."
+X1649,architecture,transformer,"TopoLM is a transformer language model trained by the authors, not a large pretrained LLM."
+X1652,modality,image,StyleGender is a dataset of artistic and generated images analyzed with pixel-level metrics.
+X1656,modality,multimodal,Mind-Animator maps fMRI to video using fMRI-vision-language tri-modal contrastive learning.
+X1657,architecture,other_neural,MPD is optimized via gated neural networks.
+X1661,modality,omics_matrix,CellTreeQM uses single-cell transcriptomic profiles.
+X1661,method,representation_learning,The method learns an embedding space via tree-metric learning under weak supervision.
+X1663,method,supervised_prediction,"CryoFastAR directly predicts poses, trained on simulated data with known poses."
+X1670,modality,time_series,BASIL-DCM encodes ROI-wise resting-state fMRI time courses with a temporal encoder.

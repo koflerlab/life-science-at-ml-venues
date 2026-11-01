@@ -1,0 +1,20 @@
+{
+ "n": 514,
+ "architecture": {
+  "raw": 0.6342,
+  "n_disagreements": 188,
+  "per_label_kappa": {
+   "cnn": 0.7892,
+   "transformer": 0.7418,
+   "llm_vlm": 0.7319,
+   "gnn_equivariant": 0.7731,
+   "diffusion_flow": 0.8433,
+   "state_space_rnn": 0.8579,
+   "other_neural": 0.6669,
+   "gp_kernel": 1.0,
+   "classical_ml": 0.6572,
+   "not_stated": 0.5634,
+   "no_model": 0.6618
+  }
+ }
+}

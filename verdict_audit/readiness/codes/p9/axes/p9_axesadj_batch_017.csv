@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X2157,architecture,llm_vlm;other_neural,A sparse autoencoder is trained on the CLIP vision transformer and prompt-based adaptation of CLIP is studied.
+X2165,architecture,not_stated,The abstract describes a forecasting framework without naming its model family.
+X2166,modality,time_series,The model learns temporal dynamics of physical quantities from PDEBench 1D-3D PDE trajectories.
+X2168,architecture,diffusion_flow;other_neural,The method combines flow matching with an autoencoder latent space it aligns.
+X2170,architecture,not_stated,A two-stage pretraining and fine-tuning approach is described without naming a network family.
+X2171,architecture,not_stated,PULSE is a pretraining objective and the encoder family is not named.
+X2173,architecture,transformer,Light-DDG adopts a structure-aware Transformer backbone.
+X2174,architecture,not_stated,The paper trains a baseline deep learning model HR-Heim whose family is not named.
+X2179,modality,none_or_synthetic,"Experiments use sequence-to-sequence, multitask and RL benchmark tasks rather than a real data type."
+X2179,method,other,"The contribution is a neuromodulation-inspired computational neuroscience model of credit assignment, not mainly RL."
+X2179,architecture,state_space_rnn,The model is an endogenously neuromodulated recurrent neural network.
+X2181,architecture,not_stated,The dataset paper trains channel-adaptive models without naming their family.
+X2183,method,supervised_prediction,The framework learns entity alignment from noisy annotated correspondences.
+X2184,modality,omics_matrix,The real-world application is a single-cell genomics dataset with perturbations across time points.
+X2191,modality,image,Prompt tuning of CLIP is applied to noisy-label image classification benchmarks.
+X2202,architecture,cnn;transformer,Whisper is adapted to neural recordings via a convolutional front-end and windowed self-attention.
+X2204,method,optimization_efficiency,The core challenge addressed is reducing high inference cost by eliminating irrelevant patches.
+X2204,architecture,other_neural,"The networks are attention-based MIL with a Kolmogorov-Arnold classifier, not a named transformer."
+X2205,modality,interactive_environment,"The system serves VLA models for embodied agents, validated on a real humanoid robot."
+X2208,architecture,llm_vlm,"The model is instruction-driven with chain-of-thought rationale training, implying a language model; no other family is named."
+X2209,method,llm_prompting_agents,The study uses LLM in-context learning to probe representational change across six models.
+X2224,method,generative_modeling,The design space targets protein structure generation and folding with multimodal PLMs.
+X2225,method,benchmark_dataset,The paper extends a video dataset and benchmarks 350+ models against human behaviour and neural responses.
+X2227,modality,geometry_3d,Vessel graphs are encoded as tubular 3D shapes via centerline points and implicit neural representations.
+X2228,method,generative_modeling,A conditional diffusion model solves the acoustic inverse problem by generating a distribution over scenes.
+X2231,modality,none_or_synthetic,It is a theoretical analysis of continuous CoT on graph reachability with synthetic experiments.
+X2239,architecture,not_stated,A concrete architecture is proposed and tested on synthetic data but its family is not named.
+X2240,architecture,not_stated,DSENet is described as a dual-stream network without naming its layer family.
+X2244,architecture,not_stated,The GLP encoder and heads are not tied to a named model family.
+X2246,method,other,"Weaver modifies decoder-only LLM attention and positional encodings for graph reasoning, which fits no listed family."
+X2247,modality,audio_speech,Both the spatial DoA cues and Whisper embeddings come from microphone speech recordings.
+X2247,method,other,"The contribution is a system architecture fusing spatial speech into a LoRA-tuned LLM, not prompting or agents."
+X2250,modality,image,"The agents take histopathology whole slide images as input, with text only as output."
+X2254,method,benchmark_dataset,The main contribution is a framework and a 1M-problem synthesized dataset.
+X2255,modality,interactive_environment,"Validation is on simulated control systems such as platoons, drone formations and microgrids."
+X2255,method,reinforcement_decision,The work synthesizes neural stability certificates for control of interconnected systems.
+X2257,method,trustworthy_ml,The contribution is an interpretable concept bottleneck layer that mitigates concept leakage.
+X2263,modality,none_or_synthetic,The paper is a convergence proof for REINFORCE with no real data.
+X2265,modality,multimodal,The task grounds natural language queries to objects in images using MLLMs.
+X2266,modality,multimodal,The model has shared encoders for mesh geometry and electron microscopy images.
+X2269,method,llm_prompting_agents,The paper trains and evaluates a pathology MLLM with a VQA benchmark.
+X2279,architecture,diffusion_flow;llm_vlm,An MLLM anticipates user intent and a diffusion prior with a learned plug-in performs editing.
+X2286,architecture,not_stated,Image and text generative models are fine-tuned but their families are not named.
+X2287,modality,image,The input is an in-the-wild building facade image.
+X2289,modality,image,The abstract describes medical image registration without stating 3D volumes.
+X2294,architecture,gp_kernel;llm_vlm,SVG uses SVM optimization in the RKHS induced by a frozen language model.
+X2308,architecture,cnn;other_neural,The authors train a spiking ResNet-18.
+X2309,architecture,diffusion_flow,"The method is conditional flow matching; the attention modules are components, not a named transformer model."
+X2314,modality,image,NeuralCPM is trained on observed spatial configurations of multicellular systems on a lattice.
+X2318,method,optimization_efficiency,"The framework compresses pathology foundation models by distillation, cutting size 86-92%."

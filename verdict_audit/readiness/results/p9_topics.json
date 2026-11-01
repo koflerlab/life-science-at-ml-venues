@@ -1,0 +1,2799 @@
+{
+ "note": "9-24",
+ "post_hoc": true,
+ "n": 2170,
+ "agreement": {
+  "n": 2170,
+  "raw": 0.9203,
+  "kappa": 0.9101,
+  "n_disagreements": 173
+ },
+ "overall": {
+  "neuroscience": {
+   "n": 380,
+   "share": 0.17511520737327188
+  },
+  "radiology": {
+   "n": 367,
+   "share": 0.16912442396313365
+  },
+  "proteins": {
+   "n": 250,
+   "share": 0.1152073732718894
+  },
+  "genomics_omics": {
+   "n": 222,
+   "share": 0.10230414746543778
+  },
+  "other": {
+   "n": 176,
+   "share": 0.08110599078341015
+  },
+  "ehr_clinical_text": {
+   "n": 162,
+   "share": 0.07465437788018434
+  },
+  "molecules_drug_discovery": {
+   "n": 156,
+   "share": 0.07188940092165899
+  },
+  "pathology_microscopy": {
+   "n": 150,
+   "share": 0.06912442396313365
+  },
+  "physiological_signals": {
+   "n": 127,
+   "share": 0.05852534562211981
+  },
+  "other_clinical_imaging": {
+   "n": 68,
+   "share": 0.03133640552995392
+  },
+  "epidemiology_public_health": {
+   "n": 64,
+   "share": 0.029493087557603687
+  },
+  "other_biology": {
+   "n": 45,
+   "share": 0.020737327188940093
+  },
+  "chemistry_materials": {
+   "n": 3,
+   "share": 0.0013824884792626728
+  }
+ },
+ "by_label": {
+  "clinical": {
+   "ehr_clinical_text": 161,
+   "radiology": 367,
+   "pathology_microscopy": 108,
+   "neuroscience": 22,
+   "other": 113,
+   "physiological_signals": 98,
+   "other_clinical_imaging": 68,
+   "epidemiology_public_health": 64,
+   "genomics_omics": 10,
+   "molecules_drug_discovery": 1,
+   "other_biology": 1
+  },
+  "life_science": {
+   "neuroscience": 358,
+   "proteins": 250,
+   "other_biology": 44,
+   "genomics_omics": 212,
+   "molecules_drug_discovery": 155,
+   "pathology_microscopy": 42,
+   "physiological_signals": 29,
+   "other": 63,
+   "chemistry_materials": 3,
+   "ehr_clinical_text": 1
+  }
+ },
+ "T1_by_venue": {
+  "cvpr": {
+   "n": 108,
+   "topics": {
+    "radiology": {
+     "n": 58,
+     "share": 0.5370370370370371,
+     "wilson": [
+      0.44334384333440474,
+      0.6281858915763978
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 21,
+     "share": 0.19444444444444445,
+     "wilson": [
+      0.13084280853074548,
+      0.27903687845513453
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 9,
+     "share": 0.08333333333333333,
+     "wilson": [
+      0.044459900413239356,
+      0.15083058184023337
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 1,
+     "share": 0.009259259259259259,
+     "wilson": [
+      0.0016363187318928635,
+      0.05059469369997506
+     ]
+    },
+    "physiological_signals": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "neuroscience": {
+     "n": 5,
+     "share": 0.046296296296296294,
+     "wilson": [
+      0.019934521435234435,
+      0.1038262259074359
+     ]
+    },
+    "genomics_omics": {
+     "n": 2,
+     "share": 0.018518518518518517,
+     "wilson": [
+      0.005093117606642765,
+      0.06502032855292575
+     ]
+    },
+    "proteins": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 1,
+     "share": 0.009259259259259259,
+     "wilson": [
+      0.0016363187318928635,
+      0.05059469369997506
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "other_biology": {
+     "n": 1,
+     "share": 0.009259259259259259,
+     "wilson": [
+      0.0016363187318928635,
+      0.05059469369997506
+     ]
+    },
+    "other": {
+     "n": 10,
+     "share": 0.09259259259259259,
+     "wilson": [
+      0.051072779285118,
+      0.16210013669605533
+     ]
+    }
+   }
+  },
+  "eccv": {
+   "n": 129,
+   "topics": {
+    "radiology": {
+     "n": 66,
+     "share": 0.5116279069767442,
+     "wilson": [
+      0.42628654943579447,
+      0.5962967377272629
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 18,
+     "share": 0.13953488372093023,
+     "wilson": [
+      0.09011944437190833,
+      0.20979865357331362
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 9,
+     "share": 0.06976744186046512,
+     "wilson": [
+      0.03713573649300738,
+      0.12728263847387045
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 2,
+     "share": 0.015503875968992248,
+     "wilson": [
+      0.004261981087390919,
+      0.05476772045188593
+     ]
+    },
+    "physiological_signals": {
+     "n": 4,
+     "share": 0.031007751937984496,
+     "wilson": [
+      0.012122842184807997,
+      0.077017908905212
+     ]
+    },
+    "neuroscience": {
+     "n": 7,
+     "share": 0.05426356589147287,
+     "wilson": [
+      0.026530617490702076,
+      0.10777670792543265
+     ]
+    },
+    "genomics_omics": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "proteins": {
+     "n": 1,
+     "share": 0.007751937984496124,
+     "wilson": [
+      0.0013696853368445096,
+      0.04260449142706077
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "other_biology": {
+     "n": 4,
+     "share": 0.031007751937984496,
+     "wilson": [
+      0.012122842184807997,
+      0.077017908905212
+     ]
+    },
+    "other": {
+     "n": 18,
+     "share": 0.13953488372093023,
+     "wilson": [
+      0.09011944437190833,
+      0.20979865357331362
+     ]
+    }
+   }
+  },
+  "iccv": {
+   "n": 104,
+   "topics": {
+    "radiology": {
+     "n": 46,
+     "share": 0.4423076923076923,
+     "wilson": [
+      0.3506008495845397,
+      0.5381248369779741
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 25,
+     "share": 0.2403846153846154,
+     "wilson": [
+      0.16845266546271023,
+      0.3308129240686023
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 12,
+     "share": 0.11538461538461539,
+     "wilson": [
+      0.0672491122978073,
+      0.1909221314522854
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 1,
+     "share": 0.009615384615384616,
+     "wilson": [
+      0.0016993291044208915,
+      0.05246900667694733
+     ]
+    },
+    "physiological_signals": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "neuroscience": {
+     "n": 9,
+     "share": 0.08653846153846154,
+     "wilson": [
+      0.04619542485248201,
+      0.15633866217886766
+     ]
+    },
+    "genomics_omics": {
+     "n": 1,
+     "share": 0.009615384615384616,
+     "wilson": [
+      0.0016993291044208915,
+      0.05246900667694733
+     ]
+    },
+    "proteins": {
+     "n": 2,
+     "share": 0.019230769230769232,
+     "wilson": [
+      0.0052896007240565805,
+      0.06742445396355932
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "other_biology": {
+     "n": 1,
+     "share": 0.009615384615384616,
+     "wilson": [
+      0.0016993291044208915,
+      0.05246900667694733
+     ]
+    },
+    "other": {
+     "n": 7,
+     "share": 0.0673076923076923,
+     "wilson": [
+      0.032983269269930095,
+      0.1324593799489242
+     ]
+    }
+   }
+  },
+  "iclr": {
+   "n": 531,
+   "topics": {
+    "radiology": {
+     "n": 54,
+     "share": 0.1016949152542373,
+     "wilson": [
+      0.07878092101186272,
+      0.13033071129198198
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 19,
+     "share": 0.035781544256120526,
+     "wilson": [
+      0.02302459967033356,
+      0.05520716091074314
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 6,
+     "share": 0.011299435028248588,
+     "wilson": [
+      0.005188566959147748,
+      0.024430669839186563
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 37,
+     "share": 0.0696798493408663,
+     "wilson": [
+      0.05097235611502296,
+      0.09456905278062017
+     ]
+    },
+    "physiological_signals": {
+     "n": 32,
+     "share": 0.060263653483992465,
+     "wilson": [
+      0.04300779403270129,
+      0.08383649033111783
+     ]
+    },
+    "neuroscience": {
+     "n": 113,
+     "share": 0.2128060263653484,
+     "wilson": [
+      0.1801198032336743,
+      0.2496178985456937
+     ]
+    },
+    "genomics_omics": {
+     "n": 54,
+     "share": 0.1016949152542373,
+     "wilson": [
+      0.07878092101186272,
+      0.13033071129198198
+     ]
+    },
+    "proteins": {
+     "n": 85,
+     "share": 0.160075329566855,
+     "wilson": [
+      0.13134508248940727,
+      0.19368872191174627
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 60,
+     "share": 0.11299435028248588,
+     "wilson": [
+      0.08879959392917627,
+      0.14274858781285724
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.007182687360145509
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 14,
+     "share": 0.026365348399246705,
+     "wilson": [
+      0.015768941722520958,
+      0.04376569432673176
+     ]
+    },
+    "other_biology": {
+     "n": 12,
+     "share": 0.022598870056497175,
+     "wilson": [
+      0.012973753740047311,
+      0.0390820324964758
+     ]
+    },
+    "other": {
+     "n": 45,
+     "share": 0.0847457627118644,
+     "wilson": [
+      0.06393736530049461,
+      0.1115194428460669
+     ]
+    }
+   }
+  },
+  "icml": {
+   "n": 494,
+   "topics": {
+    "radiology": {
+     "n": 46,
+     "share": 0.0931174089068826,
+     "wilson": [
+      0.07053766399492156,
+      0.12197658150003104
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 21,
+     "share": 0.04251012145748988,
+     "wilson": [
+      0.02796971583558239,
+      0.06411097810401606
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 6,
+     "share": 0.012145748987854251,
+     "wilson": [
+      0.00557799363201756,
+      0.026242569374368405
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 44,
+     "share": 0.08906882591093117,
+     "wilson": [
+      0.0670179955768101,
+      0.11746156579371417
+     ]
+    },
+    "physiological_signals": {
+     "n": 43,
+     "share": 0.08704453441295547,
+     "wilson": [
+      0.06526376582896326,
+      0.11519845347934685
+     ]
+    },
+    "neuroscience": {
+     "n": 66,
+     "share": 0.13360323886639677,
+     "wilson": [
+      0.10641044849451012,
+      0.1664506382447258
+     ]
+    },
+    "genomics_omics": {
+     "n": 76,
+     "share": 0.15384615384615385,
+     "wilson": [
+      0.124710792836764,
+      0.18832371452461355
+     ]
+    },
+    "proteins": {
+     "n": 79,
+     "share": 0.15991902834008098,
+     "wilson": [
+      0.13023907619205227,
+      0.1948474573559678
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 41,
+     "share": 0.08299595141700405,
+     "wilson": [
+      0.06176709856185799,
+      0.1106604366220238
+     ]
+    },
+    "chemistry_materials": {
+     "n": 2,
+     "share": 0.004048582995951417,
+     "wilson": [
+      0.0011109472540055017,
+      0.014640247503523798
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 24,
+     "share": 0.048582995951417005,
+     "wilson": [
+      0.03286188942489641,
+      0.07127083070134455
+     ]
+    },
+    "other_biology": {
+     "n": 7,
+     "share": 0.01417004048582996,
+     "wilson": [
+      0.00688046481668265,
+      0.02895744025191748
+     ]
+    },
+    "other": {
+     "n": 39,
+     "share": 0.07894736842105263,
+     "wilson": [
+      0.058287013478964034,
+      0.10610583758048939
+     ]
+    }
+   }
+  },
+  "neurips": {
+   "n": 804,
+   "topics": {
+    "radiology": {
+     "n": 97,
+     "share": 0.12064676616915423,
+     "wilson": [
+      0.09991723527957959,
+      0.14498424045526742
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 46,
+     "share": 0.05721393034825871,
+     "wilson": [
+      0.04316586269215173,
+      0.07547323685409596
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 26,
+     "share": 0.03233830845771144,
+     "wilson": [
+      0.022162464750399038,
+      0.046961977466986146
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 77,
+     "share": 0.09577114427860696,
+     "wilson": [
+      0.0773094185699521,
+      0.11807739983603241
+     ]
+    },
+    "physiological_signals": {
+     "n": 48,
+     "share": 0.05970149253731343,
+     "wilson": [
+      0.04532293543293284,
+      0.07826762984620109
+     ]
+    },
+    "neuroscience": {
+     "n": 180,
+     "share": 0.22388059701492538,
+     "wilson": [
+      0.19641846937175383,
+      0.25396883427787253
+     ]
+    },
+    "genomics_omics": {
+     "n": 89,
+     "share": 0.11069651741293532,
+     "wilson": [
+      0.09083235239295886,
+      0.13426326041034314
+     ]
+    },
+    "proteins": {
+     "n": 83,
+     "share": 0.10323383084577115,
+     "wilson": [
+      0.08405410394784352,
+      0.12618711165679977
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 54,
+     "share": 0.06716417910447761,
+     "wilson": [
+      0.05183925265096118,
+      0.0866057098268315
+     ]
+    },
+    "chemistry_materials": {
+     "n": 1,
+     "share": 0.0012437810945273632,
+     "wilson": [
+      0.00021958600590548522,
+      0.007011534550401592
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 26,
+     "share": 0.03233830845771144,
+     "wilson": [
+      0.022162464750399038,
+      0.046961977466986146
+     ]
+    },
+    "other_biology": {
+     "n": 20,
+     "share": 0.024875621890547265,
+     "wilson": [
+      0.01615980042927529,
+      0.03811024458945115
+     ]
+    },
+    "other": {
+     "n": 57,
+     "share": 0.0708955223880597,
+     "wilson": [
+      0.05512040876273655,
+      0.09075175231438548
+     ]
+    }
+   }
+  }
+ },
+ "T1_by_venue_year": {
+  "cvpr-2025": {
+   "n": 108,
+   "topics": {
+    "radiology": {
+     "n": 58,
+     "share": 0.5370370370370371,
+     "wilson": [
+      0.44334384333440474,
+      0.6281858915763978
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 21,
+     "share": 0.19444444444444445,
+     "wilson": [
+      0.13084280853074548,
+      0.27903687845513453
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 9,
+     "share": 0.08333333333333333,
+     "wilson": [
+      0.044459900413239356,
+      0.15083058184023337
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 1,
+     "share": 0.009259259259259259,
+     "wilson": [
+      0.0016363187318928635,
+      0.05059469369997506
+     ]
+    },
+    "physiological_signals": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "neuroscience": {
+     "n": 5,
+     "share": 0.046296296296296294,
+     "wilson": [
+      0.019934521435234435,
+      0.1038262259074359
+     ]
+    },
+    "genomics_omics": {
+     "n": 2,
+     "share": 0.018518518518518517,
+     "wilson": [
+      0.005093117606642765,
+      0.06502032855292575
+     ]
+    },
+    "proteins": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 1,
+     "share": 0.009259259259259259,
+     "wilson": [
+      0.0016363187318928635,
+      0.05059469369997506
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      3.469446951953614e-18,
+      0.03434857870416731
+     ]
+    },
+    "other_biology": {
+     "n": 1,
+     "share": 0.009259259259259259,
+     "wilson": [
+      0.0016363187318928635,
+      0.05059469369997506
+     ]
+    },
+    "other": {
+     "n": 10,
+     "share": 0.09259259259259259,
+     "wilson": [
+      0.051072779285118,
+      0.16210013669605533
+     ]
+    }
+   }
+  },
+  "eccv-2026": {
+   "n": 129,
+   "topics": {
+    "radiology": {
+     "n": 66,
+     "share": 0.5116279069767442,
+     "wilson": [
+      0.42628654943579447,
+      0.5962967377272629
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 18,
+     "share": 0.13953488372093023,
+     "wilson": [
+      0.09011944437190833,
+      0.20979865357331362
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 9,
+     "share": 0.06976744186046512,
+     "wilson": [
+      0.03713573649300738,
+      0.12728263847387045
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 2,
+     "share": 0.015503875968992248,
+     "wilson": [
+      0.004261981087390919,
+      0.05476772045188593
+     ]
+    },
+    "physiological_signals": {
+     "n": 4,
+     "share": 0.031007751937984496,
+     "wilson": [
+      0.012122842184807997,
+      0.077017908905212
+     ]
+    },
+    "neuroscience": {
+     "n": 7,
+     "share": 0.05426356589147287,
+     "wilson": [
+      0.026530617490702076,
+      0.10777670792543265
+     ]
+    },
+    "genomics_omics": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "proteins": {
+     "n": 1,
+     "share": 0.007751937984496124,
+     "wilson": [
+      0.0013696853368445096,
+      0.04260449142706077
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.028918651988533713
+     ]
+    },
+    "other_biology": {
+     "n": 4,
+     "share": 0.031007751937984496,
+     "wilson": [
+      0.012122842184807997,
+      0.077017908905212
+     ]
+    },
+    "other": {
+     "n": 18,
+     "share": 0.13953488372093023,
+     "wilson": [
+      0.09011944437190833,
+      0.20979865357331362
+     ]
+    }
+   }
+  },
+  "iccv-2025": {
+   "n": 104,
+   "topics": {
+    "radiology": {
+     "n": 46,
+     "share": 0.4423076923076923,
+     "wilson": [
+      0.3506008495845397,
+      0.5381248369779741
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 25,
+     "share": 0.2403846153846154,
+     "wilson": [
+      0.16845266546271023,
+      0.3308129240686023
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 12,
+     "share": 0.11538461538461539,
+     "wilson": [
+      0.0672491122978073,
+      0.1909221314522854
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 1,
+     "share": 0.009615384615384616,
+     "wilson": [
+      0.0016993291044208915,
+      0.05246900667694733
+     ]
+    },
+    "physiological_signals": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "neuroscience": {
+     "n": 9,
+     "share": 0.08653846153846154,
+     "wilson": [
+      0.04619542485248201,
+      0.15633866217886766
+     ]
+    },
+    "genomics_omics": {
+     "n": 1,
+     "share": 0.009615384615384616,
+     "wilson": [
+      0.0016993291044208915,
+      0.05246900667694733
+     ]
+    },
+    "proteins": {
+     "n": 2,
+     "share": 0.019230769230769232,
+     "wilson": [
+      0.0052896007240565805,
+      0.06742445396355932
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.03562261687512055
+     ]
+    },
+    "other_biology": {
+     "n": 1,
+     "share": 0.009615384615384616,
+     "wilson": [
+      0.0016993291044208915,
+      0.05246900667694733
+     ]
+    },
+    "other": {
+     "n": 7,
+     "share": 0.0673076923076923,
+     "wilson": [
+      0.032983269269930095,
+      0.1324593799489242
+     ]
+    }
+   }
+  },
+  "iclr-2025": {
+   "n": 222,
+   "topics": {
+    "radiology": {
+     "n": 18,
+     "share": 0.08108108108108109,
+     "wilson": [
+      0.05190058610715591,
+      0.12451332523601556
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 7,
+     "share": 0.03153153153153153,
+     "wilson": [
+      0.015356007488822678,
+      0.0636444955185949
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 1,
+     "share": 0.0045045045045045045,
+     "wilson": [
+      0.0007955782235107185,
+      0.025070338418950188
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 8,
+     "share": 0.036036036036036036,
+     "wilson": [
+      0.01837085780729679,
+      0.06948540959428023
+     ]
+    },
+    "physiological_signals": {
+     "n": 10,
+     "share": 0.04504504504504504,
+     "wilson": [
+      0.024648540128827116,
+      0.0809192560610688
+     ]
+    },
+    "neuroscience": {
+     "n": 50,
+     "share": 0.22522522522522523,
+     "wilson": [
+      0.17521740237511524,
+      0.28458096958115847
+     ]
+    },
+    "genomics_omics": {
+     "n": 24,
+     "share": 0.10810810810810811,
+     "wilson": [
+      0.07373074771234928,
+      0.15581774999577888
+     ]
+    },
+    "proteins": {
+     "n": 36,
+     "share": 0.16216216216216217,
+     "wilson": [
+      0.11949273548961543,
+      0.21632493494842608
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 34,
+     "share": 0.15315315315315314,
+     "wilson": [
+      0.11171408847922638,
+      0.2063920531704962
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.017010152248301463
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 8,
+     "share": 0.036036036036036036,
+     "wilson": [
+      0.01837085780729679,
+      0.06948540959428023
+     ]
+    },
+    "other_biology": {
+     "n": 7,
+     "share": 0.03153153153153153,
+     "wilson": [
+      0.015356007488822678,
+      0.0636444955185949
+     ]
+    },
+    "other": {
+     "n": 19,
+     "share": 0.08558558558558559,
+     "wilson": [
+      0.055474129279163994,
+      0.12979554645816693
+     ]
+    }
+   }
+  },
+  "iclr-2026": {
+   "n": 309,
+   "topics": {
+    "radiology": {
+     "n": 36,
+     "share": 0.11650485436893204,
+     "wilson": [
+      0.08535121018688804,
+      0.15707690678988234
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 12,
+     "share": 0.038834951456310676,
+     "wilson": [
+      0.022352242612637244,
+      0.06664359425816256
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 5,
+     "share": 0.016181229773462782,
+     "wilson": [
+      0.0069308466203427295,
+      0.037313908552882316
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 29,
+     "share": 0.09385113268608414,
+     "wilson": [
+      0.06614023842799216,
+      0.13153679685120345
+     ]
+    },
+    "physiological_signals": {
+     "n": 22,
+     "share": 0.07119741100323625,
+     "wilson": [
+      0.047484326972844354,
+      0.10544162660877654
+     ]
+    },
+    "neuroscience": {
+     "n": 63,
+     "share": 0.20388349514563106,
+     "wilson": [
+      0.1627268451596658,
+      0.25231258693632147
+     ]
+    },
+    "genomics_omics": {
+     "n": 30,
+     "share": 0.0970873786407767,
+     "wilson": [
+      0.0688546852596634,
+      0.13521536169061432
+     ]
+    },
+    "proteins": {
+     "n": 49,
+     "share": 0.15857605177993528,
+     "wilson": [
+      0.12207399270546992,
+      0.20346327599536784
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 26,
+     "share": 0.08414239482200647,
+     "wilson": [
+      0.05806597643341675,
+      0.12043202383253256
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.01227969681781451
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 6,
+     "share": 0.019417475728155338,
+     "wilson": [
+      0.008928721406924706,
+      0.04170904543738245
+     ]
+    },
+    "other_biology": {
+     "n": 5,
+     "share": 0.016181229773462782,
+     "wilson": [
+      0.0069308466203427295,
+      0.037313908552882316
+     ]
+    },
+    "other": {
+     "n": 26,
+     "share": 0.08414239482200647,
+     "wilson": [
+      0.05806597643341675,
+      0.12043202383253256
+     ]
+    }
+   }
+  },
+  "icml-2025": {
+   "n": 166,
+   "topics": {
+    "radiology": {
+     "n": 12,
+     "share": 0.07228915662650602,
+     "wilson": [
+      0.04183263378476524,
+      0.12209422512377069
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 9,
+     "share": 0.05421686746987952,
+     "wilson": [
+      0.028782352761620243,
+      0.09981747201629046
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      1.734723475976807e-18,
+      0.022618722386034983
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 11,
+     "share": 0.06626506024096386,
+     "wilson": [
+      0.037400567775504975,
+      0.11475061308948921
+     ]
+    },
+    "physiological_signals": {
+     "n": 9,
+     "share": 0.05421686746987952,
+     "wilson": [
+      0.028782352761620243,
+      0.09981747201629046
+     ]
+    },
+    "neuroscience": {
+     "n": 24,
+     "share": 0.14457831325301204,
+     "wilson": [
+      0.09911975400985601,
+      0.20611524142118087
+     ]
+    },
+    "genomics_omics": {
+     "n": 20,
+     "share": 0.12048192771084337,
+     "wilson": [
+      0.07936196668337014,
+      0.1787703165734998
+     ]
+    },
+    "proteins": {
+     "n": 33,
+     "share": 0.19879518072289157,
+     "wilson": [
+      0.14520087187123953,
+      0.2660152259516731
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 19,
+     "share": 0.1144578313253012,
+     "wilson": [
+      0.0745098548587058,
+      0.17184675035462232
+     ]
+    },
+    "chemistry_materials": {
+     "n": 1,
+     "share": 0.006024096385542169,
+     "wilson": [
+      0.0010641662329914856,
+      0.03333023419658525
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 11,
+     "share": 0.06626506024096386,
+     "wilson": [
+      0.037400567775504975,
+      0.11475061308948921
+     ]
+    },
+    "other_biology": {
+     "n": 3,
+     "share": 0.018072289156626505,
+     "wilson": [
+      0.00616482076443815,
+      0.051780935752222076
+     ]
+    },
+    "other": {
+     "n": 14,
+     "share": 0.08433734939759036,
+     "wilson": [
+      0.050900877380029026,
+      0.1365773376155904
+     ]
+    }
+   }
+  },
+  "icml-2026": {
+   "n": 328,
+   "topics": {
+    "radiology": {
+     "n": 34,
+     "share": 0.10365853658536585,
+     "wilson": [
+      0.07513074413525729,
+      0.14136290825793268
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 12,
+     "share": 0.036585365853658534,
+     "wilson": [
+      0.021049895668565778,
+      0.06285037482193331
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 6,
+     "share": 0.018292682926829267,
+     "wilson": [
+      0.008409879867216617,
+      0.03932855919527585
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 33,
+     "share": 0.10060975609756098,
+     "wilson": [
+      0.07253907409667709,
+      0.13792760639184515
+     ]
+    },
+    "physiological_signals": {
+     "n": 34,
+     "share": 0.10365853658536585,
+     "wilson": [
+      0.07513074413525729,
+      0.14136290825793268
+     ]
+    },
+    "neuroscience": {
+     "n": 42,
+     "share": 0.12804878048780488,
+     "wilson": [
+      0.09614565668649502,
+      0.16856377094403716
+     ]
+    },
+    "genomics_omics": {
+     "n": 56,
+     "share": 0.17073170731707318,
+     "wilson": [
+      0.1338793598621133,
+      0.21520767443376765
+     ]
+    },
+    "proteins": {
+     "n": 46,
+     "share": 0.1402439024390244,
+     "wilson": [
+      0.10681609158399785,
+      0.18200122366520538
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 22,
+     "share": 0.06707317073170732,
+     "wilson": [
+      0.04470768300025391,
+      0.09946230653692287
+     ]
+    },
+    "chemistry_materials": {
+     "n": 1,
+     "share": 0.003048780487804878,
+     "wilson": [
+      0.0005383736493467933,
+      0.01706520588980683
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 13,
+     "share": 0.039634146341463415,
+     "wilson": [
+      0.0233061289795522,
+      0.06662111341561465
+     ]
+    },
+    "other_biology": {
+     "n": 4,
+     "share": 0.012195121951219513,
+     "wilson": [
+      0.004752309291347449,
+      0.030932185961809473
+     ]
+    },
+    "other": {
+     "n": 25,
+     "share": 0.07621951219512195,
+     "wilson": [
+      0.05215687773203817,
+      0.11009402751914191
+     ]
+    }
+   }
+  },
+  "neurips-2025": {
+   "n": 373,
+   "topics": {
+    "radiology": {
+     "n": 40,
+     "share": 0.10723860589812333,
+     "wilson": [
+      0.07974632487699347,
+      0.14273866616433534
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 22,
+     "share": 0.058981233243967826,
+     "wilson": [
+      0.03926930548770487,
+      0.08768483121057898
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 13,
+     "share": 0.03485254691689008,
+     "wilson": [
+      0.02047902578547824,
+      0.058709683741283145
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 30,
+     "share": 0.08042895442359249,
+     "wilson": [
+      0.05691659725445905,
+      0.11249569692962255
+     ]
+    },
+    "physiological_signals": {
+     "n": 19,
+     "share": 0.05093833780160858,
+     "wilson": [
+      0.03284942093981221,
+      0.07818290670129749
+     ]
+    },
+    "neuroscience": {
+     "n": 104,
+     "share": 0.27882037533512066,
+     "wilson": [
+      0.23574378956867797,
+      0.3264064613590329
+     ]
+    },
+    "genomics_omics": {
+     "n": 33,
+     "share": 0.08847184986595175,
+     "wilson": [
+      0.06368935324228067,
+      0.1216447499989751
+     ]
+    },
+    "proteins": {
+     "n": 42,
+     "share": 0.1126005361930295,
+     "wilson": [
+      0.08439050354417856,
+      0.14870902686859966
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 26,
+     "share": 0.06970509383378017,
+     "wilson": [
+      0.04800908817508056,
+      0.10017412726610217
+     ]
+    },
+    "chemistry_materials": {
+     "n": 1,
+     "share": 0.002680965147453083,
+     "wilson": [
+      0.00047340086765795125,
+      0.015028072430406807
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 13,
+     "share": 0.03485254691689008,
+     "wilson": [
+      0.02047902578547824,
+      0.058709683741283145
+     ]
+    },
+    "other_biology": {
+     "n": 6,
+     "share": 0.0160857908847185,
+     "wilson": [
+      0.007392476154254372,
+      0.03464534557243398
+     ]
+    },
+    "other": {
+     "n": 24,
+     "share": 0.064343163538874,
+     "wilson": [
+      0.04361596695343043,
+      0.09395270911630285
+     ]
+    }
+   }
+  },
+  "neurips-2026": {
+   "n": 431,
+   "topics": {
+    "radiology": {
+     "n": 57,
+     "share": 0.13225058004640372,
+     "wilson": [
+      0.10349315157936415,
+      0.1675057592884093
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 24,
+     "share": 0.05568445475638051,
+     "wilson": [
+      0.037701816535372634,
+      0.08151768776228425
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 13,
+     "share": 0.030162412993039442,
+     "wilson": [
+      0.017710147871603875,
+      0.050916220902680824
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 47,
+     "share": 0.10904872389791183,
+     "wilson": [
+      0.0830023777500744,
+      0.1420027735509971
+     ]
+    },
+    "physiological_signals": {
+     "n": 29,
+     "share": 0.06728538283062645,
+     "wilson": [
+      0.047253448678135565,
+      0.09496293540287233
+     ]
+    },
+    "neuroscience": {
+     "n": 76,
+     "share": 0.17633410672853828,
+     "wilson": [
+      0.1432588669403046,
+      0.21512818710420262
+     ]
+    },
+    "genomics_omics": {
+     "n": 56,
+     "share": 0.12993039443155452,
+     "wilson": [
+      0.10142849821876562,
+      0.16497103669233762
+     ]
+    },
+    "proteins": {
+     "n": 41,
+     "share": 0.0951276102088167,
+     "wilson": [
+      0.07089705081757788,
+      0.1265118447434724
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 28,
+     "share": 0.06496519721577726,
+     "wilson": [
+      0.04532618931363233,
+      0.09229081881070533
+     ]
+    },
+    "chemistry_materials": {
+     "n": 0,
+     "share": 0.0,
+     "wilson": [
+      0.0,
+      0.008834481337572118
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 13,
+     "share": 0.030162412993039442,
+     "wilson": [
+      0.017710147871603875,
+      0.050916220902680824
+     ]
+    },
+    "other_biology": {
+     "n": 14,
+     "share": 0.03248259860788863,
+     "wilson": [
+      0.019445908699188077,
+      0.05377983603176682
+     ]
+    },
+    "other": {
+     "n": 33,
+     "share": 0.0765661252900232,
+     "wilson": [
+      0.05503591870239405,
+      0.10557796920529464
+     ]
+    }
+   }
+  }
+ },
+ "T2_venue_by_topic": {
+  "chi2": 662.522980539684,
+  "dof": 60,
+  "p": 2.056045709875246e-102,
+  "min_expected": 0.14377880184331798,
+  "adjusted_residuals": {
+   "cvpr": {
+    "radiology": 10.46,
+    "pathology_microscopy": 5.27,
+    "other_clinical_imaging": 3.18,
+    "ehr_clinical_text": -2.65,
+    "physiological_signals": -2.66,
+    "neuroscience": -3.61,
+    "genomics_omics": -2.95,
+    "proteins": -3.85,
+    "molecules_drug_discovery": -2.58,
+    "chemistry_materials": -0.4,
+    "epidemiology_public_health": -1.86,
+    "other_biology": -0.86,
+    "other": 0.45
+   },
+   "iccv": {
+    "radiology": 7.62,
+    "pathology_microscopy": 7.06,
+    "other_clinical_imaging": 5.04,
+    "ehr_clinical_text": -2.59,
+    "physiological_signals": -2.61,
+    "neuroscience": -2.44,
+    "genomics_omics": -3.2,
+    "proteins": -3.14,
+    "molecules_drug_discovery": -2.91,
+    "chemistry_materials": -0.39,
+    "epidemiology_public_health": -1.82,
+    "other_biology": -0.82,
+    "other": -0.53
+   },
+   "eccv": {
+    "radiology": 10.7,
+    "pathology_microscopy": 3.25,
+    "other_clinical_imaging": 2.58,
+    "ehr_clinical_text": -2.64,
+    "physiological_signals": -1.37,
+    "neuroscience": -3.72,
+    "genomics_omics": -3.95,
+    "proteins": -3.94,
+    "molecules_drug_discovery": -3.26,
+    "chemistry_materials": -0.44,
+    "epidemiology_public_health": -2.04,
+    "other_biology": 0.84,
+    "other": 2.51
+   },
+   "iclr": {
+    "radiology": -4.77,
+    "pathology_microscopy": -3.49,
+    "other_clinical_imaging": -3.05,
+    "ehr_clinical_text": -0.5,
+    "physiological_signals": 0.2,
+    "neuroscience": 2.63,
+    "genomics_omics": -0.05,
+    "proteins": 3.73,
+    "molecules_drug_discovery": 4.22,
+    "chemistry_materials": -0.99,
+    "epidemiology_public_health": -0.49,
+    "other_biology": 0.35,
+    "other": 0.35
+   },
+   "icml": {
+    "radiology": -5.13,
+    "pathology_microscopy": -2.65,
+    "other_clinical_imaging": -2.79,
+    "ehr_clinical_text": 1.39,
+    "physiological_signals": 3.07,
+    "neuroscience": -2.76,
+    "genomics_omics": 4.3,
+    "proteins": 3.54,
+    "molecules_drug_discovery": 1.09,
+    "chemistry_materials": 1.81,
+    "epidemiology_public_health": 2.85,
+    "other_biology": -1.17,
+    "other": -0.2
+   },
+   "neurips": {
+    "radiology": -4.62,
+    "pathology_microscopy": -1.68,
+    "other_clinical_imaging": 0.21,
+    "ehr_clinical_text": 2.87,
+    "physiological_signals": 0.18,
+    "neuroscience": 4.59,
+    "genomics_omics": 0.99,
+    "proteins": -1.34,
+    "molecules_drug_discovery": -0.65,
+    "chemistry_materials": -0.13,
+    "epidemiology_public_health": 0.6,
+    "other_biology": 1.04,
+    "other": -1.34
+   }
+  },
+  "flagged": [
+   {
+    "venue": "eccv",
+    "topic": "radiology",
+    "residual": 10.7,
+    "direction": "over"
+   },
+   {
+    "venue": "cvpr",
+    "topic": "radiology",
+    "residual": 10.46,
+    "direction": "over"
+   },
+   {
+    "venue": "iccv",
+    "topic": "radiology",
+    "residual": 7.62,
+    "direction": "over"
+   },
+   {
+    "venue": "iccv",
+    "topic": "pathology_microscopy",
+    "residual": 7.06,
+    "direction": "over"
+   },
+   {
+    "venue": "cvpr",
+    "topic": "pathology_microscopy",
+    "residual": 5.27,
+    "direction": "over"
+   },
+   {
+    "venue": "icml",
+    "topic": "radiology",
+    "residual": -5.13,
+    "direction": "under"
+   },
+   {
+    "venue": "iccv",
+    "topic": "other_clinical_imaging",
+    "residual": 5.04,
+    "direction": "over"
+   },
+   {
+    "venue": "iclr",
+    "topic": "radiology",
+    "residual": -4.77,
+    "direction": "under"
+   },
+   {
+    "venue": "neurips",
+    "topic": "radiology",
+    "residual": -4.62,
+    "direction": "under"
+   },
+   {
+    "venue": "neurips",
+    "topic": "neuroscience",
+    "residual": 4.59,
+    "direction": "over"
+   },
+   {
+    "venue": "icml",
+    "topic": "genomics_omics",
+    "residual": 4.3,
+    "direction": "over"
+   },
+   {
+    "venue": "iclr",
+    "topic": "molecules_drug_discovery",
+    "residual": 4.22,
+    "direction": "over"
+   },
+   {
+    "venue": "eccv",
+    "topic": "genomics_omics",
+    "residual": -3.95,
+    "direction": "under"
+   },
+   {
+    "venue": "eccv",
+    "topic": "proteins",
+    "residual": -3.94,
+    "direction": "under"
+   },
+   {
+    "venue": "cvpr",
+    "topic": "proteins",
+    "residual": -3.85,
+    "direction": "under"
+   },
+   {
+    "venue": "iclr",
+    "topic": "proteins",
+    "residual": 3.73,
+    "direction": "over"
+   },
+   {
+    "venue": "eccv",
+    "topic": "neuroscience",
+    "residual": -3.72,
+    "direction": "under"
+   },
+   {
+    "venue": "cvpr",
+    "topic": "neuroscience",
+    "residual": -3.61,
+    "direction": "under"
+   },
+   {
+    "venue": "icml",
+    "topic": "proteins",
+    "residual": 3.54,
+    "direction": "over"
+   },
+   {
+    "venue": "iclr",
+    "topic": "pathology_microscopy",
+    "residual": -3.49,
+    "direction": "under"
+   },
+   {
+    "venue": "eccv",
+    "topic": "molecules_drug_discovery",
+    "residual": -3.26,
+    "direction": "under"
+   },
+   {
+    "venue": "eccv",
+    "topic": "pathology_microscopy",
+    "residual": 3.25,
+    "direction": "over"
+   },
+   {
+    "venue": "iccv",
+    "topic": "genomics_omics",
+    "residual": -3.2,
+    "direction": "under"
+   },
+   {
+    "venue": "cvpr",
+    "topic": "other_clinical_imaging",
+    "residual": 3.18,
+    "direction": "over"
+   },
+   {
+    "venue": "iccv",
+    "topic": "proteins",
+    "residual": -3.14,
+    "direction": "under"
+   },
+   {
+    "venue": "icml",
+    "topic": "physiological_signals",
+    "residual": 3.07,
+    "direction": "over"
+   },
+   {
+    "venue": "iclr",
+    "topic": "other_clinical_imaging",
+    "residual": -3.05,
+    "direction": "under"
+   }
+  ]
+ },
+ "T3_by_year": {
+  "2025": {
+   "n": 973,
+   "topics": {
+    "radiology": {
+     "n": 174,
+     "share": 0.17882836587872558,
+     "wilson": [
+      0.1560268541522639,
+      0.20415600456300784
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 84,
+     "share": 0.08633093525179857,
+     "wilson": [
+      0.07027026025513983,
+      0.10564526177013017
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 35,
+     "share": 0.03597122302158273,
+     "wilson": [
+      0.025976423954940313,
+      0.04961577031688429
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 51,
+     "share": 0.052415210688591986,
+     "wilson": [
+      0.04008904551077718,
+      0.06826178639482554
+     ]
+    },
+    "physiological_signals": {
+     "n": 38,
+     "share": 0.03905447070914697,
+     "wilson": [
+      0.028584049685348945,
+      0.05315038914280906
+     ]
+    },
+    "neuroscience": {
+     "n": 192,
+     "share": 0.197327852004111,
+     "wilson": [
+      0.17353193765457814,
+      0.2235043883986939
+     ]
+    },
+    "genomics_omics": {
+     "n": 80,
+     "share": 0.08221993833504625,
+     "wilson": [
+      0.06655806690079151,
+      0.10116779571603395
+     ]
+    },
+    "proteins": {
+     "n": 113,
+     "share": 0.11613566289825282,
+     "wilson": [
+      0.09749680816657903,
+      0.13779374456991372
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 80,
+     "share": 0.08221993833504625,
+     "wilson": [
+      0.06655806690079151,
+      0.10116779571603395
+     ]
+    },
+    "chemistry_materials": {
+     "n": 2,
+     "share": 0.0020554984583761563,
+     "wilson": [
+      0.000563861113156081,
+      0.007463643039001239
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 32,
+     "share": 0.0328879753340185,
+     "wilson": [
+      0.023391016484991582,
+      0.04605893323049965
+     ]
+    },
+    "other_biology": {
+     "n": 18,
+     "share": 0.018499486125385406,
+     "wilson": [
+      0.011733265086844467,
+      0.029052876699090936
+     ]
+    },
+    "other": {
+     "n": 74,
+     "share": 0.07605344295991778,
+     "wilson": [
+      0.06101362092911343,
+      0.09442775257504528
+     ]
+    }
+   }
+  },
+  "2026": {
+   "n": 1197,
+   "topics": {
+    "radiology": {
+     "n": 193,
+     "share": 0.16123642439431912,
+     "wilson": [
+      0.14149188681106228,
+      0.1831484321119331
+     ]
+    },
+    "pathology_microscopy": {
+     "n": 66,
+     "share": 0.05513784461152882,
+     "wilson": [
+      0.04357290925728635,
+      0.0695490878487433
+     ]
+    },
+    "other_clinical_imaging": {
+     "n": 33,
+     "share": 0.02756892230576441,
+     "wilson": [
+      0.019696872592255582,
+      0.03846367081330265
+     ]
+    },
+    "ehr_clinical_text": {
+     "n": 111,
+     "share": 0.09273182957393483,
+     "wilson": [
+      0.07757733658487581,
+      0.110492097385433
+     ]
+    },
+    "physiological_signals": {
+     "n": 89,
+     "share": 0.07435254803675856,
+     "wilson": [
+      0.0608135907129395,
+      0.09061487412372173
+     ]
+    },
+    "neuroscience": {
+     "n": 188,
+     "share": 0.1570593149540518,
+     "wilson": [
+      0.1375472765120104,
+      0.17876554942606507
+     ]
+    },
+    "genomics_omics": {
+     "n": 142,
+     "share": 0.11862990810359231,
+     "wilson": [
+      0.10152031778280689,
+      0.13817957269400538
+     ]
+    },
+    "proteins": {
+     "n": 137,
+     "share": 0.11445279866332497,
+     "wilson": [
+      0.09763738293846197,
+      0.13373501455343037
+     ]
+    },
+    "molecules_drug_discovery": {
+     "n": 76,
+     "share": 0.06349206349206349,
+     "wilson": [
+      0.05102593359309856,
+      0.0787510494827709
+     ]
+    },
+    "chemistry_materials": {
+     "n": 1,
+     "share": 0.000835421888053467,
+     "wilson": [
+      0.00014748390816190452,
+      0.00471710439390891
+     ]
+    },
+    "epidemiology_public_health": {
+     "n": 32,
+     "share": 0.026733500417710943,
+     "wilson": [
+      0.018999344044739186,
+      0.037495700763835065
+     ]
+    },
+    "other_biology": {
+     "n": 27,
+     "share": 0.022556390977443608,
+     "wilson": [
+      0.015547666987339313,
+      0.03261988483631503
+     ]
+    },
+    "other": {
+     "n": 102,
+     "share": 0.08521303258145363,
+     "wilson": [
+      0.07069271858767118,
+      0.10238722800978181
+     ]
+    }
+   }
+  }
+ },
+ "T4_practices": {
+  "radiology": {
+   "n_coded": 312,
+   "code": {
+    "n_known": 290,
+    "share": 0.5689655172413793,
+    "wilson": [
+     0.511432982139279,
+     0.6246947819349705
+    ]
+   },
+   "main_data_access": {
+    "n_known": 184,
+    "share": 0.842391304347826,
+    "wilson": [
+     0.7828122463727961,
+     0.8879656856720756
+    ]
+   },
+   "weights_release": {
+    "n_known": 62,
+    "share": 0.3548387096774194,
+    "wilson": [
+     0.2474256057638604,
+     0.4791910013659786
+    ]
+   },
+   "variance": {
+    "n_known": 236,
+    "share": 0.5084745762711864,
+    "wilson": [
+     0.4450681675919533,
+     0.5716095063395081
+    ]
+   }
+  },
+  "pathology_microscopy": {
+   "n_coded": 128,
+   "code": {
+    "n_known": 121,
+    "share": 0.5785123966942148,
+    "wilson": [
+     0.48944135441778625,
+     0.6627515043728731
+    ]
+   },
+   "main_data_access": {
+    "n_known": 80,
+    "share": 0.9625,
+    "wilson": [
+     0.8954510802560568,
+     0.9871656636992113
+    ]
+   },
+   "weights_release": {
+    "n_known": 27,
+    "share": 0.5185185185185185,
+    "wilson": [
+     0.3398532458621043,
+     0.6925704935029092
+    ]
+   },
+   "variance": {
+    "n_known": 107,
+    "share": 0.6542056074766355,
+    "wilson": [
+     0.56015355580043,
+     0.7375685990583956
+    ]
+   }
+  },
+  "other_clinical_imaging": {
+   "n_coded": 56,
+   "code": {
+    "n_known": 55,
+    "share": 0.4727272727272727,
+    "wilson": [
+     0.34692885310480803,
+     0.6020868092837061
+    ]
+   },
+   "main_data_access": {
+    "n_known": 30,
+    "share": 0.8666666666666667,
+    "wilson": [
+     0.7031831605558306,
+     0.9469043057578189
+    ]
+   },
+   "weights_release": {
+    "n_known": 14,
+    "share": 0.42857142857142855,
+    "wilson": [
+     0.21380509930400526,
+     0.6740973309713064
+    ]
+   },
+   "variance": {
+    "n_known": 44,
+    "share": 0.29545454545454547,
+    "wilson": [
+     0.18155360887243294,
+     0.4422047938565727
+    ]
+   }
+  },
+  "ehr_clinical_text": {
+   "n_coded": 137,
+   "code": {
+    "n_known": 124,
+    "share": 0.6129032258064516,
+    "wilson": [
+     0.5250067645169081,
+     0.6940142740182793
+    ]
+   },
+   "main_data_access": {
+    "n_known": 91,
+    "share": 0.5604395604395604,
+    "wilson": [
+     0.45806952309152443,
+     0.6579133367505703
+    ]
+   },
+   "weights_release": {
+    "n_known": 16,
+    "share": 0.4375,
+    "wilson": [
+     0.2309836333518552,
+     0.6682180439322347
+    ]
+   },
+   "variance": {
+    "n_known": 112,
+    "share": 0.6517857142857143,
+    "wilson": [
+     0.5598502165764603,
+     0.7336540167904821
+    ]
+   }
+  },
+  "physiological_signals": {
+   "n_coded": 111,
+   "code": {
+    "n_known": 106,
+    "share": 0.6226415094339622,
+    "wilson": [
+     0.5276006299875899,
+     0.7091038608428422
+    ]
+   },
+   "main_data_access": {
+    "n_known": 79,
+    "share": 0.7468354430379747,
+    "wilson": [
+     0.6410553271149313,
+     0.8297226395105322
+    ]
+   },
+   "weights_release": {
+    "n_known": 16,
+    "share": 0.9375,
+    "wilson": [
+     0.7167073163197013,
+     0.9888809426916687
+    ]
+   },
+   "variance": {
+    "n_known": 87,
+    "share": 0.7816091954022989,
+    "wilson": [
+     0.6839074696002304,
+     0.8554929812945139
+    ]
+   }
+  },
+  "neuroscience": {
+   "n_coded": 323,
+   "code": {
+    "n_known": 304,
+    "share": 0.5592105263157895,
+    "wilson": [
+     0.5030046864134226,
+     0.6139385727172473
+    ]
+   },
+   "main_data_access": {
+    "n_known": 207,
+    "share": 0.7294685990338164,
+    "wilson": [
+     0.6651780998136441,
+     0.7853971187390514
+    ]
+   },
+   "weights_release": {
+    "n_known": 48,
+    "share": 0.5833333333333334,
+    "wilson": [
+     0.44281082215364653,
+     0.7115054026542299
+    ]
+   },
+   "variance": {
+    "n_known": 265,
+    "share": 0.8528301886792453,
+    "wilson": [
+     0.8051398614756534,
+     0.890437013531786
+    ]
+   }
+  },
+  "genomics_omics": {
+   "n_coded": 188,
+   "code": {
+    "n_known": 176,
+    "share": 0.625,
+    "wilson": [
+     0.5515229616573151,
+     0.693136783362747
+    ]
+   },
+   "main_data_access": {
+    "n_known": 98,
+    "share": 0.9591836734693877,
+    "wilson": [
+     0.899710305133373,
+     0.984015009472839
+    ]
+   },
+   "weights_release": {
+    "n_known": 24,
+    "share": 0.5416666666666666,
+    "wilson": [
+     0.35074553553106635,
+     0.7210894164831857
+    ]
+   },
+   "variance": {
+    "n_known": 159,
+    "share": 0.7484276729559748,
+    "wilson": [
+     0.6756629566378809,
+     0.8094710631703255
+    ]
+   }
+  },
+  "proteins": {
+   "n_coded": 223,
+   "code": {
+    "n_known": 209,
+    "share": 0.6267942583732058,
+    "wilson": [
+     0.5594877259146138,
+     0.6895237455270593
+    ]
+   },
+   "main_data_access": {
+    "n_known": 103,
+    "share": 0.9514563106796117,
+    "wilson": [
+     0.8913579718797461,
+     0.979089494275759
+    ]
+   },
+   "weights_release": {
+    "n_known": 57,
+    "share": 0.6140350877192983,
+    "wilson": [
+     0.484294964443229,
+     0.7293746300447528
+    ]
+   },
+   "variance": {
+    "n_known": 177,
+    "share": 0.6440677966101694,
+    "wilson": [
+     0.5711562265372495,
+     0.7108585311291281
+    ]
+   }
+  },
+  "molecules_drug_discovery": {
+   "n_coded": 141,
+   "code": {
+    "n_known": 138,
+    "share": 0.6304347826086957,
+    "wilson": [
+     0.5473871480047701,
+     0.7064170956021831
+    ]
+   },
+   "main_data_access": {
+    "n_known": 57,
+    "share": 0.9649122807017544,
+    "wilson": [
+     0.8807899619581051,
+     0.9903245386467442
+    ]
+   },
+   "weights_release": {
+    "n_known": 21,
+    "share": 0.5714285714285714,
+    "wilson": [
+     0.3654621629703244,
+     0.7553030051347894
+    ]
+   },
+   "variance": {
+    "n_known": 110,
+    "share": 0.6818181818181818,
+    "wilson": [
+     0.5899016684157921,
+     0.7614637375517979
+    ]
+   }
+  },
+  "chemistry_materials": {
+   "n_coded": 3,
+   "code": {
+    "n_known": 3,
+    "share": 1.0,
+    "wilson": [
+     0.43849391955098227,
+     1.0
+    ]
+   },
+   "main_data_access": {
+    "n_known": 1,
+    "share": 1.0,
+    "wilson": [
+     0.20654329147389294,
+     1.0
+    ]
+   },
+   "weights_release": {
+    "n_known": 1,
+    "share": 1.0,
+    "wilson": [
+     0.20654329147389294,
+     1.0
+    ]
+   },
+   "variance": {
+    "n_known": 3,
+    "share": 0.0,
+    "wilson": [
+     0.0,
+     0.5615060804490177
+    ]
+   }
+  },
+  "epidemiology_public_health": {
+   "n_coded": 60,
+   "code": {
+    "n_known": 54,
+    "share": 0.6296296296296297,
+    "wilson": [
+     0.49627222791081016,
+     0.745768102923745
+    ]
+   },
+   "main_data_access": {
+    "n_known": 31,
+    "share": 0.6451612903225806,
+    "wilson": [
+     0.469476380428149,
+     0.7888355225843418
+    ]
+   },
+   "weights_release": {
+    "n_known": 10,
+    "share": 0.0,
+    "wilson": [
+     0.0,
+     0.2775401687666166
+    ]
+   },
+   "variance": {
+    "n_known": 52,
+    "share": 0.9230769230769231,
+    "wilson": [
+     0.8182618931787533,
+     0.9696811457026542
+    ]
+   }
+  },
+  "other_biology": {
+   "n_coded": 34,
+   "code": {
+    "n_known": 33,
+    "share": 0.5757575757575758,
+    "wilson": [
+     0.4080697369146003,
+     0.7276464100497011
+    ]
+   },
+   "main_data_access": {
+    "n_known": 19,
+    "share": 0.8947368421052632,
+    "wilson": [
+     0.686054495051583,
+     0.9706420586049034
+    ]
+   },
+   "weights_release": {
+    "n_known": 6,
+    "share": 0.5,
+    "wilson": [
+     0.18761280689940868,
+     0.8123871931005913
+    ]
+   },
+   "variance": {
+    "n_known": 24,
+    "share": 0.6666666666666666,
+    "wilson": [
+     0.4670595949408046,
+     0.8202802131162036
+    ]
+   }
+  },
+  "other": {
+   "n_coded": 154,
+   "code": {
+    "n_known": 143,
+    "share": 0.5874125874125874,
+    "wilson": [
+     0.5054657671294023,
+     0.6647857147394958
+    ]
+   },
+   "main_data_access": {
+    "n_known": 68,
+    "share": 0.8970588235294118,
+    "wilson": [
+     0.8024187647817829,
+     0.9492348732218252
+    ]
+   },
+   "weights_release": {
+    "n_known": 21,
+    "share": 0.38095238095238093,
+    "wilson": [
+     0.20750767797982506,
+     0.5912170418449848
+    ]
+   },
+   "variance": {
+    "n_known": 130,
+    "share": 0.6846153846153846,
+    "wilson": [
+     0.6004148643239348,
+     0.7582180270939801
+    ]
+   }
+  }
+ },
+ "T5_icml2026": {
+  "radiology": {
+   "icml2026": 34,
+   "attempted": 12,
+   "decided": 3,
+   "decided_share": 0.25,
+   "wilson": [
+    0.08894003962896138,
+    0.53231033912066
+   ]
+  },
+  "pathology_microscopy": {
+   "icml2026": 12,
+   "attempted": 3,
+   "decided": 0,
+   "decided_share": 0.0,
+   "wilson": [
+    0.0,
+    0.5615060804490177
+   ]
+  },
+  "other_clinical_imaging": {
+   "icml2026": 6,
+   "attempted": 2,
+   "decided": 1,
+   "decided_share": 0.5,
+   "wilson": [
+    0.09452865480086614,
+    0.9054713451991339
+   ]
+  },
+  "ehr_clinical_text": {
+   "icml2026": 33,
+   "attempted": 19,
+   "decided": 6,
+   "decided_share": 0.3157894736842105,
+   "wilson": [
+    0.15364171004428598,
+    0.5398998982493537
+   ]
+  },
+  "physiological_signals": {
+   "icml2026": 34,
+   "attempted": 13,
+   "decided": 4,
+   "decided_share": 0.3076923076923077,
+   "wilson": [
+    0.12680497161618087,
+    0.5763111218666236
+   ]
+  },
+  "neuroscience": {
+   "icml2026": 42,
+   "attempted": 6,
+   "decided": 4,
+   "decided_share": 0.6666666666666666,
+   "wilson": [
+    0.29998832134152864,
+    0.9032306674407831
+   ]
+  },
+  "genomics_omics": {
+   "icml2026": 56,
+   "attempted": 12,
+   "decided": 6,
+   "decided_share": 0.5,
+   "wilson": [
+    0.2537781703934222,
+    0.7462218296065778
+   ]
+  },
+  "proteins": {
+   "icml2026": 46,
+   "attempted": 14,
+   "decided": 9,
+   "decided_share": 0.6428571428571429,
+   "wilson": [
+    0.3876400468214042,
+    0.8365550926279727
+   ]
+  },
+  "molecules_drug_discovery": {
+   "icml2026": 22,
+   "attempted": 7,
+   "decided": 3,
+   "decided_share": 0.42857142857142855,
+   "wilson": [
+    0.15821692226262685,
+    0.7495457695909742
+   ]
+  },
+  "chemistry_materials": {
+   "icml2026": 1,
+   "attempted": 0,
+   "decided": 0,
+   "decided_share": null,
+   "wilson": null
+  },
+  "epidemiology_public_health": {
+   "icml2026": 13,
+   "attempted": 10,
+   "decided": 9,
+   "decided_share": 0.9,
+   "wilson": [
+    0.5958436145024278,
+    0.9821242504842788
+   ]
+  },
+  "other_biology": {
+   "icml2026": 4,
+   "attempted": 2,
+   "decided": 1,
+   "decided_share": 0.5,
+   "wilson": [
+    0.09452865480086614,
+    0.9054713451991339
+   ]
+  },
+  "other": {
+   "icml2026": 25,
+   "attempted": 10,
+   "decided": 5,
+   "decided_share": 0.5,
+   "wilson": [
+    0.23658959361548731,
+    0.7634104063845126
+   ]
+  }
+ }
+}

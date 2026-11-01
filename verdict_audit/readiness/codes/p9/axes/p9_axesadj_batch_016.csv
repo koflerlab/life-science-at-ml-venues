@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X2010,architecture,diffusion_flow,The method's named model is a flow-matching generative actor; the critic's network family is not named.
+X2013,architecture,no_model,The contribution is a cryptographic zero-knowledge proof with statistical detection; no learned model is built or trained.
+X2014,architecture,transformer,"SymTrack uses predictive token rectification, which points to a token-based transformer tracker."
+X2019,architecture,transformer,MeToken turns micro-environments into discrete tokens for a token model; the text names no graph or equivariant network.
+X2025,modality,interactive_environment,LLM agents act over many turns in web shopping and terminal environments.
+X2026,architecture,transformer,"The scene-adaptive decoder learns query embeddings, a transformer-style query decoder."
+X2027,modality,interactive_environment,CoME is a mobile agent that plans and decides actions on device screens.
+X2029,architecture,not_stated,"H2DiLR is a learned framework, but the text never names its network family."
+X2032,architecture,diffusion_flow;other_neural;transformer,"Sparse autoencoders are trained on the internals of a diffusion protein language model, and the analysis is built on that model's denoising trajectory."
+X2038,method,representation_learning,"OmniCT is a unified slice-volume CT foundation LVLM, and adapting representations is its main contribution."
+X2040,method,other,"The main contribution is DEX, an architectural change to attention in pretrained LMs, with empirical rather than formal analysis."
+X2044,method,other,"The core task is inferring latent synaptic connectivity (structure discovery), with spike prediction serving only as the training signal."
+X2050,architecture,not_stated,This is a dataset paper whose proposed baseline model family is not named.
+X2052,method,supervised_prediction,"The aim is a more accurate tree classifier/regressor trained end to end, measured by testing accuracy."
+X2052,architecture,classical_ml,The model is an oblique decision tree trained by gradients; ReLU and argmin are only a reformulation and no neural network is used.
+X2056,architecture,not_stated,dMoE is plugged into multiple network architectures that the text does not name.
+X2058,method,uncertainty_calibration,The paper's central lens is data (aleatoric) uncertainty and how methods cope with it.
+X2059,method,llm_prompting_agents,The framework is a query-based collaboration among LLMs that generates augmented clinical text.
+X2060,method,llm_prompting_agents,This is an evaluation study comparing frontier LRMs with humans on behaviour and brain alignment.
+X2062,architecture,diffusion_flow;llm_vlm;transformer,"UniDDT combines a Noisy ViT encoder, an LLM and a diffusion decoder."
+X2064,modality,volumetric,The inputs are multi-contrast MRI brain images.
+X2067,modality,volumetric,"The input is fMRI ROI-wise brain responses, which are decoded into visual predictions."
+X2069,method,other,The method is hybrid mechanistic-neural modelling that predicts process-model parameters under ecological constraints.
+X2071,modality,graph_molecule,The method conditions on RNA three-dimensional backbone structure to design sequences.
+X2072,method,reinforcement_decision,Challenger and Solver LLMs are trained with rewards in a co-evolving reinforcement-learning loop.
+X2074,method,generative_modeling,Offline optimization is recast as distribution translation with a learned probabilistic bridge.
+X2077,modality,none_or_synthetic,This is a learning-theory paper on selective classifiers with no specific real data type.
+X2079,architecture,transformer,The framework integrates visual cues and EEG through cross-modal attention.
+X2083,method,benchmark_dataset,"This is a controlled evaluation study over a grid of 54 tokenizer-generator cells, not a new generator."
+X2086,architecture,no_model,The contribution is a benchmark of prompts and checklists used to evaluate existing T2I models; the authors build no model.
+X2091,method,representation_learning,The main contribution is world-model-style masked pretraining that is then fine-tuned for guidance.
+X2091,architecture,transformer,EchoWorld uses masked-region pretraining and a motion-aware attention mechanism.
+X2093,modality,none_or_synthetic,This is a finite-sample theoretical analysis of robust average-reward MDPs with no real data.
+X2094,architecture,llm_vlm,The EEG-language models align EEG with clinical reports through language modelling; no separate transformer is named.
+X2096,method,reinforcement_decision,The method aligns the LLM with reinforcement learning from self-verified intrinsic rewards (RLVR).
+X2105,architecture,no_model,RAPID is an analytical approximation algorithm for epidemic spread with no learned model.
+X2106,method,trustworthy_ml,The aim is robustness of spiking networks to noise and adversarial training.
+X2109,architecture,classical_ml,"The paper analyses and validates ridge regression, a linear model fitted to data."
+X2115,modality,image,Masked image modeling experiments make images the data type.
+X2117,modality,graph_molecule,PIGRAM models proteins and nucleic acids through residue patches and secondary-structure motifs with geometric attributes.
+X2140,modality,multimodal,The point of the paper is comparing and combining raw biomolecular sequences with text context as LLM input.
+X2140,method,llm_prompting_agents,"This is a systematic evaluation of Sci-LLMs under different input modes, which counts as LLM evaluation."
+X2141,modality,image,The digital twins take visual stimulus images as input and predict cortical responses.
+X2141,method,supervised_prediction,"The paper studies and improves models trained to predict neural responses, examining dataset, architecture, loss and training."
+X2147,architecture,gnn_equivariant;transformer,Wi-GATr is an equivariant Geometric Algebra Transformer.
+X2148,architecture,not_stated,The benchmark trains a fusion model whose family is not named.
+X2149,architecture,classical_ml,"The embeddings come from the GloVe algorithm with random projection, not a neural network."
+X2150,architecture,cnn,FlexDepth is a lightweight depth-estimation family with a scale-driven decoder; both coders agree on cnn and the text names no transformer.
+X2152,architecture,not_stated,Iris's task encoding and segmentation network family is not named in the text.
+X2155,method,representation_learning,Unified domain adaptation and dual-view representation learning are the main point.

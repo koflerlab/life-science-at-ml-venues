@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X4142,method,optimization_efficiency,"The main contribution is cutting inference token consumption 4.7-6.4x via uncertainty-guided length calibration, an efficiency goal."
+X4147,method,reinforcement_decision,"Beyond the bound, the paper proposes the PB-SAC RL algorithm evaluated on several continuous control tasks, so experiments are more than illustrative."
+X4147,architecture,not_stated,The SAC policy and critic networks are used but their family is never named.
+X4152,architecture,llm_vlm,"A large language model is employed to extract object and scene concepts, while the concept bottleneck model's family is not named."
+X4155,modality,multimodal,"The method searches embedding vectors with emphasis on cross-modal text-to-image retrieval, with no single primary data type."
+X4157,architecture,gnn_equivariant,The named learned component is a Graph Attention Task Head; the prototype backbone family is not stated.
+X4166,method,llm_prompting_agents,"The paper is an evaluation study of RLVR-trained LLMs' reasoning boundaries using pass@k, i.e. LLM evaluation."
+X4168,architecture,other_neural;state_space_rnn,A nonlinear multiscale encoder plus a dynamical backbone enabling real-time recursive decoding imply a neural state-space model with unnamed neural encoders.
+X4172,architecture,other_neural,"Caracal replaces self-attention with a Fourier mixing module, so it is not an attention transformer."
+X4173,architecture,classical_ml,The model is a Bayesian Matrix Normal-Inverse Wishart prior over a Koopman operator with closed-form updates; no neural network is named.
+X4178,architecture,gnn_equivariant;transformer,GARLIC combines graph attention over sensor graphs with cross-dimensional sequential attention.
+X4179,architecture,transformer,RaftPPI uses a low-rank factorized attention mechanism trained by the authors.
+X4180,method,theory,The core is a theoretically grounded backtracking sampler with provable robustness and parallels to approximate-counting theory.
+X4182,modality,volumetric,"BraTS and ISLES inputs are multi-sequence MRI volumes, all of one data type."
+X4182,architecture,cnn;other_neural,"A hypernetwork generates convolutional weights via CP decomposition, so both a CNN and a hypernetwork are built."
+X4183,method,generative_modeling,The end goal is reconstructing video stimuli from EEG with a fine-tuned Stable Diffusion model; pretraining serves that generation.
+X4190,architecture,diffusion_flow,mvOU-OTFM is a simulation-free algorithm based on flow and score matching.
+X4192,architecture,not_stated,Teacher and student models are trained but their architecture family is not named.
+X4193,architecture,not_stated,Deep ensembles of unimodal neural networks are used without naming their family.
+X4194,architecture,gnn_equivariant,DGRNet is a graph-based segmentation network; CNNs are only mentioned as existing approaches.
+X4197,architecture,not_stated,The memory-augmented low-level controller builds on Steve-1 but no architecture family is named.
+X4200,architecture,transformer,The model combines pretrained molecular encoders with ESM-2 protein embeddings and is explicitly diffusion-free.
+X4208,method,generative_modeling,The task is generating lay-language text with an asymmetric LoRA-tuned LLM.
+X4210,method,benchmark_dataset,"The contribution is a new pair of evaluation measures for source separation, i.e. an evaluation tool."
+X4211,method,benchmark_dataset,"TEDBench, a new large-scale benchmark, is the headline contribution, with MiAE as a proposed strong baseline."
+X4211,architecture,gnn_equivariant,"MiAE uses an SE(3)-invariant encoder, a geometric invariant network."
+X4213,modality,multimodal,The method interprets implicit clinical text queries together with surgical images to produce masks.
+X4216,method,other,"The contribution is unsupervised trajectory-optimization-based 3D registration, not a supervised prediction task."
+X4218,modality,multimodal,Video question answering with MLLMs combines video frames with text questions and a text legend.
+X4219,architecture,other_neural,"An autoencoder-based clustering method is built, and policy network families are not named."
+X4226,architecture,classical_ml;other_neural,The method uses a learned SincAdaptNet feature extractor plus Dirichlet projection and GMM Bayesian inference; no transformer is described.
+X4230,architecture,llm_vlm,"Besides the dataset, the authors fine-tune VLMs on 3D-RAD-T and show improvement."
+X4234,modality,volumetric,"The benchmark consists of brain MRI scans, with narratives and boxes as annotations."
+X4234,architecture,llm_vlm,The benchmark is evaluated by running leading vision-language models on it.
+X4235,modality,time_series,"The method learns from trajectories of stochastic physical systems, i.e. state sequences over time."
+X4239,method,other,"GausSim is a physics-constrained neural simulator of elastic dynamics, which fits no listed family well."
+X4243,method,generative_modeling,DriveVA is a world model that jointly generates future videos and trajectories with a DiT decoder in a shared generative process.
+X4244,method,representation_learning,The main contribution is a hyperspherical skill embedding space with vMF prior and geodesic alignment.
+X4246,architecture,transformer,RNAformer is described as a transformer-based RNA secondary-structure predictor.
+X4248,architecture,llm_vlm,More than 17 pretrained protein language models are used for zero-shot scoring in the benchmark.
+X4249,modality,multimodal,SWIRL trains LLMs and VLMs on both visual dynamics and textual environments.
+X4252,architecture,not_stated,The object detector being adapted is not named by family.
+X4260,modality,geometry_3d,The method learns a 3D Gaussian-splatting language field of scenes.
+X4261,method,llm_prompting_agents,The paper studies inference-time scaling of multi-agent LLM debate teams.
+X4264,method,llm_prompting_agents,An empirical study of RL fine-tuning of Qwen2.5-7B for LLM reasoning on DRG coding.
+X4265,architecture,not_stated,An iterative neural network is proposed but its family is not named.
+X4266,method,causal_inference_trials,The goal is estimating target-site causal effects for survival outcomes across sources.
+X4268,method,representation_learning,"The goal is learning collective variables (representations) of slow dynamics, with time-lagged generation as the training device."
+X4270,modality,multimodal,DPLM-2 jointly models protein sequences and 3D structures.
+X4271,method,generative_modeling,RT-Loss improves 3D Gaussian Splatting reconstruction quality rather than efficiency.

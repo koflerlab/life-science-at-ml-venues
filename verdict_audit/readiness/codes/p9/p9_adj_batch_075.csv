@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P2291,variance,no,"Results such as the 22.4%/52.0%/3.7% error rates are single point values and no seeds, repeated runs or error bars are reported."
+P2336,variance,no,"The text gives only training settings and point results with no mention of multiple seeds, standard deviations or intervals."
+P2448,variance,no,"No repeated runs, seeds or error bars are reported for the experiments shown; the only 'variance' is a prior hyperparameter."
+P2450,compute,none,"The text describes datasets, model and tools but states no hardware or compute time."
+P2454,compute,unclear,"The checklist says hardware, memory and runtime are reported in the Appendix and Tables 6-7, but the actual hardware is not shown in the text."
+P2459,variance,no,"Results (e.g. Table 6) are single values and the only mean ± std concerns image sizes, not results across runs."
+P2459,compute,none,No hardware or training time is stated anywhere in the text.
+P2469,compute,none,The text reports results tables and setup but names no hardware or compute time.
+P2490,variance,no,"Tables report single values with no seeds, standard deviations or intervals."
+P2514,variance,unclear,"5-fold cross-validation is used but the results table values are not shown, so whether variability is reported cannot be determined."
+P2514,compute,unclear,"Computation resources are said to be analysed in the Supplementary Material, but no hardware or time is given in the text."
+P2537,compute,none,The text reports results and setup but states no hardware or compute time.
+P2564,compute,none,The text gives model and anatomical details but no hardware or compute time.
+P2602,compute,none,Training settings give iterations and batch size but no hardware or compute time is stated.
+P2613,variance,no,"All result tables (Tables 1-5) report single MAE values without seeds, standard deviations or intervals."
+P2613,compute,none,No hardware or compute time is mentioned in the text.
+P2647,compute,none,The text discusses power efficiency and training details but states no training hardware or compute time.
+P2667,variance,no,"No seeds, standard deviations or intervals for results appear in the text."
+P2667,compute,none,Only a generic remark on VRAM requirements appears; no hardware or compute time used is stated.
+P2689,compute,none,The text states no hardware or compute time for the experiments.

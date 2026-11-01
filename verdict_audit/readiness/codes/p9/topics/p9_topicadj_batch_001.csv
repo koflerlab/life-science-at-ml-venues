@@ -1,0 +1,51 @@
+item_id,topic,reason
+T0420,radiology,"A tokenizer for medical 2D images and 3D volumes across imaging modalities, dominated by volumetric scan imaging."
+T0442,other,Generic unsupervised anomaly detection for medical imaging on unnamed benchmarks with no specific modality or domain.
+T0452,pathology_microscopy,Experiments are on a renal pathology dataset and 18 histopathology segmentation benchmarks.
+T0453,other,"Anatomical structure detection on unspecified medical imaging benchmarks, with no modality named."
+T0468,other,Disease screening on medical images without any modality or clinical domain specified.
+T0526,epidemiology_public_health,"Estimating causal effects of treatment policies over time, validated on survival and tumor growth tasks."
+T0560,neuroscience,The mixture LDS method targets neural data heterogeneity and is applied to neural datasets from non-human primates.
+T0578,radiology,Zero-shot disease classification evaluated mainly on glioma subtyping and Alzheimer's disease classification from brain images.
+T0654,other_biology,A benchmark of LLM experiment design on simulated systems biology models.
+T0708,other,LLMs are studied as models of human associative learning with no neural or biological data.
+T0716,genomics_omics,Treatment response prediction is built on patient tumor mutations from genomic sequencing reports and cell line data.
+T0747,other_clinical_imaging,A clinical dataset of Parkinson's gait from RGB video and motion capture converted to 3D meshes.
+T0768,neuroscience,EEG spatial super-resolution motivated by brain-computer interface decoding applications.
+T0799,physiological_signals,Domain adaptation for EEG across days and subjects with EEG-based sleep staging as the practical scenario.
+T0804,pathology_microscopy,A versatile processor for low-level biomedical image tasks aimed at biologists using ImageJ/napari-style microscopy workflows.
+T0817,physiological_signals,Safe RL for glucose control in a diabetes simulator measured by time-in-range and glucose variability.
+T0838,neuroscience,Neural circuit models with biologically grounded connectivity are tested in embodied rat locomotion simulation.
+T0866,epidemiology_public_health,"Causal identifiability of dynamic treatment effects evaluated on cancer, MIMIC-IV and sepsis data."
+T0868,other,"A unified generative model spanning chest X-ray, pathology images and reports with no single primary domain."
+T0869,genomics_omics,Unified cell embeddings from optical pooled screens and Perturb-seq gene expression for perturbation profiling.
+T0894,other,"Fuses radiology and pathology foundation models equally for oncology, so no single primary domain."
+T0896,genomics_omics,Trajectory inference from snapshots demonstrated on single-cell RNA-seq of blood development and gene regulatory networks.
+T0898,genomics_omics,Unbalanced optimal transport flow matching applied to trajectory inference in single-cell biology.
+T0951,molecules_drug_discovery,"Predicts glycan molecular structures from MS/MS spectra, a molecule structure elucidation task rather than proteins."
+T0971,ehr_clinical_text,Reasoning reward agents evaluated on medical reasoning benchmarks such as MedQA.
+T0979,neuroscience,Benchmark of EEG foundation models for brain-computer interface decoding tasks.
+T0983,ehr_clinical_text,Generative model of ICD-coded healthcare events and medical history sequences in UK Biobank for disease prediction.
+T1024,proteins,A unified molecular dynamics simulator for biomolecules including peptides and proteins.
+T1028,other,A medical VLM reasoning framework with no specific imaging modality named.
+T1054,other,"A general tubular shape learning method for plants and organs, validated on cerebral artery branch classification without a specified modality focus."
+T1059,radiology,Models tau pathology spread in Alzheimer's disease from longitudinal neuroimaging snapshots.
+T1064,other,Model ranking for generic biomedical segmentation across 2D and 3D imaging without a single domain.
+T1077,epidemiology_public_health,Causal estimation of individualized potential outcomes for therapeutic dosing decisions from observational data.
+T1078,proteins,"Design algorithm selection demonstrated on protein design tasks, with protein binding as the motivating example."
+T1079,proteins,A dataset of cyclic peptide-protein complexes mined from AlphaFold structures for peptide design.
+T1080,epidemiology_public_health,An agentic framework for building epidemic simulators for public health planning.
+T1081,physiological_signals,Behavioral health prediction from longitudinal mobile sensing data on GLOBEM and similar datasets.
+T1082,radiology,Benchmark for grounding lesions across sequential medical images over multiple imaging modalities for disease progression.
+T1083,other_biology,A VQA dataset of coral reef images for ecosystem monitoring.
+T1084,neuroscience,EEG foundation model pretraining with mental-process cues evaluated on BCI decoding benchmarks.
+T1085,other_clinical_imaging,Retinal vessel segmentation from retinal images.
+T1086,genomics_omics,Generates spatial transcriptomics gene expression from histology images.
+T1087,pathology_microscopy,Explanations for MIL models in digital histopathology.
+T1088,other_clinical_imaging,Polyp segmentation for colorectal cancer detection from endoscopic images.
+T1089,other,A medical VLM diagnostic memory framework without any specific imaging modality named.
+T1090,physiological_signals,Mental health monitoring from mobile and wearable sensing with EMA labels.
+T1091,neuroscience,EEG/ERP recordings of how the human brain processes AI hallucinated content.
+T1092,genomics_omics,"Predicts spatial gene expression and pathway activity from histology, with gene expression as the target."
+T1093,other,"Biomedical LLM regression across clinical trial duration, biological age and molecular property tasks, no single domain."
+T1094,neuroscience,Brain models trained on recordings from 3.1 million mouse visual cortex neurons for neural prediction and decoding.

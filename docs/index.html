@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Medical ML Paper Map</title>
+<meta name="description" content="Interactive map of 2,170 medical and life-science papers at CVPR, ICCV, ECCV, ICLR, ICML and NeurIPS 2025-26, with live shares of released code, open data, weights and variance."/>
+<style>
+:root{--bg:#fafaf7;--panel:#fff;--ink:#1b1f23;--ink2:#4a5560;--mut:#6b7783;--line:#e2e5e9;--dim:#d5d9de;--accent:#0b5cad;
+--c0:#0072B2;--c1:#E69F00;--c2:#009E73;--c3:#D55E00;--c4:#CC79A7;--c5:#56B4E9;--c6:#B8A100;--c7:#8a949e}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171a;--panel:#1d2126;--ink:#e8ebee;--ink2:#b3bcc5;--mut:#8f9aa5;--line:#2c333a;--dim:#2e353c;--accent:#6fb1ff;--c6:#d6c43a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:20px 16px 8px;max-width:1280px;margin:0 auto}h1{font-size:22px;margin:0 0 4px}header p{margin:0;color:var(--ink2);max-width:80ch}
+main{display:grid;grid-template-columns:260px minmax(0,1fr) 280px;gap:14px;max-width:1280px;margin:0 auto;padding:12px 16px 40px}
+@media(max-width:1000px){main{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:0 0 8px}
+details{border-top:1px solid var(--line);padding:6px 0}summary{cursor:pointer;font-weight:600;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:2px 9px;font-size:12px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+select,input[type=search]{width:100%;padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit;margin-bottom:8px}
+button.link{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font:inherit}
+#wrap{position:relative;height:min(72vh,640px);min-height:380px}canvas{width:100%;height:100%;display:block;border-radius:6px;cursor:crosshair}
+#tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.18);border-radius:8px;padding:8px 10px;font-size:13px;max-width:320px;display:none;z-index:3}
+#tip b{display:block;margin-bottom:2px}#tip span{color:var(--ink2)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;margin:8px 0;font-size:12px;color:var(--ink2)}.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.row{margin:10px 0}.row .top{display:flex;justify-content:space-between;font-size:13px}.row .top b{font-variant-numeric:tabular-nums}
+.bar{position:relative;height:8px;background:var(--dim);border-radius:4px;margin-top:4px}.bar>div{height:100%;background:var(--accent);border-radius:4px}.bar>u{position:absolute;top:-3px;width:2px;height:14px;background:var(--ink)}
+small{color:var(--mut)}table{border-collapse:collapse;width:100%;font-size:12px;margin-top:8px}td,th{padding:2px 4px;text-align:right;border-top:1px solid var(--line)}td:first-child,th:first-child{text-align:left}
+#err{color:#b3261e;display:none;margin:0 16px}
+</style>
+</head>
+<body>
+<header>
+<h1>Medical ML paper map</h1>
+<p>2,170 clinical and life-science papers from CVPR, ICCV, ECCV, ICLR, ICML and NeurIPS (2025-26), placed by similarity of title and abstract. Filter the map and see how many of the selected papers release code, use open data, share weights or report variance. The black tick on each bar is the share for all medical papers.</p>
+</header>
+<div id="err" class="card" role="alert"></div>
+<main>
+<aside class="card" aria-label="Filters">
+<h2>Filters</h2>
+<input type="search" id="q" placeholder="Search title" aria-label="Search title"/>
+<div id="filters"></div>
+<p><button class="link" id="reset" type="button">Reset all filters</button></p>
+<h2 style="margin-top:12px">Colour by</h2>
+<select id="colorBy" aria-label="Colour by"></select>
+</aside>
+<section class="card">
+<div id="wrap"><canvas id="cv" role="img" aria-label="t-SNE map of medical papers; the table on the right has the numbers"></canvas><div id="tip"></div></div>
+<div class="legend" id="legend"></div>
+<small>Hover a dot for details, click to open it on OpenReview. Positions come from SPECTER2 embeddings and t-SNE; distances between far-apart clusters are not meaningful.</small>
+</section>
+<aside class="card" aria-live="polite">
+<h2>Selected papers</h2>
+<div><b id="n" style="font-size:26px">-</b> <small id="nsub"></small></div>
+<div id="shares"></div>
+<small>Shares are of papers whose full text was coded; "unclear" counts as not met. Interval: 95% Wilson.</small>
+<table id="tbl"><thead><tr><th>Practice</th><th>k / n</th><th>%</th></tr></thead><tbody></tbody></table>
+</aside>
+</main>
+<script>
+"use strict";
+const DIMS=[["venue","Venue"],["topic","Topic"],["modality","Data type"],["method","Method"],["architecture","Architecture"]];
+const PRACT=[["code","Code released","released"],["main_data_access","Open main data","open"],["weights_release","Weights shared","yes"],["variance","Variance reported","yes"]];
+const PAL=["--c0","--c1","--c2","--c3","--c4","--c5","--c6"];
+let R,sel={},qs="",colorBy="topic",pts=[],hover=-1,cv,ctx,cmap;
+const $=id=>document.getElementById(id);
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const pretty=s=>s.replace(/_/g," ");
+const vals=(r,d)=>d==="architecture"?r.architecture.split(";"):[r[d]];
+function wilson(k,n){if(!n)return[0,0];const z=1.96,p=k/n,d=1+z*z/n,c=p+z*z/(2*n),m=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n));return[(c-m)/d,(c+m)/d]}
+function pass(r){
+  if(qs&&!r.title.toLowerCase().includes(qs))return false;
+  for(const [d] of DIMS){const s=sel[d];if(s&&s.size&&!vals(r,d).some(v=>s.has(v)))return false}
+  return true}
+function buildFilters(){
+  const box=$("filters");box.innerHTML="";
+  for(const [d,label] of DIMS){
+    const cnt={};R.forEach(r=>vals(r,d).forEach(v=>cnt[v]=(cnt[v]||0)+1));
+    const det=document.createElement("details");det.open=d==="venue"||d==="topic";
+    det.innerHTML="<summary>"+label+"</summary><div class=\"chips\"></div>";
+    const ch=det.querySelector(".chips");
+    Object.entries(cnt).sort((a,b)=>b[1]-a[1]).forEach(([v,c])=>{
+      const b=document.createElement("button");b.className="chip";b.type="button";b.setAttribute("aria-pressed","false");
+      b.textContent=pretty(v)+" "+c;
+      b.onclick=()=>{const s=sel[d]||(sel[d]=new Set());s.has(v)?s.delete(v):s.add(v);b.setAttribute("aria-pressed",s.has(v));update()};
+      ch.appendChild(b)});
+    box.appendChild(det)}}
+function colorMap(){
+  const cnt={};R.forEach(r=>vals(r,colorBy).forEach(v=>cnt[v]=(cnt[v]||0)+1));
+  const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1]).map(e=>e[0]);
+  const m={};top.forEach((v,i)=>m[v]=i<7?css(PAL[i]):css("--c7"));
+  m.__legend=top.slice(0,7).map(v=>[v,m[v]]).concat(top.length>7?[["other values",css("--c7")]]:[]);return m}
+function layout(){
+  const w=cv.clientWidth,h=cv.clientHeight,dpr=devicePixelRatio||1;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  const xs=R.map(r=>+r.tsne_x),ys=R.map(r=>+r.tsne_y),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),pad=14;
+  const s=Math.min((w-2*pad)/(x1-x0),(h-2*pad)/(y1-y0));
+  const ox=(w-(x1-x0)*s)/2,oy=(h-(y1-y0)*s)/2;
+  pts=R.map((r,i)=>[ox+(xs[i]-x0)*s,oy+(ys[i]-y0)*s])}
+function draw(){
+  ctx.clearRect(0,0,cv.clientWidth,cv.clientHeight);
+  const dim=css("--dim");
+  for(const on of [false,true])R.forEach((r,i)=>{if(r._on!==on)return;
+    ctx.beginPath();ctx.arc(pts[i][0],pts[i][1],on?3.2:2.2,0,6.283);
+    ctx.fillStyle=on?cmap[vals(r,colorBy)[0]]:dim;ctx.globalAlpha=on?.85:.6;ctx.fill()});
+  ctx.globalAlpha=1;
+  if(hover>=0){ctx.beginPath();ctx.arc(pts[hover][0],pts[hover][1],7,0,6.283);ctx.lineWidth=2;ctx.strokeStyle=css("--ink");ctx.stroke()}}
+function shares(){
+  const on=R.filter(r=>r._on),coded=on.filter(r=>r.code!==""),n=coded.length;
+  $("n").textContent=on.length.toLocaleString();$("nsub").textContent="papers ("+n.toLocaleString()+" with coded full text)";
+  const base=R.filter(r=>r.code!=="");let h="",t="";
+  for(const [f,label,pos] of PRACT){
+    const k=coded.filter(r=>r[f]===pos).length,p=n?k/n:0,lo_hi=wilson(k,n),bk=base.filter(r=>r[f]===pos).length/base.length;
+    h+="<div class=\"row\"><div class=\"top\"><span>"+label+"</span><b>"+(n?(p*100).toFixed(0)+"%":"n/a")+"</b></div><div class=\"bar\"><div style=\"width:"+p*100+"%\"></div><u style=\"left:"+bk*100+"%\" title=\"all medical papers\"></u></div><small>"+(n?(lo_hi[0]*100).toFixed(0)+"-"+(lo_hi[1]*100).toFixed(0)+"% ("+k+"/"+n+")":"no coded papers in selection")+"</small></div>";
+    t+="<tr><td>"+label+"</td><td>"+k+"/"+n+"</td><td>"+(n?(p*100).toFixed(1):"-")+"</td></tr>"}
+  $("shares").innerHTML=h;document.querySelector("#tbl tbody").innerHTML=t}
+function update(){
+  R.forEach(r=>r._on=pass(r));cmap=colorMap();
+  $("legend").innerHTML=cmap.__legend.map(([v,c])=>"<span><i style=\"background:"+c+"\"></i>"+pretty(v)+"</span>").join("");
+  shares();draw()}
+function tip(e){
+  const rect=cv.getBoundingClientRect(),mx=e.clientX-rect.left,my=e.clientY-rect.top;let best=-1,bd=100;
+  R.forEach((r,i)=>{if(!r._on)return;const d=(pts[i][0]-mx)**2+(pts[i][1]-my)**2;if(d<bd){bd=d;best=i}});
+  if(best!==hover){hover=best;draw()}
+  const t=$("tip");if(best<0){t.style.display="none";cv.style.cursor="crosshair";return}
+  const r=R[best];cv.style.cursor="pointer";
+  t.innerHTML="<b></b><span></span>";
+  t.firstChild.textContent=r.title;
+  t.lastChild.textContent=r.venue.toUpperCase()+" "+r.year+" | "+pretty(r.topic)+" | "+pretty(r.modality)+" | "+pretty(r.method)+" | "+r.architecture.split(";").map(pretty).join(", ");
+  t.style.display="block";
+  const w=$("wrap").clientWidth;t.style.left=Math.max(4,Math.min(pts[best][0]+12,w-t.offsetWidth-4))+"px";t.style.top=Math.max(pts[best][1]-t.offsetHeight-10,4)+"px"}
+async function init(){
+  const err=$("err");let D;
+  try{const res=await fetch("data.json");if(!res.ok)throw new Error("HTTP "+res.status);D=await res.json()}
+  catch(e){err.style.display="block";err.textContent="Could not load data.json ("+e.message+"). Open this page through a web server or GitHub Pages, not from a file.";return}
+  R=D.rows.map(a=>Object.fromEntries(D.cols.map((c,i)=>[c,a[i]])));
+  if(R.length!==2170){err.style.display="block";err.textContent="Unexpected row count "+R.length}
+  cv=$("cv");ctx=cv.getContext("2d");
+  buildFilters();
+  const cb=$("colorBy");DIMS.forEach(([d,l])=>cb.add(new Option(l,d)));cb.value=colorBy;cb.onchange=()=>{colorBy=cb.value;update()};
+  $("q").oninput=e=>{qs=e.target.value.trim().toLowerCase();update()};
+  $("reset").onclick=()=>{sel={};qs="";$("q").value="";document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed","false"));update()};
+  cv.onmousemove=tip;cv.onmouseleave=()=>{hover=-1;$("tip").style.display="none";draw()};
+  cv.onclick=()=>{if(hover>=0)window.open("https://openreview.net/forum?id="+encodeURIComponent(R[hover].forum_id),"_blank","noopener")};
+  addEventListener("resize",()=>{layout();draw()});
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>update());
+  layout();update()}
+init();
+</script>
+</body>
+</html>

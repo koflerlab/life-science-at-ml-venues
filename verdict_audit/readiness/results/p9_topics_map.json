@@ -1,0 +1,15 @@
+{
+ "note": "9-24",
+ "model": "allenai/specter2_base",
+ "revision": "3447645e1def9117997203454fa4495937bfbd83",
+ "pooling": "CLS",
+ "max_length": 512,
+ "tsne": {
+  "metric": "cosine",
+  "perplexity": 30,
+  "init": "pca",
+  "random_state": 20261101
+ },
+ "n": 2170,
+ "tsne_sha256": "7124d83e564f2cd56ccac77c22d19796c34f734a14ec6638fad1c28f9db001a5"
+}

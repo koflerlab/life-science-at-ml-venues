@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1179,modality,multimodal,"The method jointly uses fMRI brain activity and video stimuli, combining brain imaging with video diffusion models."
+X1180,architecture,not_stated,The abstract mentions only a biochemically-informed architecture without naming a model family.
+X1187,architecture,not_stated,The text refers to data-driven and physics-driven networks without naming their family.
+X1188,modality,graph_molecule,"The setting is screening compounds in drug discovery, with molecular datasets and a biological assay as the main data."
+X1191,modality,image,The input is event-camera captures of structured light patterns from which 3D is measured.
+X1191,method,supervised_prediction,The core is a confidence-driven stereo matching method for 3D measurement evaluated against ground truth.
+X1191,architecture,not_stated,Confidence estimation and a cost volume are described but no model family is named.
+X1192,modality,time_series,Models forecast simulated neural activity over time in an in silico zebrafish.
+X1193,method,reinforcement_decision,"The paper analyses and improves GRPO, a reinforcement learning algorithm for LLMs."
+X1195,modality,none_or_synthetic,A causal selection model and identification procedure are proposed with no real data type named.
+X1199,architecture,diffusion_flow;llm_vlm,A diffusion language model planner is combined with an autoregressive LLM decoder.
+X1202,architecture,not_stated,An inverse folding model is fine-tuned with DPO but its family is not named.
+X1204,architecture,not_stated,MaxSup is a loss regularizer evaluated on image classification with no network family named.
+X1205,architecture,not_stated,No model family is named for the continual category discovery method.
+X1209,architecture,diffusion_flow,The method is a dual diffusion model; no CNN is named.
+X1210,architecture,not_stated,The EEG encoder and text-side modules are described without naming a model family.
+X1214,architecture,llm_vlm,The study uses 630 language and vision models up to 72B parameters and extracts their representations.
+X1215,method,representation_learning,The contribution is parameter-efficient adaptation of a monocular depth foundation model via visual prompt tuning.
+X1216,method,llm_prompting_agents,The framework enables MLLMs to perform latent multi-step visual reasoning.
+X1217,method,other,"The contribution is a free-energy interpretation and better zero-shot estimators from inverse folding likelihoods, not label-trained prediction."
+X1218,method,generative_modeling,"MR-LFADS is a sequential variational autoencoder, a latent generative model of neural population activity."
+X1218,architecture,state_space_rnn,"MR-LFADS is a sequential VAE composed of recurrent networks, covered by the RNN family."
+X1222,architecture,no_model,This is a position paper proposing guidelines and an evaluation framework with no model built.
+X1232,architecture,not_stated,Policies and critics are trained but no network family is named.
+X1233,method,representation_learning,The paper learns distance-preserving position embeddings to explain grid cell patterns.
+X1237,method,supervised_prediction,The main contribution is training process reward models from noisy weak labels via data curation.
+X1238,method,reinforcement_decision,Bayesian optimization with preference exploration is sequential decision making with a decision maker in the loop.
+X1245,architecture,diffusion_flow;state_space_rnn,The framework is a 3D diffusion model with an LSTM-based memory mechanism; convolution sits inside the LSTM gates.
+X1251,method,generative_modeling,Prot2Text-V2 generates free-form text descriptions of protein function from sequences.
+X1252,architecture,other_neural,The method generalizes principal SVM by using a neural network function class.
+X1254,modality,multimodal,The dataset pairs text prompts and generated images to align text-to-image models.
+X1259,architecture,not_stated,Evidential deep learning models are used but no network family is named.
+X1262,architecture,not_stated,Experiments span various architectures and none is named.
+X1264,modality,multimodal,The point is fusing protein structure features with sequence features.
+X1268,modality,image,"The method adapts BiomedCLIP for few-shot biomedical image classification, with images as the data input."
+X1273,modality,multimodal,"EEG is contrastively aligned with images and used to reconstruct images, so both are central."
+X1275,method,representation_learning,The contribution is low-rank adaptation of a pretrained 3D reconstruction model to new camera types.
+X1280,architecture,not_stated,ASR models are used but their family is not named.
+X1292,architecture,classical_ml,PERMITS is a projected gradient sparse estimator for a simplex-constrained linear recovery model.
+X1297,method,other,"The contribution is an open-source software toolkit, not a new benchmark or dataset."
+X1301,modality,none_or_synthetic,"The framework is theoretical, based on stochastic dynamical systems such as Ornstein-Uhlenbeck processes, with no real data named."
+X1302,architecture,diffusion_flow,SignSparK is a conditional flow matching framework; the segmentation model family is not named.
+X1304,modality,none_or_synthetic,This is a position paper with no data.
+X1307,modality,multimodal,The benchmark evaluates MLLMs on medical images paired with question-answer text.
+X1311,architecture,not_stated,The RefLayer baseline is described without naming a model family.
+X1315,architecture,transformer,"The authors train CloneLM, a language model on antibody clonal families; no Gaussian process is mentioned."
+X1320,architecture,gnn_equivariant,"Local region relationships are captured with a hypergraph, a graph-based network."
+X1321,architecture,not_stated,The synthesis framework is described without naming a model family.
+X1322,architecture,not_stated,NEURONA is a neuro-symbolic framework whose neural component family is not named.
+X1324,modality,image,"The input is histopathology whole-slide images, from which RNA-seq is predicted."

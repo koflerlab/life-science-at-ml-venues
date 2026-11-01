@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X3563,method,trustworthy_ml,"The contribution is a dimensionality-reduction method for more accurate and trustworthy visualization to interpret cross-modal embeddings, i.e. interpretability."
+X3564,method,other,"The task is label-free recovery and ranking of mental targets from EEG with stimulus generation, which fits no single listed family."
+X3564,architecture,not_stated,The abstract names the CURSOR algorithm but no model family.
+X3566,architecture,transformer,"The method prompts the pretrained Segment Anything Model, a vision foundation model that is not a language or vision-language model."
+X3569,method,generative_modeling,"The rotation trick improves VQ-VAE training for reconstruction and codebook use, so the problem solved is generative reconstruction modelling."
+X3571,architecture,not_stated,A stimulation-response model and its inverse are trained but their family is not named.
+X3573,architecture,not_stated,The authors develop 'an architecture' for MEG self-supervised learning without naming its family.
+X3574,modality,interactive_environment,The paper centres on embodied agents acting in multi-round interactive simulated physical environments.
+X3576,architecture,gnn_equivariant;transformer,AMORTIX is described as an amortized Graph Transformer model.
+X3577,method,optimization_efficiency,Thoughtbubbles is a transformer variant for adaptive parallel computation that matches baselines at half the training and token budget.
+X3578,architecture,diffusion_flow;llm_vlm,The method runs tree search over diffusion large language models.
+X3580,method,supervised_prediction,DeepObjectLog is trained from global task labels via a probabilistic logic layer for visual reasoning prediction.
+X3582,method,theory,"The main contribution is derived regret bounds on objective mismatch, with empirical validation on MassSpecGym."
+X3582,architecture,not_stated,Fingerprint predictors are trained with different losses but their model family is not named.
+X3584,method,llm_prompting_agents,The paper selects sampling temperature for LLM multi-sample inference such as majority voting and best-of-N.
+X3585,architecture,llm_vlm,The method operates on LLM embeddings with a learned orthogonal projection; no other neural family is named.
+X3586,method,uncertainty_calibration,The stated goal is quantifying instance- and item-level uncertainty of human ratings with a Bayesian model.
+X3589,architecture,other_neural,"VideoGigaGAN builds on the GigaGAN upsampler, a GAN, and no convolutional family is named."
+X3591,modality,multimodal,"One diffusion model is applied to imaging mass cytometry, spatial proteomics, clinical imaging and single-cell data with none primary."
+X3594,modality,none_or_synthetic,The abstract describes offline contextual bandit optimization with no real data type mentioned.
+X3595,modality,volumetric,"The input data are low-dose CT scans, a volumetric modality."
+X3595,method,optimization_efficiency,The main contribution is a personalized federated learning paradigm to handle privacy and unseen scanning protocols.
+X3595,architecture,llm_vlm;other_neural,"The method uses a medical LLM for reports plus physics-informed hypernetworks and client decoders, with no CNN named."
+X3597,architecture,llm_vlm,The paper evaluates 30 LLMs generating poems and uses LLM-as-a-judge.
+X3601,architecture,not_stated,Actor-critic V-ensemble networks are trained but their family is not named.
+X3608,architecture,not_stated,The study uses 'a simple model architecture' without naming its family.
+X3610,architecture,not_stated,The robot RL policy is learned but its model family is not named.
+X3612,method,optimization_efficiency,gHAWK is a scalable GNN training framework precomputing structural features to improve memory and convergence on large KGs.
+X3619,architecture,diffusion_flow;transformer,The method trains an encoder-decoder transformer brain encoder and uses diffusion-based image generative models to synthesize stimuli.
+X3629,method,representation_learning,The core contribution is graph domain adaptation with feature- and category-level alignment across WSI domains.
+X3631,architecture,not_stated,Alpha-SVRG is tested on 'various model architectures' without naming a family.
+X3635,method,trustworthy_ml,"The position paper argues RAG systems are unsafe and misleading for patients, a safety concern."
+X3636,method,reinforcement_decision,ORBIT is a rubric-based incremental reinforcement learning framework for aligning an LLM.
+X3645,architecture,diffusion_flow,The framework is built on the iterative denoising process of a consistency model.
+X3649,method,benchmark_dataset,"The paper primarily introduces a new professional-level MVQA benchmark, with a model as a secondary contribution."
+X3653,method,generative_modeling,"UniFuse jointly restores degraded images and produces fused images, a reconstruction task."
+X3653,architecture,state_space_rnn,"The feature representation uses Spatial Mamba, a state-space model; LoRA modules are not a separate family."
+X3657,modality,multimodal,LLaVA-4D aligns 4D spatiotemporal visual embeddings with language in a large multimodal model.
+X3658,architecture,not_stated,The optimizer is evaluated by training 120M to 7B models whose family is not named.
+X3660,method,optimization_efficiency,"FHBI is a sharpness-aware functional perturbation and descent procedure aimed at better generalization, a training-dynamics method."
+X3667,modality,volumetric,The dataset is paired motion-corrupted 3D brain MRI.
+X3670,modality,video,"360Anything lifts perspective images and videos to 360 panoramas, with video as the general case."
+X3685,architecture,not_stated,MahaVar is a post-hoc detector on networks whose family is not named.
+X3689,architecture,not_stated,Nonlinear static-graph components are learned but their model family is not named.
+X3691,architecture,not_stated,The neural component of the neuro-symbolic ALIGNED framework is not named.
+X3692,architecture,no_model,The coarsening framework uses optimization-based update algorithms; GNNs appear only for downstream evaluation.
+X3697,architecture,cnn,The method uses a Residual Encoder U-Net and MAE for 3D CNNs.
+X3702,method,reinforcement_decision,STEER optimizes routing via rollouts and advantage credit assignment from environmental rewards.
+X3704,architecture,not_stated,The conformal framework is model-agnostic and names no model family for its scores.
+X3707,architecture,not_stated,Brain signal encoders aligned to pretrained image features are not named and no diffusion model is mentioned.

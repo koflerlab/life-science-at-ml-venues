@@ -1,0 +1,21 @@
+item_id,axis,answer,reason
+X0009,architecture,not_stated,The models are described only as time-series and volumetric video forecasting models; no network family is named in the text.
+X0014,architecture,not_stated,"The method relies on unnamed pre-trained vision foundation models and Gaussian splatting with spline trajectories (explicitly replacing MLPs), so no learned family is named."
+X0030,architecture,not_stated,"The context encoder, decoder ensemble and actor-critic networks are described without naming their architecture family."
+X0053,architecture,cnn;other_neural,The backbone is WRN-28-2 and the proposed DEA and MFF modules are explicitly MLPs.
+X0095,architecture,llm_vlm;other_neural,VCFlow aligns fMRI features to CLIP image/video embeddings and projects into a VAE latent space; no transformer is named.
+X0105,architecture,other_neural;transformer,OVA-Fields uses a multiresolution hash-encoded field with multi-head attention and a BERT-size Sentence-BERT query encoder.
+X0117,architecture,classical_ml;diffusion_flow;gnn_equivariant;other_neural;transformer,"ConfHit uses VAE, autoregressive transformer and diffusion generators, an EGNN property predictor, and Gaussian KDEs it fits for the weights."
+X0118,architecture,cnn;state_space_rnn;transformer,"BioArc searches hybrid CNN, RNN/Hyena and Transformer architectures; the large pretrained models are biological sequence baselines, not language models."
+X0123,architecture,cnn,The reconstruction network is an unrolled MoDL with a ResNet convolutional regularizer; nothing recurrent is described.
+X0147,architecture,cnn;gnn_equivariant,FACT uses a ResNet-50 image backbone and a 2-layer GCN over the comorbidity graph; the projection and VQ codebook are not a separate model family.
+X0154,architecture,classical_ml;cnn;other_neural;transformer,"The study analyzes 36 ANNs including CNNs, vision transformers and autoencoders and fits logistic and ridge regression decoders."
+X0213,architecture,not_stated,"BAAF wraps existing one-class methods run from official code, and the text does not name their network families."
+X0217,architecture,classical_ml;cnn,The experiments use a linear model in the toy setting and ResNet variants on the MNIST-composition tasks.
+X0231,architecture,not_stated,The modality-specific encoders are unnamed state-of-the-art backbones with projection heads; CONCH and PLIP appear only as comparison models.
+X0237,architecture,diffusion_flow,"The method is a DDPM-style diffusion model on voxel fields, and the text names no CNN or other denoiser architecture."
+X0267,architecture,transformer,"The neural-process acquisition model is built from self-attention, Set Transformer and cross-attention blocks; prompts are only embedded with a pretrained embedding model."
+X0274,architecture,cnn;llm_vlm,Experiments split ResNet-18 and LoRA-finetune the pretrained GPT2-medium language model.
+X0304,architecture,classical_ml;cnn;gnn_equivariant;other_neural;state_space_rnn;transformer,"OligoGym benchmarks RF/XGB, MLP, CNN, GRU and Transformer models and also a GNN with graph convolution layers."
+X0371,architecture,cnn,The policy network has a 1D convolutional stem with residual blocks and MTCNN is used for face cropping; no transformer is named.
+X0373,architecture,classical_ml;cnn;llm_vlm;transformer,"The paper evaluates ResNet/ConvNeXt CNNs, video and vision transformers and CLIP models via RSA and fitted linear probes."

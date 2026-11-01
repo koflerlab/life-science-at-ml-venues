@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1895,architecture,not_stated,"The abstract describes prototype alignment, contrastive objectives and optimal transport but never names a model family."
+X1897,modality,volumetric,The primary data are human visual cortex (fMRI voxel) responses decomposed into sparse components within each stream.
+X1897,method,other,"The contribution is a sparse decomposition and a new brain-machine representational alignment measure, which fits no listed family."
+X1897,architecture,classical_ml,"The authors fit a sparse decomposition (a non-neural statistical model) while the visual DNNs are only compared, not trained."
+X1898,modality,interactive_environment,The LM agent acts in CTF challenge environments through interactive terminal tools such as a debugger and server connection.
+X1899,architecture,not_stated,Contrastive language-audio pretraining is used but the encoder families are never named.
+X1902,modality,none_or_synthetic,"The abstract names no real data type, only 'continuous and discrete data' for a certification method."
+X1904,method,trustworthy_ml,"Context attribution is framed as LLM interpretability, with efficiency as the means."
+X1908,architecture,not_stated,The learned score mapping diagnosis codes to a scalar via nHSIC has no named model family.
+X1915,method,biostatistics_inference,"The contribution is an axiomatic information-theoretic decomposition (estimation of neural information), with diffusion models only used for tractable computation."
+X1917,modality,omics_matrix,The agent analyses spatial proteomics data; natural-language queries only drive the workflow.
+X1920,method,reinforcement_decision,The main contribution is an online RLHF algorithm via self-play no-regret learning approximating a Nash policy.
+X1921,method,generative_modeling,"The paper targets UHR text-to-image synthesis, contributing both a training dataset and a diffusion post-training method for generation."
+X1922,architecture,diffusion_flow,PAFlow is a flow matching model; no graph or equivariant network is named.
+X1926,modality,geometry_3d,The input is cortical surface manifolds tokenized via icosahedral patches; text is only metadata prompting.
+X1928,modality,image,"Beyond synthetic data, evaluation centres on rotated character images and high-resolution natural images."
+X1932,modality,multimodal,"The method aligns MS/MS spectra with molecular scaffolds and generates molecules from spectra, combining two data types."
+X1932,architecture,transformer,The generator is described as attention-based; diffusion is not mentioned.
+X1933,modality,image,Gene expression is predicted directly from H&E histology slides.
+X1940,architecture,not_stated,The CGM foundation model's network family is never named.
+X1943,architecture,diffusion_flow;transformer,The method selects KV caches (attention) inside autoregressive video diffusion models.
+X1949,modality,multimodal,"The framework integrates lesion masks, clinical text and multi-view images through multimodal prompts."
+X1949,method,trustworthy_ml,"The title and text emphasize interpretable, provenance-enabled, verifiable diagnosis."
+X1949,architecture,not_stated,No model family (CNN or other) is named in the abstract.
+X1951,architecture,gnn_equivariant,The model operates on the joint E(3) graph of the pMHC complex.
+X1952,modality,multimodal,The benchmark targets omni-models on streaming multi-modal video interaction with questions.
+X1955,architecture,not_stated,GDNet's encoders are described without naming a network family.
+X1956,modality,image,Inputs are whole-slide images; text serves as class concept anchors for classification.
+X1958,architecture,not_stated,A certifiable learning method is proposed but no model family is named.
+X1963,architecture,no_model,The contribution is a software platform; the geometric method is an evaluated model rather than one the authors build.
+X1964,architecture,not_stated,Models across 'multiple model classes' are trained for SHAP evaluation but not named.
+X1968,architecture,not_stated,The contribution is a loss function; the image model family is not named.
+X1969,method,representation_learning,The title and text frame PhyloVAE primarily as unsupervised representation learning of tree topologies.
+X1970,method,generative_modeling,DPO-style preference optimization improves an RNA sequence design (inverse folding) generator.
+X1970,architecture,not_stated,The gRNAde base policy is fine-tuned but its family is not named in the text.
+X1972,architecture,no_model,CoJER is a conformal statistical procedure; no learned model family is built by the authors.
+X1976,method,llm_prompting_agents,The paper fine-tunes VLM-based GUI agents with instruction-as-reasoning via SFT and RL.
+X1977,architecture,not_stated,A discriminative model is trained but its family is not named.
+X1979,method,supervised_prediction,"The goal is human mesh recovery from depth images, with diffusion used to bridge sim-to-real data."
+X1982,architecture,classical_ml,ELPAC is a Bayesian probabilistic model fitted with variational inference.
+X1983,modality,multimodal,ORBIT combines fundus imaging with MLLM-proposed biomarkers and clinical records.
+X1988,method,other,The contribution is a data-quality prompt filtering method for LLM preference training.
+X1990,architecture,diffusion_flow,Representations are modelled with conditional flow matching; the encoder family is unnamed.
+X1992,architecture,not_stated,Benchmark classifiers and a generative model are used but their families are not named.
+X1995,architecture,not_stated,A frozen pre-trained generative model and a surrogate are used without naming families.
+X1996,architecture,gnn_equivariant;other_neural;transformer,The model is a spiking graph transformer with a liquid state machine module (spiking network).
+X1998,modality,none_or_synthetic,Validation is only through numerical experiments; no real dataset is described.
+X2002,method,supervised_prediction,"DGNO is a neural operator trained to restore sharp images from defocused ones, a supervised regression rather than generation."
+X2004,architecture,not_stated,Pre-trained audio models are fine-tuned but their families are never named.
+X2007,modality,multimodal,The paper centres on jointly aligned RGB-thermal image pairs for segmentation.

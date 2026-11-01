@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0524,architecture,not_stated,"Physically based path-tracing optimization of explicit mesh, materials and lighting; no learned model family is named."
+X0526,method,reinforcement_decision,The contribution is a critic-free policy optimization method for credit assignment when training retrieval agents.
+X0536,architecture,not_stated,The expert motion prior is trained with a masked modeling objective but no model family (no diffusion) is named.
+X0541,architecture,not_stated,Estimand-agnostic estimation from a single causal model is proposed without naming the model family.
+X0542,method,trustworthy_ml,"The paper is about auditing and monitoring differential privacy violations, a privacy topic."
+X0545,architecture,not_stated,The method augments optimal transport costs with ligand-receptor interactions; no neural or diffusion model is named.
+X0550,architecture,cnn;transformer,Combines Lorentz attention with an InceptionTime-based (convolutional) encoder.
+X0552,modality,volumetric,"Input data are MRI acquisitions, which the scheme assigns to volumetric."
+X0552,architecture,diffusion_flow,A diffusion-based re-noiser is part of the proposed framework.
+X0560,architecture,not_stated,Prototypical networks are used but the backbone family is not named.
+X0562,method,benchmark_dataset,The main contribution is a controlled evaluation study of over 100 models across post-training stages.
+X0572,architecture,no_model,The contribution is a benchmark dataset on which existing approaches are evaluated.
+X0573,modality,geometry_3d,The method builds and edits a dynamic 3D point cloud scene from LiDAR as its input.
+X0582,modality,tabular_records,Beyond synthetic data the method is fit to trial-wise behavioral response data from sensorimotor tasks.
+X0583,architecture,other_neural,DeepWAS trains large flexible neural network predictive models without naming a specific family.
+X0585,architecture,llm_vlm;other_neural,Guided sparse autoencoders are trained on representations of LLMs.
+X0588,architecture,gnn_equivariant;other_neural,A NeRF-based avatar with a graph neural network for non-rigid deformation.
+X0589,method,optimization_efficiency,The core contribution is an autoencoder compressor reducing replay memory/compute complexity.
+X0591,architecture,other_neural,A mixture-of-experts network is built without naming transformer or another listed family.
+X0594,architecture,not_stated,CoDeRNet is a routing framework whose model family is not named.
+X0597,architecture,state_space_rnn;transformer,Trains Llama-style Transformers and Mamba state-space models (and Hyena) for nucleotide modeling.
+X0607,architecture,no_model,PAC Bench evaluates off-the-shelf VLMs without building or adapting them.
+X0610,method,supervised_prediction,SBIND is trained to model neural dynamics and is evaluated on neural-behavioral prediction.
+X0611,architecture,not_stated,CGRNet is a recovery network whose architecture family is not named.
+X0616,method,generative_modeling,The model uses a diffusion process to generate target-drug complex conformations.
+X0617,architecture,not_stated,A pre-trained teacher encoder and student decoder are used without naming the family.
+X0620,modality,tabular_records,"The method takes pairwise preference comparison data, tested on tabular recommendation and LLM alignment."
+X0620,method,trustworthy_ml,"The paper addresses fair, manipulation-resistant preference alignment, an alignment/fairness topic."
+X0620,architecture,llm_vlm,Experiments apply the alignment method to large language models.
+X0622,architecture,diffusion_flow,MASTARS is described as a diffusion-based trajectory augmentation framework.
+X0626,architecture,not_stated,The single segmentation network uses prototype attention modules but no backbone family is named.
+X0627,method,theory,"The contribution is proving bootstrap distributional consistency, with only small RiverSwim experiments."
+X0628,method,generative_modeling,The regularization targets VQ models and is evaluated on reconstruction fidelity and autoregressive image generation.
+X0629,method,generative_modeling,"The goal is improving a diffusion video predictor's predicted futures, with policy optimization as the training tool."
+X0641,architecture,not_stated,A hyperbolic concept bottleneck model is proposed without naming the backbone family.
+X0642,architecture,not_stated,PolarDepth uses an implicit geometric representation but no model family is named.
+X0644,modality,time_series,The method models irregular continuous-time fMRI signals as latent dynamics.
+X0646,architecture,not_stated,GeneZip uses H-Net-style dynamic routing without naming a transformer or state-space family.
+X0647,modality,multimodal,GeoLLaVA-8K is a vision-language model on remote-sensing images with dialogue.
+X0647,method,optimization_efficiency,The key method is token pruning/selection to reduce memory for 8K inputs.
+X0648,architecture,no_model,Virtual Community is a simulator platform with baselines; no model is built.
+X0653,architecture,no_model,"The contribution is a distance metric between noisy neural trajectories, not a fitted model."
+X0656,architecture,llm_vlm,The authors train MoE large language model families and post-train with GRPO.
+X0657,architecture,other_neural,The theoretical analysis concerns MoE and vanilla neural networks trained by SGD.
+X0658,method,generative_modeling,"The task is accelerated MRI reconstruction, an inverse problem of reconstructing data."
+X0658,architecture,not_stated,Unspecified state-of-the-art neural networks are used for reconstruction.
+X0659,architecture,not_stated,Deep Signature combines spectral clustering and signature transforms; no neural family is named.
+X0660,architecture,transformer,"SSL backbones Wav2Vec 2.0, Whisper and Data2Vec are trained on LFP signals."
+X0664,modality,interactive_environment,RL agents act in a spatially embedded decision-making task environment.
+X0664,method,reinforcement_decision,The study compares reinforcement learning agents with different brain-inspired architectures.

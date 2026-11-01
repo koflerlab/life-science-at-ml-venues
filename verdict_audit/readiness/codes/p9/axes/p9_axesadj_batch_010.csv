@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X1327,modality,video,"The input is long-form video, with language queries only specifying the segment to locate in a video grounding task."
+X1336,architecture,diffusion_flow,The method is a conditional diffusion model; the source segmenter's family is never named.
+X1339,method,causal_inference_trials,"The contribution is a sensitivity analysis for unmeasured latent confounders, which is causal inference."
+X1342,modality,image,The task is zero-shot detection on medical images; text prompts only serve as a knowledge bank for detection.
+X1352,modality,image,"The attribution maps are computed over image sub-regions on RefCOCO, MS COCO and LVIS images."
+X1352,architecture,llm_vlm,"The method interprets pretrained vision-language foundation models (Grounding DINO, Florence-2) and trains no model of its own."
+X1355,architecture,diffusion_flow;llm_vlm;transformer,The authors adapt a Multimodal Diffusion Transformer and use large language models as a layout designer.
+X1356,method,reinforcement_decision,"The main contribution is HRPO, an RL policy-optimization method for LLM latent reasoning."
+X1361,method,llm_prompting_agents,"The paper builds and evaluates a reasoning multimodal LLM for ECG interpretation, using instruction data and RL post-training."
+X1363,architecture,not_stated,The abstract mentions optical flow networks and depth foundation models but names no model family.
+X1364,architecture,no_model,The dataset is built with deterministic and probabilistic generation methods; the text names no learned model.
+X1367,architecture,other_neural,The object of analysis is a deep linear network (deep UFM) trained by gradient descent.
+X1368,architecture,classical_ml,"The model studied is a non-neural piecewise linear classifier with starshaped decision sets, fitted with 0/1 or log-likelihood loss."
+X1370,method,supervised_prediction,The framework fuses radiology and pathology features for diagnosis and prognosis prediction and reports SOTA on these tasks.
+X1370,architecture,diffusion_flow,The core of the method is knowledge-guided flow matching; the foundation models' families are not named.
+X1374,method,benchmark_dataset,"The paper is an evaluation study of over 600 models on brain-alignment benchmarks, deriving scaling laws."
+X1374,architecture,not_stated,The text refers to 'model architectures' trained under controlled conditions without naming any family.
+X1375,method,other,"The main contribution is a new attention mechanism derived from first principles for multi-scale data, i.e. architecture design."
+X1376,modality,interactive_environment,"The paper studies RNNs trained in closed-loop agent-environment interaction, applied to a motor control task."
+X1377,architecture,diffusion_flow;transformer,The method adds residual adapters to text-to-image flow-matching transformers; the DenseNet is only a downstream evaluator.
+X1383,method,representation_learning,"The stated aim is gait representation learning, regularized through a generative unified template."
+X1385,architecture,no_model,"The contribution is a dataset and benchmark built with a binning algorithm and compression, with no learned model."
+X1396,modality,tabular_records,"The prediction target is post-discharge risk from EHRs (MIMIC-III/IV), with the KG serving only as external knowledge."
+X1404,architecture,diffusion_flow;other_neural,The method trains a bidirectional autoencoder framework and integrates it with ControlNet and Stable Diffusion.
+X1406,architecture,not_stated,BrainMosaic is described only as a deep learning architecture with set matching; no family is named.
+X1409,architecture,llm_vlm,The method uses vision-language models for mutual correction; the source model's family is not named.
+X1410,method,optimization_efficiency,"The goal is token-efficient reasoning, reducing inference cost and reasoning length via post-training."
+X1412,method,representation_learning,"The contribution is parameter-efficient fine-tuning (transfer) of a time-series foundation model, with criteria for when to fine-tune."
+X1416,architecture,transformer,The model uses a lightweight visual backbone and a Sliding Perceiver mapping network; no large LLM is named.
+X1419,architecture,diffusion_flow,The method is a structured denoising diffusion model; no graph network is named.
+X1421,modality,image,The experiments are image classification tasks under group transformations.
+X1421,architecture,gnn_equivariant,The contribution is an affine steerable equivariant layer.
+X1423,architecture,classical_ml;transformer,GeoBPE clusters with k-medoids and is paired with a transformer for backbone generation.
+X1429,architecture,cnn;transformer,GrAPE trains deep convolutional networks and modern transformer architectures.
+X1430,architecture,diffusion_flow;transformer,IC-Custom adapts a DiT (diffusion transformer) through its multi-modal attention.
+X1432,method,other,The main contribution is a new metaplastic attention architecture (Palimpsa) for memory capacity.
+X1434,architecture,transformer,"The analysis targets deep encoder-only transformer dynamics, with numerical experiments on them."
+X1435,method,supervised_prediction,The paper proposes a saliency prediction architecture that sets SOTA on saliency benchmarks.
+X1436,modality,video,SLAM runs on camera image sequences such as colonoscopy video and phone captures.
+X1438,architecture,llm_vlm,The framework is vision-language pretraining for a medical VLM; no other family is named.
+X1441,modality,graph_molecule,"The method generates molecules for structure-based drug design, scored by docking."
+X1441,method,reinforcement_decision,SBDD is formalized as a hierarchical multi-armed bandit solved with Thompson sampling.
+X1443,architecture,not_stated,The text refers only to an encoder and decoder without naming their family.
+X1445,architecture,llm_vlm,The benchmark evaluates LLMs and uses an ensemble LLM-as-a-Judge.
+X1447,architecture,cnn,CAST explicitly employs a 3D CNN architecture.
+X1449,architecture,not_stated,"The Bayesian optimization uses a UCB acquisition, but the surrogate model family is not named."
+X1451,method,representation_learning,The method trains contrastive models mapping brain responses into CLIP embedding space and then clusters them.
+X1451,architecture,classical_ml;llm_vlm,The method uses CLIP embeddings and a novel adaptation of DBSCAN clustering.
+X1453,method,reinforcement_decision,"BREAD is a GRPO variant, i.e. an RL method for training reasoning."
+X1455,modality,image,Occupancy is predicted from surrounding camera images.

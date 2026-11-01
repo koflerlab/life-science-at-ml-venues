@@ -56,6 +56,30 @@ def test_wave_holds_partial_batches_until_final(tmp_path, monkeypatch):
     assert len({i for x in b["coder1"] for i in x["items"]}) == 45
 
 
+def test_full2more_appends_only_new_papers(tmp_path, monkeypatch):
+    import json
+    import build_p9_sheets as S
+    keys = {f"P{i:04d}": dict(key=f"k{i}", title=f"t{i}") for i in range(30)}
+    batches = dict(coder1=[dict(batch=0, items=[f"P{i:04d}" for i in range(20)])],
+                   coder2=[dict(batch=0, items=["P0000", "P0001"])])
+    (tmp_path / "keys.json").write_text(json.dumps(keys))
+    (tmp_path / "batches.json").write_text(json.dumps(batches))
+    monkeypatch.setattr(S, "KEYS", tmp_path / "keys.json")
+    monkeypatch.setattr(S, "BATCHES", tmp_path / "batches.json")
+    monkeypatch.setattr(S, "SHEETS", tmp_path)
+    monkeypatch.setattr(S, "excerpts", lambda: {f"k{i}": dict(truncated=False, excerpt="x") for i in range(30)})
+    S.full2()
+    first = json.loads((tmp_path / "batches.json").read_text())["coder2full"]
+    b = json.loads((tmp_path / "batches.json").read_text())
+    b["coder1"].append(dict(batch=1, items=[f"P{i:04d}" for i in range(20, 30)]))
+    (tmp_path / "batches.json").write_text(json.dumps(b))
+    S.full2(more=True)
+    full = json.loads((tmp_path / "batches.json").read_text())["coder2full"]
+    assert full[:len(first)] == first and [x["batch"] for x in full] == list(range(len(full)))
+    got = [i for x in full for i in x["items"]]
+    assert sorted(got) == [f"P{i:04d}" for i in range(2, 30)] and len(got) == len(set(got))
+
+
 def test_mh_rd_matches_hand_computation():
     from analyze_p9 import mh_rd
     rows = [("a", True, 1)] * 3 + [("a", True, 0)] + [("a", False, 1)] + [("a", False, 0)] * 3 \
@@ -107,3 +131,47 @@ def test_note_9_22_results_match_the_release_table():
             sel = [r for r in rows if r["group"] == g]
             share = sum(r[field] == pos for r in sel) / len(sel)
             assert abs(share - res["E_b"][field]["share"][key]) < 1e-12, (field, g)
+
+
+def test_axes_architecture_sets_are_canonical_and_exclusive():
+    import build_p9_axes as A
+    assert A.norm_arch("transformer; cnn") == "cnn;transformer"
+    assert A.norm_arch("cnn,cnn") == "cnn"
+    assert A.norm_arch("not_stated") == "not_stated"
+    assert A.norm_arch("cnn;not_stated") is None and A.norm_arch("no_model;gp_kernel") is None
+    assert A.norm_arch("resnet") is None and A.norm_arch("") is None
+    assert A.valid("method", " theory ") == "theory" and A.valid("modality", "pixels") is None
+
+
+def test_axes_agreement_scores_architecture_per_label():
+    import build_p9_axes as A
+    a = {"X1": dict(modality="image", method="theory", architecture="cnn;transformer"),
+         "X2": dict(modality="text", method="theory", architecture="llm_vlm")}
+    b = {"X1": dict(modality="image", method="theory", architecture="cnn"),
+         "X2": dict(modality="image", method="theory", architecture="llm_vlm")}
+    ag = A.agreement(a, b, A.PASS["a"]["axes"])
+    assert ag["modality"]["n_disagreements"] == 1 and ag["method"]["raw"] == 1.0
+    k = ag["architecture"]["per_label_kappa"]
+    assert k["cnn"] == 1.0 and k["transformer"] == 0.0 and k["llm_vlm"] == 1.0 and ag["architecture"]["n_disagreements"] == 1
+
+
+def test_claim_logbook_rows_point_at_their_values():
+    import ast
+    import json
+    import sys
+
+    import build_claim_logbook as B
+    sys.path.insert(0, str(B.ASSETS.parent))
+    import build_assets
+
+    tree = ast.parse(B.ASSETS.read_text(encoding="utf-8"))
+    results = {f: json.loads((B.HERE / "results" / f).read_text(encoding="utf-8")) for f in B.PRODUCER}
+    rows = [r for name in B.ARGS for r in B.rows_for(tree, name, vars(build_assets), results)]
+    assert rows and all(r["claim"] in build_assets.TEXT for r in rows)
+    for r in rows:
+        node = results[r["result_file"].rsplit("/", 1)[1]]
+        for k in r["key_path"].replace("[", ".[").split("."):
+            node = node[int(k[1:-1])] if k.startswith("[") else node[k]
+        assert node == r["value"] and (B.HERE / r["script"].rsplit("/", 1)[1]).exists()
+    # X5 headline: open main data within data-type strata is among the logged numbers
+    assert any(r["key_path"] == "X5.main_data_access.venue_year_x_modality.mh_rd" for r in rows)

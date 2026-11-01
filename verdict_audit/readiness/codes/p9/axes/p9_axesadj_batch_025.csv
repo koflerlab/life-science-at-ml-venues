@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X3320,method,representation_learning,The contribution is a uniform learning paradigm whose point is generalization of brain decoding to unseen subjects.
+X3321,method,benchmark_dataset,"The main output is the synthesized MedSynVQA dataset of 13,087 audited questions for training medical VQA models."
+X3331,modality,text,The task is framed as LLMs taking heterogeneous textual inputs to predict gene rankings.
+X3331,architecture,llm_vlm,"The paper evaluates zero-shot LLMs and improves them with fine-tuning, ensembling and prompt optimization."
+X3333,modality,none_or_synthetic,This is a position paper arguing for statistical monitoring with no data analysed.
+X3344,architecture,diffusion_flow,The method extends flow matching (with GFlowNets); no graph or equivariant network is named.
+X3345,method,supervised_prediction,"Cell-MNN learns an ODE to model and predict cellular dynamics over time, evaluated on single-cell benchmarks."
+X3347,architecture,llm_vlm,The authors train vision-language models on datasets of varying alignment.
+X3351,architecture,not_stated,"The DSRF modules (MVRP, DDCP) are neural networks whose family is not named."
+X3355,method,trustworthy_ml,"DECAT diagnoses whether multimodal predictions reflect genuine biology or spurious confounding, an interpretability/robustness question."
+X3355,architecture,not_stated,The authors train thousands of representations across four multimodal model classes whose families are not named beyond CLIP as an example.
+X3356,method,other,"The paper computes convex conjugates of functions with deep learning, a numerical-analysis problem not covered by other families."
+X3358,method,representation_learning,The title and abstract frame masked generation as self-supervised pretraining yielding transferable representations.
+X3359,modality,volumetric,"The input is MRI data (M4Raw, fastMRI), which the scheme classes as volumetric."
+X3360,method,llm_prompting_agents,GRIP synthesizes reasoning instruction data using a knowledge graph and open-source multi-model LLM supervision.
+X3361,method,trustworthy_ml,"The work targets RLHF alignment of LLMs, mitigating reward hacking with a hybrid reward system and prompt selection."
+X3366,method,representation_learning,ConvNova is a CNN-based DNA foundation model evaluated on foundation-model benchmarks.
+X3368,method,llm_prompting_agents,"Beyond the Dyn-VQA dataset, the main method is OmniSearch, a self-adaptive planning agent for multimodal retrieval-augmented generation."
+X3371,method,reinforcement_decision,"LA-CDM is trained with reinforcement learning for iterative, sequential clinical decisions on which tests to request."
+X3372,architecture,other_neural,"Rat NCAP is a biologically grounded spinal-circuit neural architecture, not an RNN or other named family."
+X3373,architecture,state_space_rnn,The method trains a single GRU decoder backbone plus a lightweight alignment layer.
+X3374,modality,image,"Experiments are on scene understanding benchmarks, i.e. image data."
+X3382,method,other,"The contribution is a framework of geometric trajectory metrics in embedding space, not a statistical inference method."
+X3382,architecture,transformer,The method builds trajectories from transformer text embedding models.
+X3383,modality,multimodal,The model integrates a VLM with an image generator for text-instructed generation and editing with reasoning annotations.
+X3383,method,generative_modeling,"The core contribution is training a model for structured image generation and editing, with dataset and benchmark supporting it."
+X3383,architecture,llm_vlm,The trained unified model integrates a VLM with FLUX.1 Kontext; the only named family is the VLM.
+X3386,architecture,llm_vlm,The Herald Translator is an LLM fine-tuned on the Herald dataset.
+X3397,modality,none_or_synthetic,This is a theory of attractor dynamics with experiments on simulated head-direction and grid-cell populations.
+X3398,architecture,not_stated,OPT is implemented on TD3 and SPOT value functions without naming the network family.
+X3401,method,benchmark_dataset,The paper is an evaluation study measuring brain alignment of MLLM embeddings across instructions.
+X3402,modality,multimodal,Reasoning segmentation jointly takes pathology images and text queries through an LLM.
+X3413,architecture,transformer,The proposed network uses a long-short-term attention module and cross-attention fusion.
+X3415,method,generative_modeling,The paper proposes fine-tuning objectives to control sequence-level temperature of generative language models.
+X3415,architecture,diffusion_flow;transformer,Experiments fine-tune GPT2 (a small transformer LM) and BD3LM (a diffusion language model).
+X3417,architecture,no_model,The contribution is a dataset; the CVL model is only used to run experiments on it.
+X3418,architecture,cnn;gnn_equivariant;transformer,"The architecture combines temporal convolutions, spatial graph convolutions and a transformer cross-attention decoder."
+X3420,architecture,no_model,The study analyses EEG event-related potentials statistically without building a learned model.
+X3424,modality,interactive_environment,Auto-bidding trajectories are generated and evaluated in the AuctionNet auction benchmark environment.
+X3426,method,trustworthy_ml,The goal is LLM alignment via RLHF made robust to preference-model misspecification.
+X3427,method,theory,The contribution is proving that CFM and forward-only IFM coincide and that IFM is strictly more expressive.
+X3428,method,supervised_prediction,The architectural change is trained and evaluated on video question answering and action recognition benchmarks.
+X3428,architecture,llm_vlm;transformer,A Video-LLM is adapted with new stacked temporal attention modules inside the vision encoder.
+X3433,modality,image,"Experiments use real classification data on common transformers with last-layer classifiers, most consistent with images."
+X3433,architecture,transformer,The study analyses and trains transformer models with an aligned training method.
+X3442,modality,multimodal,"CPath-Omni is a large multimodal model doing VQA, captioning and classification over images and text."
+X3446,architecture,transformer,"The authors train their own masked protein language model, not a pretrained natural-language LLM."
+X3449,architecture,llm_vlm,The benchmark evaluates 24 LVLMs and proposes the LookBack strategy for them.
+X3452,method,theory,The study uses theory and simulations to characterise representational drift.
+X3452,architecture,other_neural,"Models are Hebbian learners (Oja, similarity matching), autoencoders and a two-layer network."

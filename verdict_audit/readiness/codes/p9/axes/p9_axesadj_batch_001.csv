@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0121,architecture,not_stated,"Policies are evaluated and recovery supervision is used to improve a policy, but no model family is named."
+X0123,architecture,not_stated,The defense is applied to unspecified PD-DL reconstruction networks without naming a family.
+X0124,architecture,diffusion_flow;gnn_equivariant,The method uses the FlexEGNN equivariant encoder plus an energy-guided latent diffusion.
+X0130,architecture,diffusion_flow;gnn_equivariant,BackFlip is an equivariant network and FliPS an SE(3)-equivariant flow matching model.
+X0138,method,other,"A new tree-sliced Wasserstein metric validated by extensive experiments, not mainly theory and fitting no other family."
+X0143,architecture,not_stated,Self-supervised reconstruction and masked feature modeling are described without naming the network family.
+X0144,modality,image,Experiments are on benchmark image classification tasks.
+X0150,architecture,transformer,The model is built from novel order-aware and object-aware attention modules.
+X0158,architecture,not_stated,A generative sequence-structure co-design model is described without naming its family.
+X0160,architecture,diffusion_flow,It extends flow-based latent protein generation architectures; no transformer is mentioned.
+X0164,architecture,diffusion_flow,MarS-FM is a flow matching model; no equivariant network is mentioned.
+X0165,architecture,diffusion_flow,The method conditions a latent diffusion model on brain representations; cross-attention is analysed inside the diffusion model.
+X0166,architecture,not_stated,LigoSpace components are plugged into unnamed state-of-the-art models.
+X0168,modality,interactive_environment,Agents act over many turns in realistic software application environments via tools.
+X0172,modality,time_series,"The framework's input and target are time series, mapped to images only as an internal representation."
+X0175,method,llm_prompting_agents,SERSAL is a self-prompting method that uses LLM outputs and small-model distillation to improve LLM tabular prediction.
+X0177,modality,none_or_synthetic,RNNs are trained on synthetic delayed cue-discrimination tasks with analytical models.
+X0178,architecture,cnn;transformer,The model uses a CNN-Transformer encoder to map EEG to position maps.
+X0189,method,llm_prompting_agents,"The work trains and evaluates LLM-based human behavior simulators with a benchmark, corpus and post-training recipe."
+X0197,method,optimization_efficiency,The main contribution is a grid representation that solves DEs 5-20x faster than MLP solvers.
+X0198,architecture,no_model,A position paper on benchmark data sets and GED properties; no model is built by the authors.
+X0199,method,supervised_prediction,It proposes a new training loss improving recommendation prediction in graph collaborative filtering.
+X0201,architecture,transformer,"DPO is adapted to protein language models, which are not large natural-language LLMs."
+X0203,method,reinforcement_decision,The contribution refines RLVR policy-gradient updates restricted to high-entropy tokens.
+X0205,method,benchmark_dataset,The paper presents the first systematic evaluation of context length for EHR models.
+X0206,modality,volumetric,The method decodes from fMRI as its input.
+X0210,modality,geometry_3d,The input is 3D human pose sequences from Human3.6M and AMASS.
+X0210,method,supervised_prediction,The task is human pose forecasting with a heatmap representation of possible futures.
+X0212,modality,tabular_records,Experiments are on tabular benchmarks and a loan-application credit dataset.
+X0212,method,supervised_prediction,ArbNN is a tabular prediction model achieving state-of-the-art on tabular benchmarks.
+X0214,method,reinforcement_decision,The study compares RL agents with mice and proposes mechanisms for RL agents' risk avoidance.
+X0215,architecture,no_model,Contour Monte Carlo is a sampling algorithm; no learned model is fitted.
+X0216,method,causal_inference_trials,It estimates treatment effects in randomized trials borrowing external controls.
+X0217,architecture,not_stated,Neural networks are trained in experiments but their family is not named.
+X0218,method,supervised_prediction,The main contribution is a fine-tuned multimodal model predicting tactile attributes from annotated visuo-tactile video.
+X0219,modality,volumetric,The benchmark consists of brain MRI scans.
+X0219,architecture,no_model,The paper is an evaluation-only benchmark; VLMs are only evaluated as baselines.
+X0220,architecture,llm_vlm,The authors run QLoRA fine-tuning on LLaMa-3.1-8B-instruct and use LLM-as-a-judge.
+X0222,architecture,not_stated,VCIP uses variational inference but names no model family.
+X0223,architecture,no_model,A benchmark that only evaluates existing MLLMs without building or adapting a model.
+X0226,architecture,llm_vlm,The authors build a code agent framework on o1-preview.
+X0231,architecture,not_stated,A trimodal contrastive model is described without naming encoder families.
+X0233,architecture,other_neural,The study simulates feedforward and recurrent rate and spiking networks with plasticity rules.
+X0234,modality,none_or_synthetic,The analysis uses a synthetic structured identity mapping task on a Gaussian mixture.
+X0237,method,generative_modeling,"After the impossibility proof, the main contribution is a field-based molecular generation model."
+X0237,architecture,not_stated,The proposed field-based model replaces equivariant layers and its family is not named.
+X0238,architecture,cnn;gnn_equivariant;state_space_rnn,"MedMamba uses multi-scale convolutional embeddings, state space encoders and a learned graph module."
+X0239,architecture,diffusion_flow,Enzymes are generated with a conditioned discrete diffusion model; retrieval does not involve an LLM.
+X0241,architecture,classical_ml,The framework fits a structural causal model over the validated graph.
+X0245,modality,image,"Online HD map construction on nuScenes and Argoverse 2 driving perception data, with geometry as the predicted output."

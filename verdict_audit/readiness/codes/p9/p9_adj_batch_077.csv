@@ -1,0 +1,21 @@
+item_id,field,label,reason
+P3457,compute,unclear,"The truncated text mentions a runtime profile table (Table 7) but shows no hardware or time values, so compute cannot be determined."
+P3479,compute,unclear,"The truncated text shows no compute information and the checklist compute item is not visible, so it cannot be determined."
+P3500,compute,unclear,"The truncated excerpts contain no hardware or runtime statement, and the experimental details are cut off."
+P3502,compute,unclear,"The truncated excerpts give training hyperparameters but no hardware or time, and the rest of the setup is cut off."
+P3525,compute,unclear,The implementation details section is cut off mid-sentence before any hardware or training time is stated.
+P3534,compute,unclear,"The truncated text mentions GPU memory usage and inference speed only comparatively, with no stated hardware or time."
+P3734,compute,none,"The untruncated text states no hardware, and the only time mentioned is under 30 minutes for a toy experiment without hardware."
+P3744,compute,hardware_only,"The text states an AMD EPYC 9754 CPU with 256 GB memory, but runtime is only given as the formula Time_Limit x N seconds with no actual time value."
+P3785,compute,amount,"The text states runs of up to 400,000 sequences finished within a day on 32 CPU cores and 200GB RAM, which gives both hardware and time."
+P3842,compute,unclear,"The text only vaguely mentions reliance on multiple GPUs in the limitations, and the pre-training details are cut off."
+P3847,variance,no,"The untruncated text describes the setup and comparisons without any seeds, repeated runs or error bars."
+P3867,variance,unclear,"The checklist answers Yes, but its justification only refers to ablation reliability, and no error bars or repeated runs appear in the truncated text."
+P3900,variance,no,"The main results tables (e.g., Table 4) show single values without error bars, and no repeated runs are described."
+P3972,variance,no,The main results tables report single success rates without error bars or repeated runs.
+P3991,variance,no,"The seeds/variance excerpt has only feature-statistic standard deviations and CASP-derived seeds, with no error bars or repeated runs for results."
+P4060,variance,no,The main transfer results (Tables 3 and 4) are single values without error bars; the five seeds are only for sampling pseudomouse neuron pools.
+P4097,variance,no,"The results tables shown (e.g., Table 9) give single values, and nothing mentions seeds, repeated runs or error bars."
+P4098,variance,no,"The results tables shown (Tables 7 and 8) report single values without error bars, and the checklist answer is not shown."
+P4131,compute,unclear,The truncated text shows no compute information and the checklist compute item is not visible.
+P4140,compute,hardware_only,The text states an Intel Core i5-1135G7 machine with 12 GB RAM but gives no running time.

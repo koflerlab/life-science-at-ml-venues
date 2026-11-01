@@ -96,9 +96,13 @@ def table(key: str, rows: list[list[str]], caption: str) -> str:
                       r"\bottomrule", r"\end{tabularx}", r"\end{table}", ""])
 
 
+# Post hoc figures keep their descriptive file names.
+FIG_FILE = {"5": "fig_topics_venue", "6": "fig_topics_map", "7": "fig_axes"}
+
+
 def figure(n: str, caption: str) -> str:
     return "\n".join([r"\begin{figure}[htbp]", r"\centering", r"\setcounter{figure}{" + str(int(n) - 1) + "}",
-                      r"\includegraphics[width=\textwidth]{figures/fig" + n + ".pdf}",
+                      r"\includegraphics[width=\textwidth]{figures/" + FIG_FILE.get(n, "fig" + n) + ".pdf}",
                       r"\caption{" + caption + r"}\label{fig:" + n + "}", r"\end{figure}", ""])
 
 

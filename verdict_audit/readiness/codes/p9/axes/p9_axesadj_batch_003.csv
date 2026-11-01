@@ -1,0 +1,51 @@
+item_id,axis,answer,reason
+X0390,method,other,"The contribution is a model-free entropy-rate filter for curating synthetic training data, which fits no listed family."
+X0391,architecture,not_stated,The abstract describes a contrastive multimodal framework but never names the model family of its encoders.
+X0396,method,llm_prompting_agents,"The framework is built around coding LLMs with retrieval augmentation, agents and a VLM critic doing self-reflection."
+X0399,modality,volumetric,"Pre-training uses multi-parametric brain MRI scans (16,022 scans)."
+X0403,architecture,not_stated,It explains MIL models post hoc without naming the MIL model family.
+X0404,modality,time_series,"Besides the solvable model, the method is applied to large-scale neuronal population recordings from mouse visual cortex."
+X0405,method,causal_inference_trials,Hit discovery is formalized as a sequential experimental design problem for perturbation experiments.
+X0405,architecture,not_stated,A posterior model is used for the acquisition function but its family is not named in the text.
+X0410,architecture,diffusion_flow,Experiments use orthogonality-regularized normalizing flows.
+X0413,architecture,not_stated,It combines pretrained sequence-structure embeddings with a sequence decoder without naming their family.
+X0422,method,llm_prompting_agents,The contribution is a visual chain-of-thought reasoning scheme for pretrained vision-language-action models.
+X0423,method,supervised_prediction,A new Mamba architecture is trained end to end for tumor staging and survival prediction without pretraining.
+X0433,architecture,not_stated,A deep evidential regression framework is used but the network family is not named.
+X0435,method,reinforcement_decision,"The paper addresses credit assignment for delayed rewards and errors via eligibility traces, a sequential learning problem."
+X0435,architecture,state_space_rnn,The eligibility traces are explicitly formed by a state-space model.
+X0439,method,biostatistics_inference,The contribution is a latent dynamical statistical model with a variational filtering and learning algorithm for neural recordings.
+X0440,architecture,other_neural,The only named model family is VQ-VAE tokenizers used in the pretraining method.
+X0449,modality,tabular_records,"Beyond simulations, the estimator is applied to real data estimating the age profile of retirement income."
+X0451,modality,none_or_synthetic,The paper is theoretical with regret and cost guarantees on abstract MDPs and reports no real data.
+X0459,architecture,no_model,The paper is a convergence analysis of an algorithm and trains or adapts no model itself.
+X0460,architecture,not_stated,The contrastive encoder family is not named; only a linear dynamical system on embeddings is described.
+X0463,method,llm_prompting_agents,The main contribution is a method for evaluating LLMs and their benchmarks via concept-level gaps.
+X0463,architecture,llm_vlm;other_neural,The method applies sparse autoencoders to the internal representations of five open-source LLMs.
+X0464,method,trustworthy_ml,"The bottleneck is designed to identify which spatial edges matter for a target, an interpretability and discovery goal."
+X0466,architecture,classical_ml,"The paper develops and empirically compares new PCA and robust PCA algorithms, a non-neural statistical model."
+X0467,method,supervised_prediction,"Controllers are trained on expert policy-trajectory observations and evaluated empirically on generalization, with proof as a supplement."
+X0471,modality,omics_matrix,The benchmark is built from four types of single-cell multi-omics data posed to LLMs.
+X0472,architecture,not_stated,It adjusts dropout in neural networks across architectural configurations without naming a family.
+X0473,architecture,transformer,The framework uses an anatomy-adaptive Vision Transformer.
+X0477,modality,interactive_environment,VLM-based GUI agents act in GUI environments and are trained with RL on trajectories.
+X0479,architecture,transformer,The proposed method uses learnable class token queries over image patch tokens; CNN CAM is only prior work.
+X0480,modality,time_series,The framework is fitted to ex vivo recordings of mouse retinal ganglion cell responses.
+X0480,architecture,gp_kernel;other_neural,"It uses adaptive deep kernel Gaussian processes, combining a neural feature map with a GP."
+X0485,method,generative_modeling,"The goal is instruction-guided image editing, with Instruct-CLIP used to refine data and train latent diffusion models."
+X0486,architecture,llm_vlm,"Experiments pre-train LLMs (dense and MoE, 130M to 1.3B) with the proposed optimizer."
+X0488,architecture,transformer,"It builds on biomedical language models to produce concept embeddings, not on large LLMs."
+X0491,modality,time_series,The main evaluation is online adaptation of wireless receivers to time-varying channel streams.
+X0491,method,other,"The contribution is online adaptation via learned latent Bayesian filtering, which fits no listed family."
+X0492,method,llm_prompting_agents,SlideChat is a vision-language assistant built by instruction-tuning a multimodal LLM.
+X0494,architecture,not_stated,Spectral representations are said to be learned from visual inputs but the learned model family is not named.
+X0501,method,trustworthy_ml,"It explains and quantifies LLM prompt sensitivity through interaction decomposition, a robustness and interpretability analysis."
+X0509,architecture,diffusion_flow;transformer,The method is a multimodal diffusion transformer (DiT) built on SD3.5M.
+X0510,method,optimization_efficiency,The main point is cutting retrieval latency several-fold relative to MLLM encoding.
+X0511,method,optimization_efficiency,The main point is computational efficiency of pan-sharpening via learnable look-up tables.
+X0515,modality,text,The learning problem is driven by natural-language feedback and evaluated with LLMs in empirical domains.
+X0517,modality,interactive_environment,The paper concerns agentic benchmarks where agents act on tasks with reward designs.
+X0519,modality,image,The method is framed as image-to-image translation evaluated on MRI contrasts and CIFAR-10/ImageNet.
+X0520,architecture,transformer,The only named model component is a gated cross-attention fusion module.
+X0521,modality,multimodal,The model jointly handles EEG signals and language by feeding EEG tokens into an LLM.
+X0522,method,uncertainty_calibration,The method targets better-calibrated uncertainty estimates for image registration.
