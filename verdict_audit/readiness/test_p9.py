@@ -153,3 +153,25 @@ def test_axes_agreement_scores_architecture_per_label():
     assert ag["modality"]["n_disagreements"] == 1 and ag["method"]["raw"] == 1.0
     k = ag["architecture"]["per_label_kappa"]
     assert k["cnn"] == 1.0 and k["transformer"] == 0.0 and k["llm_vlm"] == 1.0 and ag["architecture"]["n_disagreements"] == 1
+
+
+def test_claim_logbook_rows_point_at_their_values():
+    import ast
+    import json
+    import sys
+
+    import build_claim_logbook as B
+    sys.path.insert(0, str(B.ASSETS.parent))
+    import build_assets
+
+    tree = ast.parse(B.ASSETS.read_text(encoding="utf-8"))
+    results = {f: json.loads((B.HERE / "results" / f).read_text(encoding="utf-8")) for f in B.PRODUCER}
+    rows = [r for name in B.ARGS for r in B.rows_for(tree, name, vars(build_assets), results)]
+    assert rows and all(r["claim"] in build_assets.TEXT for r in rows)
+    for r in rows:
+        node = results[r["result_file"].rsplit("/", 1)[1]]
+        for k in r["key_path"].replace("[", ".[").split("."):
+            node = node[int(k[1:-1])] if k.startswith("[") else node[k]
+        assert node == r["value"] and (B.HERE / r["script"].rsplit("/", 1)[1]).exists()
+    # X5 headline: open main data within data-type strata is among the logged numbers
+    assert any(r["key_path"] == "X5.main_data_access.venue_year_x_modality.mh_rd" for r in rows)

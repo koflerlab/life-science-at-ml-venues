@@ -352,7 +352,8 @@ def main() -> None:
     forest_ax(a2, claim, "Medical minus other, percentage points (95% CI)", "(b) Claim level")
     fig.tight_layout()
     save(fig, "fig4")
-    missing = checks(p9, areas, ext, claims, adv, ext9, more, emp)
+    missing = checks(p9, areas, ext, claims, adv, ext9, more, emp) + checks_posthoc(load("p9_topics.json"),
+                                                                                  load("p9_axes.json"))
     for m in missing:
         print("NOT IN TEXT:", m, file=sys.stderr)
     print(f"tables and figures written; {len(missing)} quoted numbers not found in the text", file=sys.stderr)
@@ -443,6 +444,57 @@ def checks(p9, areas, ext, claims, adv, ext9, more, emp) -> list[str]:
         f"The compute tier was not reported in {a3['compute_tier']['life_science']['distribution']['not_stated']:,} "
         f"of {a3['compute_tier']['life_science']['n']:,} medical papers",
         f"specific result ({sh('claims', 'life_science')}% versus {sh('claims', 'other')}%)",
+    ]
+    return [w for w in want if w not in TEXT]
+
+
+def checks_posthoc(top: dict, ax: dict) -> list[str]:
+    """Quoted numbers of the topic and axes section (Notes 9-24 to 9-27), each built from a result file."""
+    ov, res = top["overall"], top["T2_venue_by_topic"]
+    r = lambda v, t: f"{res['adjusted_residuals'][v][t]:.1f}"
+    topic = lambda t: f"{ov[t]['n']}, {pct(ov[t]['share'])}%"
+    ag = ax["agreement"]["a"]
+    x2 = lambda a, l: f"{pts(ax['X2'][a][l]['mh_rd'])}, {ci(ax['X2'][a][l]['ci'])}"
+    share = lambda a, g, l: pct(ax["X1"][a][g]["all"]["labels"][l]["share"])
+    both = lambda a, l: f"{share(a, 'life_science', l)}% versus {share(a, 'other', l)}%"
+    x5 = lambda f, s: ax["X5"][f][s]
+    want = [
+        f"(Notes 9-24 and 9-26)",
+        f"each of the {top['n']:,} medical papers",
+        f"coded all {ax['n']:,} papers",
+        f"agreed on {pct(top['agreement']['raw'])}% of medical papers (kappa {top['agreement']['kappa']:.2f}; "
+        f"{top['agreement']['n_disagreements']} disagreements adjudicated)",
+        f"neuroscience ({ov['neuroscience']['n']} papers, {pct(ov['neuroscience']['share'])}%), radiology "
+        f"({topic('radiology')}), proteins ({topic('proteins')}) and genomics and omics ({topic('genomics_omics')})",
+        f"(chi-square {res['chi2']:.1f}, {res['dof']} degrees of freedom",
+        f"(adjusted residuals {r('cvpr', 'radiology')}, {r('iccv', 'radiology')} and {r('eccv', 'radiology')})",
+        f"neuroscience at NeurIPS ({r('neurips', 'neuroscience')})",
+        f"data type (kappa {ag['modality']['kappa']:.2f}) and method (kappa {ag['method']['kappa']:.2f})",
+        f"(exact agreement on the label set {ag['architecture']['raw']:.2f}); "
+        f"{sum(ag[k]['n_disagreements'] for k in ('modality', 'method', 'architecture')):,} item-axis",
+        f"molecular graphs ({x2('modality', 'graph_molecule').replace(',', ' percentage points,', 1)}), time series ({x2('modality', 'time_series')}) and "
+        f"volumetric images ({x2('modality', 'volumetric')})",
+        f"text ({x2('modality', 'text')}) or no data or synthetic data ({x2('modality', 'none_or_synthetic')})",
+        f"representation learning ({x2('method', 'representation_learning')})",
+        f"optimisation and efficiency ({x2('method', 'optimization_efficiency')}) or theory ({x2('method', 'theory')})",
+        f"Causal inference and trials ({both('method', 'causal_inference_trials')}) and biostatistical inference "
+        f"({both('method', 'biostatistics_inference')})",
+        f"in {share('architecture', 'life_science', 'llm_vlm')}% of medical and "
+        f"{share('architecture', 'other', 'llm_vlm')}% of other papers",
+        f"code {pts(x5('code', 'venue_year_x_method')['mh_rd'])} percentage points "
+        f"({ci(x5('code', 'venue_year_x_method')['ci'])}), open main data "
+        f"{pts(x5('main_data_access', 'venue_year_x_method')['mh_rd'])} "
+        f"({ci(x5('main_data_access', 'venue_year_x_method')['ci'])}), weights "
+        f"{pts(x5('weights_release', 'venue_year_x_method')['mh_rd'])} "
+        f"({ci(x5('weights_release', 'venue_year_x_method')['ci'])}) and variance "
+        f"{pts(x5('variance', 'venue_year_x_method')['mh_rd'])}",
+        f"code ({pts(x5('code', 'venue_year_x_modality')['mh_rd'])}), weights "
+        f"({pts(x5('weights_release', 'venue_year_x_modality')['mh_rd'])}, "
+        f"{ci(x5('weights_release', 'venue_year_x_modality')['ci'])}) and variance "
+        f"({pts(x5('variance', 'venue_year_x_modality')['mh_rd'])})",
+        f"open main data difference of {pts(x5('main_data_access', 'venue_year')['mh_rd'])} reversed to "
+        f"{pts(x5('main_data_access', 'venue_year_x_modality')['mh_rd'])} percentage points "
+        f"({ci(x5('main_data_access', 'venue_year_x_modality')['ci'])})",
     ]
     return [w for w in want if w not in TEXT]
 
