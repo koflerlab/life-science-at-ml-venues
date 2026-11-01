@@ -1,0 +1,16 @@
+{
+  "title": "Life science at ML venues: reproducibility practice and agentic reproduction of medical and life-science papers",
+  "upload_type": "dataset",
+  "description": "A meta-research study of 2,170 medical and life-science papers and an equal random sample of other papers at nine venue-years of CVPR, ICCV, ECCV, ICLR, ICML and NeurIPS (2025-2026): twelve reproducibility practices coded from 3,787 full texts under a frozen protocol, topic, modality, method and architecture codes, and reproduction outcomes from the ICML 2026 agent reproduction challenge. The release holds the code, protocols, coding sheets and the 4,340-row paper table (public fields only).",
+  "creators": [
+    {"name": "Kondrateva, Ekaterina", "orcid": "0000-0003-3623-6106", "affiliation": "Hertie AI Institute for Brain Health, University of Tübingen; Maastricht University"},
+    {"name": "Kofler, Florian", "affiliation": "Hertie AI Institute for Brain Health, University of Tübingen; University of Zurich; Technical University of Munich; Helmholtz Munich"},
+    {"name": "Simkó, Attila", "affiliation": "Umeå University"}
+  ],
+  "license": "cc-by-4.0",
+  "keywords": ["reproducibility", "meta-research", "medical machine learning", "life science", "agentic reproduction"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/kondratevakate/life-science-at-ml-venues", "relation": "isSupplementTo", "scheme": "url"},
+    {"identifier": "https://huggingface.co/datasets/kondratevakate/life-science-at-ml-venues", "relation": "isVariantFormOf", "scheme": "url"}
+  ]
+}
